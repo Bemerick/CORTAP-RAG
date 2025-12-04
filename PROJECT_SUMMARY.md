@@ -31,6 +31,7 @@ A production-ready RAG (Retrieval-Augmented Generation) Q&A system for FTA compl
 ✅ **Inline source badges** (orange numbered citations)
 ✅ **Common questions** suggestions
 ✅ **Responsive chat UI** with professional card design
+✅ **Conversation history** - maintains context across questions
 ✅ **Deployed to Render.com** (backend + frontend)
 
 ---
@@ -131,18 +132,26 @@ A production-ready RAG (Retrieval-Augmented Generation) Q&A system for FTA compl
 - Replace `[Source N]` with styled orange numbered badges
 - Add card layout with gradient header and confidence label
 
+### 8. Conversation Context Bleed
+**Problem**: Answers referenced previous topics (e.g., ADA mentioned when asking about charter buses)
+**Solution**:
+- Added conversation_history field to QueryRequest schema
+- Backend sends last 6 messages (3 exchanges) to GPT-4 for context
+- Frontend tracks all messages and sends history with each query
+- GPT-4 now understands conversation flow without confusing topics
+
 ---
 
 ## Architecture
 
 ### Data Flow
 1. **User Question** → Frontend React app
-2. **API Request** → Backend FastAPI `/api/v1/query` endpoint
+2. **API Request** → Backend FastAPI `/api/v1/query` endpoint with conversation history
 3. **Semantic Search** → ChromaDB retrieves top-K chunks via embeddings
 4. **Keyword Search** → BM25 index scores all chunks
 5. **Hybrid Merge** → Combine scores (70% semantic, 30% keyword)
-6. **Context Building** → Concatenate top 5 chunks with metadata
-7. **GPT-4 Generation** → Generate answer with source citations
+6. **Context Building** → Concatenate conversation history + top 5 chunks with metadata
+7. **GPT-4 Generation** → Generate answer with source citations using full context
 8. **Response** → Return answer, confidence, sources to frontend
 9. **Display** → Show in clean card with inline source badges
 
@@ -253,7 +262,7 @@ See `TESTING.md` for comprehensive test procedures
 1. **Chunk Size**: PDFs pre-chunked into large sections, diluting semantic matching
 2. **No Reranking**: Cross-encoder reranking could improve precision
 3. **Single User**: No authentication or multi-user support
-4. **No History**: Conversations not persisted
+4. **No Persistence**: Conversations not persisted across sessions (history only maintained in-memory)
 5. **Cold Starts**: Render free tier causes ~30s cold start delay
 6. **Telemetry Warnings**: Harmless ChromaDB telemetry errors in logs
 
@@ -269,8 +278,9 @@ See `TESTING.md` for comprehensive test procedures
 - [ ] Add metadata filtering by recipient type
 
 ### Features
+- [x] **Conversation history tracking** (completed - maintains context across questions)
 - [ ] User authentication (Auth0, Firebase)
-- [ ] Conversation history per user
+- [ ] Persistent conversation storage per user (database-backed)
 - [ ] Lessons learned database (separate collection)
 - [ ] PDF highlighting with bounding boxes
 - [ ] Multi-audit session tracking

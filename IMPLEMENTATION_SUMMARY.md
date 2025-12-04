@@ -20,6 +20,7 @@ A production-ready RAG (Retrieval-Augmented Generation) application for querying
 - Three REST API endpoints: `/query`, `/common-questions`, `/health`
 - Structured JSON responses with confidence scoring
 - Pydantic validation for all requests/responses
+- **Conversation history tracking** - maintains context across questions
 
 ✅ **Frontend (React + TypeScript)**
 - Clean chat interface with message history
@@ -29,6 +30,7 @@ A production-ready RAG (Retrieval-Augmented Generation) application for querying
 - Mobile-responsive design with Tailwind CSS
 - React Query for API state management
 - Markdown rendering for formatted responses
+- **Automatic conversation context** - sends previous messages to backend
 
 ✅ **Deployment Configuration**
 - Dockerfile for backend containerization
@@ -122,6 +124,12 @@ CORTAP-RAG/
 - **Tailwind CSS**: Utility-first styling for rapid iteration
 - **TypeScript**: Full type safety across API boundary
 
+### 5. **Conversation History**
+- **In-Memory Storage**: Frontend maintains full conversation in state
+- **Context Window**: Backend receives last 6 messages (3 exchanges)
+- **Prompt Integration**: Conversation history prepended to context before current question
+- **Topic Awareness**: Prevents context bleed between different compliance topics
+
 ---
 
 ## Files Created (51 total)
@@ -213,6 +221,7 @@ See `TESTING.md` for comprehensive test suite. Key validations:
 - ✅ Common questions populate correctly
 - ✅ Response time < 5 seconds
 - ✅ No hallucinations (answers grounded in sources)
+- ✅ Conversation context maintained across follow-up questions
 
 ### 3. Deployment to Render
 

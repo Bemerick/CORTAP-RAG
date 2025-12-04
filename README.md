@@ -5,11 +5,12 @@ A Retrieval-Augmented Generation (RAG) application for querying FTA (Federal Tra
 ## Features
 
 - 🔍 **Intelligent Search**: Hybrid search combining semantic embeddings and keyword matching
-- 💬 **Chat Interface**: Clean, intuitive Q&A interface
+- 💬 **Chat Interface**: Clean, intuitive Q&A interface with conversation history
 - 📊 **Confidence Scoring**: Transparent confidence ratings for each answer
 - 📚 **Source Citations**: Full traceability with ranked source documents
 - ⚡ **Fast Retrieval**: Sub-5 second query responses
 - 🎯 **Common Questions**: Pre-loaded frequently asked compliance questions
+- 🧠 **Contextual Awareness**: Maintains conversation context across multiple questions
 
 ## Tech Stack
 
@@ -100,6 +101,7 @@ Frontend will run at http://localhost:3000
 3. Click a suggested question or type your own
 4. View answers with confidence scores and source citations
 5. Expand "View Sources" to see ranked document chunks
+6. Ask follow-up questions - the system maintains conversation context automatically
 
 ## Project Structure
 
@@ -127,7 +129,8 @@ CORTAP-RAG/
 
 ## API Endpoints
 
-- `POST /api/v1/query` - Submit a question
+- `POST /api/v1/query` - Submit a question with optional conversation history
+  - Request body: `{ "question": "string", "conversation_history": [{"role": "user|assistant", "content": "string"}] }`
 - `GET /api/v1/common-questions` - Get suggested questions
 - `GET /api/v1/health` - Health check
 - `GET /docs` - Swagger API documentation
@@ -207,6 +210,10 @@ pytest
 **CORS errors?**
 - Verify backend URL in frontend `.env`
 - Check CORS settings in `backend/main.py`
+
+**Answers referencing wrong topics?**
+- This is now fixed with conversation history tracking
+- If issues persist, refresh the page to clear conversation context
 
 ## License
 
