@@ -1,0 +1,118 @@
+"""RAG service for handling query processing."""
+from typing import Dict, Optional
+from ingestion import EmbeddingManager
+from retrieval import HybridRetriever, RAGPipeline
+from config import settings
+
+
+class RAGService:
+    """Service layer for RAG operations."""
+
+    _instance = None
+    _initialized = False
+
+    def __new__(cls):
+        """Singleton pattern to reuse connections."""
+        if cls._instance is None:
+            cls._instance = super(RAGService, cls).__new__(cls)
+        return cls._instance
+
+    def __init__(self):
+        """Initialize RAG service components."""
+        if not self._initialized:
+            self._initialize_components()
+            RAGService._initialized = True
+
+    def _initialize_components(self):
+        """Initialize embedding manager, retriever, and RAG pipeline."""
+        # Initialize embedding manager (connects to ChromaDB)
+        self.embedding_manager = EmbeddingManager(
+            db_path=settings.chroma_db_path,
+            openai_api_key=settings.openai_api_key,
+            embedding_model=settings.embedding_model
+        )
+
+        # Initialize hybrid retriever
+        self.hybrid_retriever = HybridRetriever(
+            semantic_weight=settings.semantic_weight,
+            keyword_weight=settings.keyword_weight
+        )
+
+        # Build BM25 index from all documents in ChromaDB
+        self._build_bm25_index()
+
+        # Initialize RAG pipeline
+        self.rag_pipeline = RAGPipeline(
+            openai_api_key=settings.openai_api_key,
+            model=settings.llm_model,
+            temperature=settings.llm_temperature
+        )
+
+    def _build_bm25_index(self):
+        """Build BM25 index from all documents in ChromaDB."""
+        # Get all documents from collection
+        all_docs = self.embedding_manager.collection.get()
+
+        if all_docs and all_docs['ids']:
+            documents = all_docs['documents']
+            doc_ids = all_docs['ids']
+
+            self.hybrid_retriever.build_bm25_index(documents, doc_ids)
+            print(f"BM25 index built with {len(documents)} documents")
+        else:
+            print("Warning: No documents in ChromaDB. BM25 index not built.")
+
+    def check_database_ready(self) -> bool:
+        """Check if database is ready with documents."""
+        count = self.embedding_manager.get_collection_count()
+        return count > 0
+
+    def process_query(
+        self,
+        question: str,
+        recipient_type: Optional[str] = None
+    ) -> Dict[str, any]:
+        """
+        Process a user query through the RAG pipeline.
+
+        Args:
+            question: User's question
+            recipient_type: Optional recipient type for filtering
+
+        Returns:
+            Query response with answer, confidence, and sources
+        """
+        # Step 1: Semantic retrieval from ChromaDB
+        filter_metadata = None
+        if recipient_type:
+            # Future: implement metadata filtering by recipient_type
+            pass
+
+        semantic_results = self.embedding_manager.query_collection(
+            query_text=question,
+            n_results=settings.top_k_retrieval,
+            filter_metadata=filter_metadata
+        )
+
+        # Step 2: Hybrid search (merge semantic + BM25)
+        retrieved_chunks = self.hybrid_retriever.merge_results(
+            semantic_results=semantic_results,
+            query=question,
+            top_k=settings.top_k_retrieval
+        )
+
+        if not retrieved_chunks:
+            return {
+                'answer': "I couldn't find relevant information in the FTA compliance guide to answer your question.",
+                'confidence': 'low',
+                'sources': [],
+                'ranked_chunks': []
+            }
+
+        # Step 3: Generate answer with RAG pipeline
+        response = self.rag_pipeline.process_query(
+            question=question,
+            retrieved_chunks=retrieved_chunks
+        )
+
+        return response
