@@ -67,7 +67,7 @@ Rules:
 5. Reference specific compliance requirements, regulations, or review areas mentioned in the sources
 6. Rate your confidence: "high" if sources directly answer the question, "medium" if sources have relevant but incomplete info, "low" if sources barely mention the topic
 
-Format your response as JSON:
+Format your response as valid JSON (do NOT wrap in markdown code blocks):
 {
   "answer": "Your detailed answer with [Source N] citations. Include all relevant information found in the sources.",
   "confidence": "low|medium|high",
@@ -82,7 +82,7 @@ Format your response as JSON:
 
 Question: {question}
 
-Provide your answer in JSON format as specified."""
+Provide your answer as a valid JSON object (raw JSON, no markdown formatting)."""
 
         # Call LLM
         messages = [
@@ -92,13 +92,29 @@ Provide your answer in JSON format as specified."""
 
         response = self.llm.invoke(messages)
 
-        # Parse JSON response
+        # Parse JSON response - handle various formats
+        content = response.content.strip()
+
+        # Remove markdown code blocks if present
+        if content.startswith('```'):
+            # Extract content between ```json and ``` or ``` and ```
+            lines = content.split('\n')
+            content = '\n'.join(lines[1:-1]) if len(lines) > 2 else content
+            content = content.replace('```json', '').replace('```', '').strip()
+
         try:
-            result = json.loads(response.content)
+            result = json.loads(content)
+            # Ensure we have the required fields
+            if 'answer' not in result:
+                result = {
+                    "answer": content,
+                    "confidence": "low",
+                    "reasoning": "Invalid response format"
+                }
         except json.JSONDecodeError:
-            # Fallback if JSON parsing fails
+            # Fallback if JSON parsing fails - just use the content as answer
             result = {
-                "answer": response.content,
+                "answer": content,
                 "confidence": "low",
                 "reasoning": "Failed to parse structured response"
             }
