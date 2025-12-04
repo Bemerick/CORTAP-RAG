@@ -22,15 +22,22 @@ async def query_endpoint(
     Main Q&A endpoint.
 
     Args:
-        request: Query request with question and optional recipient_type
+        request: Query request with question, optional recipient_type, and conversation history
 
     Returns:
         Answer with confidence score and source citations
     """
     try:
+        # Convert Pydantic models to dicts for conversation history
+        conversation_history = [
+            {"role": msg.role, "content": msg.content}
+            for msg in request.conversation_history
+        ] if request.conversation_history else None
+
         response = rag_service.process_query(
             question=request.question,
-            recipient_type=request.recipient_type
+            recipient_type=request.recipient_type,
+            conversation_history=conversation_history
         )
         return response
     except Exception as e:

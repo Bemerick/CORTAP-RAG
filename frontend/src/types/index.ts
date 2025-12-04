@@ -14,9 +14,15 @@ export interface QueryResponse {
   ranked_chunks: SourceCitation[];
 }
 
+export interface ConversationMessage {
+  role: string;
+  content: string;
+}
+
 export interface QueryRequest {
   question: string;
   recipient_type?: string;
+  conversation_history?: ConversationMessage[];
 }
 
 export interface CommonQuestion {

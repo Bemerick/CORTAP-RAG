@@ -39,7 +39,8 @@ class RAGPipeline:
     def generate_answer(
         self,
         question: str,
-        retrieved_chunks: List[Dict[str, any]]
+        retrieved_chunks: List[Dict[str, any]],
+        conversation_history: List[Dict[str, str]] = None
     ) -> Dict[str, any]:
         """
         Generate answer using GPT-4 with retrieved context.
@@ -47,6 +48,7 @@ class RAGPipeline:
         Args:
             question: User's question
             retrieved_chunks: List of retrieved document chunks
+            conversation_history: Previous conversation messages (optional)
 
         Returns:
             Dict with answer, confidence, and formatted sources
@@ -74,7 +76,24 @@ Format your response as valid JSON (do NOT wrap in markdown code blocks):
   "reasoning": "Brief explanation of confidence level"
 }"""
 
-        user_prompt = f"""Context from FTA Compliance Guide:
+        # Build conversation context if provided
+        conversation_context = ""
+        if conversation_history and len(conversation_history) > 0:
+            # Include last 3 exchanges (6 messages max) for context
+            recent_history = conversation_history[-6:]
+            conversation_parts = []
+            for msg in recent_history:
+                role = msg.get('role', 'user')
+                content = msg.get('content', '')
+                conversation_parts.append(f"{role.upper()}: {content}")
+            conversation_context = f"""Previous conversation:
+{chr(10).join(conversation_parts)}
+
+---
+
+"""
+
+        user_prompt = f"""{conversation_context}Context from FTA Compliance Guide:
 
 {context}
 
@@ -141,7 +160,8 @@ Provide your answer as a valid JSON object (raw JSON, no markdown formatting).""
     def process_query(
         self,
         question: str,
-        retrieved_chunks: List[Dict[str, any]]
+        retrieved_chunks: List[Dict[str, any]],
+        conversation_history: List[Dict[str, str]] = None
     ) -> Dict[str, any]:
         """
         Full RAG pipeline: generate answer and format response.
@@ -149,12 +169,13 @@ Provide your answer as a valid JSON object (raw JSON, no markdown formatting).""
         Args:
             question: User's question
             retrieved_chunks: Retrieved document chunks with scores
+            conversation_history: Previous conversation messages (optional)
 
         Returns:
             Formatted response with answer, confidence, and sources
         """
         # Generate answer
-        llm_result = self.generate_answer(question, retrieved_chunks)
+        llm_result = self.generate_answer(question, retrieved_chunks, conversation_history)
 
         # Format sources
         sources = self.format_sources(retrieved_chunks)

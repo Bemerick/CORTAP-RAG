@@ -54,7 +54,13 @@ export const ChatContainer: React.FC = () => {
     };
     setMessages((prev) => [...prev, userMessage]);
 
-    mutation.mutate({ question });
+    // Build conversation history from previous messages
+    const conversation_history = messages.map((m: Message) => ({
+      role: m.type === 'user' ? 'user' : 'assistant',
+      content: m.content
+    }));
+
+    mutation.mutate({ question, conversation_history });
   };
 
   return (

@@ -70,7 +70,8 @@ class RAGService:
     def process_query(
         self,
         question: str,
-        recipient_type: Optional[str] = None
+        recipient_type: Optional[str] = None,
+        conversation_history: Optional[list] = None
     ) -> Dict[str, any]:
         """
         Process a user query through the RAG pipeline.
@@ -78,6 +79,7 @@ class RAGService:
         Args:
             question: User's question
             recipient_type: Optional recipient type for filtering
+            conversation_history: Previous conversation messages (optional)
 
         Returns:
             Query response with answer, confidence, and sources
@@ -112,7 +114,8 @@ class RAGService:
         # Step 3: Generate answer with RAG pipeline
         response = self.rag_pipeline.process_query(
             question=question,
-            retrieved_chunks=retrieved_chunks
+            retrieved_chunks=retrieved_chunks,
+            conversation_history=conversation_history
         )
 
         return response
