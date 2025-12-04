@@ -28,7 +28,7 @@ class RAGPipeline:
         for i, chunk in enumerate(retrieved_chunks, 1):
             category = chunk['metadata'].get('category', 'Unknown')
             chunk_id = chunk['chunk_id']
-            text = chunk['text'][:1000]  # Limit chunk size for context
+            text = chunk['text'][:3000]  # Limit chunk size for context
 
             context_parts.append(
                 f"[Source {i}] Category: {category}, ID: {chunk_id}\n{text}\n"
@@ -57,18 +57,19 @@ class RAGPipeline:
         # Create prompt
         system_prompt = """You are an expert FTA (Federal Transit Administration) compliance assistant.
 
-Your task is to answer questions based ONLY on the provided context from the FTA compliance guide.
+Your task is to answer questions based on the provided context from the FTA compliance guide.
 
 Rules:
-1. Answer based solely on the provided sources - do not use external knowledge
-2. Cite specific sources using [Source N] notation
-3. If the context doesn't contain enough information, say so honestly
-4. Be precise and reference specific compliance requirements
-5. After your answer, rate your confidence as "low", "medium", or "high"
+1. Use ONLY information from the provided sources
+2. Cite specific sources using [Source N] notation in your answer
+3. If sources mention the topic but don't have complete details, provide what information IS available and note what's missing
+4. Be helpful - extract and synthesize relevant information from the sources even if it's partial
+5. Reference specific compliance requirements, regulations, or review areas mentioned in the sources
+6. Rate your confidence: "high" if sources directly answer the question, "medium" if sources have relevant but incomplete info, "low" if sources barely mention the topic
 
 Format your response as JSON:
 {
-  "answer": "Your detailed answer with [Source N] citations",
+  "answer": "Your detailed answer with [Source N] citations. Include all relevant information found in the sources.",
   "confidence": "low|medium|high",
   "reasoning": "Brief explanation of confidence level"
 }"""
