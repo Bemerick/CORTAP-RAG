@@ -23,19 +23,24 @@ export const MessageBubble: React.FC<MessageBubbleProps> = ({ message }) => {
   const isUser = message.type === 'user';
 
   return (
-    <div className={`flex ${isUser ? 'justify-end' : 'justify-start'} mb-4`}>
-      <div className={`max-w-3xl ${isUser ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-900'} rounded-lg px-4 py-3 shadow`}>
+    <div className={`flex ${isUser ? 'justify-end' : 'justify-start'} mb-6`}>
+      <div className={`max-w-3xl w-full ${isUser ? 'bg-blue-600 text-white rounded-lg px-4 py-3 shadow' : ''}`}>
         {isUser ? (
           <p className="whitespace-pre-wrap">{message.content}</p>
         ) : (
-          <div>
+          <div className="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+            {/* Confidence Badge Header */}
             {message.response && (
-              <div className="mb-2">
+              <div className="bg-gradient-to-r from-gray-50 to-gray-100 px-4 py-3 border-b border-gray-200">
                 <ConfidenceBadge confidence={message.response.confidence} />
               </div>
             )}
-            <div className="prose prose-sm max-w-none">
-              <ReactMarkdown>{message.content}</ReactMarkdown>
+
+            {/* Answer Content */}
+            <div className="px-4 py-4">
+              <div className="prose prose-sm max-w-none text-gray-800 leading-relaxed">
+                <ReactMarkdown>{message.content}</ReactMarkdown>
+              </div>
             </div>
           </div>
         )}
