@@ -24,7 +24,6 @@ services:
   - type: web
     name: cortap-rag-frontend
     env: static
-    region: oregon
     buildCommand: npm install && npm run build
     staticPublishPath: ./dist
     rootDir: frontend
