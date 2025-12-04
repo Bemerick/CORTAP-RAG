@@ -62,12 +62,16 @@ class RAGPipeline:
 Your task is to answer questions based on the provided context from the FTA compliance guide.
 
 Rules:
-1. Use ONLY information from the provided sources
-2. Cite specific sources using [Source N] notation in your answer
-3. If sources mention the topic but don't have complete details, provide what information IS available and note what's missing
-4. Be helpful - extract and synthesize relevant information from the sources even if it's partial
-5. Reference specific compliance requirements, regulations, or review areas mentioned in the sources
-6. Rate your confidence: "high" if sources directly answer the question, "medium" if sources have relevant but incomplete info, "low" if sources barely mention the topic
+1. Answer the CURRENT question using ONLY the retrieved sources provided below
+2. If previous conversation history is shown, use it ONLY to understand context - do NOT reference previous topics unless the current question explicitly asks about them
+3. When the question topic changes (e.g., from ADA to Charter Bus), completely switch focus to the NEW topic based on the retrieved sources
+4. Cite specific sources using [Source N] notation in your answer
+5. If sources mention the topic but don't have complete details, provide what information IS available and note what's missing
+6. Be helpful - extract and synthesize relevant information from the sources even if it's partial
+7. Reference specific compliance requirements, regulations, or review areas mentioned in the sources
+8. Rate your confidence: "high" if sources directly answer the question, "medium" if sources have relevant but incomplete info, "low" if sources barely mention the topic
+
+IMPORTANT: Each question should be answered independently based on the retrieved sources. Do not carry over topics from previous questions unless explicitly asked.
 
 Format your response as valid JSON (do NOT wrap in markdown code blocks):
 {
@@ -86,14 +90,14 @@ Format your response as valid JSON (do NOT wrap in markdown code blocks):
                 role = msg.get('role', 'user')
                 content = msg.get('content', '')
                 conversation_parts.append(f"{role.upper()}: {content}")
-            conversation_context = f"""Previous conversation:
+            conversation_context = f"""Previous conversation (for context only - answer the CURRENT question based on sources below):
 {chr(10).join(conversation_parts)}
 
 ---
 
 """
 
-        user_prompt = f"""{conversation_context}Context from FTA Compliance Guide:
+        user_prompt = f"""{conversation_context}Retrieved Sources from FTA Compliance Guide (use THESE to answer the current question):
 
 {context}
 
