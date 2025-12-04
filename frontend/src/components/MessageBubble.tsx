@@ -19,6 +19,25 @@ const ConfidenceBadge: React.FC<{ confidence: 'low' | 'medium' | 'high' }> = ({ 
   );
 };
 
+const SourceBadge: React.FC<{ number: number }> = ({ number }) => {
+  return (
+    <span className="inline-flex items-center justify-center w-5 h-5 text-xs font-bold text-white bg-orange-500 rounded-full ml-1">
+      {number}
+    </span>
+  );
+};
+
+const formatAnswerWithSourceBadges = (text: string) => {
+  // Replace [Source N] with styled badges
+  return text.split(/(\[Source \d+\])/g).map((part, index) => {
+    const match = part.match(/\[Source (\d+)\]/);
+    if (match) {
+      return <SourceBadge key={index} number={parseInt(match[1])} />;
+    }
+    return <span key={index}>{part}</span>;
+  });
+};
+
 export const MessageBubble: React.FC<MessageBubbleProps> = ({ message }) => {
   const isUser = message.type === 'user';
 
@@ -31,15 +50,16 @@ export const MessageBubble: React.FC<MessageBubbleProps> = ({ message }) => {
           <div className="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
             {/* Confidence Badge Header */}
             {message.response && (
-              <div className="bg-gradient-to-r from-gray-50 to-gray-100 px-4 py-3 border-b border-gray-200">
+              <div className="bg-gradient-to-r from-gray-50 to-gray-100 px-4 py-3 border-b border-gray-200 flex items-center gap-2">
+                <span className="text-xs font-medium text-gray-600 uppercase tracking-wide">Confidence:</span>
                 <ConfidenceBadge confidence={message.response.confidence} />
               </div>
             )}
 
             {/* Answer Content */}
-            <div className="px-4 py-4">
-              <div className="prose prose-sm max-w-none text-gray-800 leading-relaxed">
-                <ReactMarkdown>{message.content}</ReactMarkdown>
+            <div className="px-6 py-5">
+              <div className="text-gray-800 leading-relaxed text-base">
+                {formatAnswerWithSourceBadges(message.content)}
               </div>
             </div>
           </div>

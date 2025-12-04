@@ -12,10 +12,23 @@ export const ChatContainer: React.FC = () => {
   const mutation = useMutation({
     mutationFn: queryAPI.askQuestion,
     onSuccess: (data) => {
+      // Clean the answer - remove JSON formatting if present
+      let cleanAnswer = data.answer;
+
+      // If answer looks like JSON, try to parse it
+      if (cleanAnswer.trim().startsWith('{')) {
+        try {
+          const parsed = JSON.parse(cleanAnswer);
+          cleanAnswer = parsed.answer || cleanAnswer;
+        } catch (e) {
+          // Not valid JSON, use as-is
+        }
+      }
+
       const assistantMessage: Message = {
         id: Date.now().toString() + '-assistant',
         type: 'assistant',
-        content: data.answer,
+        content: cleanAnswer,
         response: data,
         timestamp: new Date(),
       };
