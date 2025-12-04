@@ -16,10 +16,16 @@ app = FastAPI(
 # Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Configure properly for production
-    allow_credentials=True,
-    allow_methods=["*"],
+    allow_origins=[
+        "http://localhost:3000",
+        "http://localhost:8000",
+        "https://cortap-rag-frontend.onrender.com",
+        "*"
+    ],
+    allow_credentials=False,  # Set to False when using wildcard origin
+    allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["*"],
+    expose_headers=["*"],
 )
 
 # Include API routes
