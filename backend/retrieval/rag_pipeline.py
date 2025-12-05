@@ -175,15 +175,22 @@ Provide your answer as a valid JSON object (raw JSON, no markdown formatting).""
                     answer_stripped.startswith('{"1"')
                 )
 
+                print(f"[DEBUG] Answer is string, checking for JSON pattern")
+                print(f"[DEBUG] First 100 chars: {answer_stripped[:100]}")
+                print(f"[DEBUG] Has JSON pattern: {has_json_pattern}")
+
                 if has_json_pattern:
                     try:
                         # Try to parse the answer as JSON
                         answer_data = json.loads(answer_stripped)
+                        print(f"[DEBUG] Successfully parsed JSON")
+                        print(f"[DEBUG] Keys: {list(answer_data.keys())}")
 
                         # Check if it's a dict with numbered keys (indicators)
                         if isinstance(answer_data, dict):
                             # Check for numbered indicators pattern
                             numeric_keys = [k for k in answer_data.keys() if k.isdigit()]
+                            print(f"[DEBUG] Numeric keys found: {numeric_keys}")
                             if numeric_keys:
                                 # Format as numbered list with count
                                 total = len(numeric_keys)
@@ -191,11 +198,13 @@ Provide your answer as a valid JSON object (raw JSON, no markdown formatting).""
                                 for key in sorted(numeric_keys, key=int):
                                     formatted += f"{key}. {answer_data[key]}\n\n"
                                 result['answer'] = formatted.strip()
+                                print(f"[DEBUG] Formatted answer created")
                             else:
                                 # Generic formatting for other dicts
                                 result['answer'] = json.dumps(answer_data, indent=2)
-                    except (json.JSONDecodeError, ValueError):
+                    except (json.JSONDecodeError, ValueError) as e:
                         # Not valid JSON, leave as-is
+                        print(f"[DEBUG] JSON parse error: {e}")
                         pass
         except json.JSONDecodeError:
             # Fallback if JSON parsing fails - just use the content as answer
