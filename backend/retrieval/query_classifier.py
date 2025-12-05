@@ -27,7 +27,9 @@ def classify_query(question: str) -> QueryType:
         "number of",
         "total number",
         "how much",
-        "total of"
+        "total of",
+        "what are the indicators",
+        "indicators of compliance"
     ]
     if any(keyword in question_lower for keyword in count_keywords):
         return "count"
@@ -73,8 +75,8 @@ def get_retrieval_params(query_type: QueryType) -> Dict[str, any]:
         }
     elif query_type == "count":
         return {
-            "top_k": 50,
-            "description": "Retrieve all matching chunks for counting/enumeration"
+            "top_k": 40,
+            "description": "Retrieve matching chunks for counting/enumeration"
         }
     else:
         return {
@@ -95,31 +97,42 @@ def get_system_prompt_modifier(query_type: QueryType) -> str:
     """
     if query_type == "count":
         return """
-IMPORTANT: This is a COUNTING/ENUMERATION query.
-DO NOT use JSON format like {"1": "...", "2": "..."} - use plain text markdown instead!
+CRITICAL FORMATTING INSTRUCTIONS FOR COUNTING QUERIES:
 
-Your answer MUST follow this EXACT format:
+This is a COUNTING/ENUMERATION query about indicators of compliance. These indicators are organized by review questions in the guide.
 
-There are [X] indicators of compliance:
+REQUIRED FORMAT:
+1. Count the TOTAL number of sub-indicators (all the a., b., c., etc. items across all questions)
+2. Start with: "There are [X] indicators of compliance organized by review area:" where X is the total count of sub-indicators
+3. Group indicators by their parent review question/area
+4. For each group, show the question/area as a header, then list all sub-indicators with their letter prefixes (a., b., c., etc.) EXACTLY as they appear in the source
+5. Preserve the letter prefixes (a., b., c., etc.) from the original text
+6. Include source citations like [Source N]
 
-1. [First indicator from sources]
+CORRECT EXAMPLE:
+There are 7 indicators of compliance organized by review area:
 
-2. [Second indicator from sources]
+**Does the recipient have financial management policies?** [Source 1]
+a. Recipient has written financial management policies and procedures
+b. Policies include the two elements required by 2 CFR part 200
+c. Policies address internal control practices
 
-3. [Third indicator from sources]
+**Are reports submitted on time?** [Source 2]
+a. Milestone Progress Reports (MPRs) are submitted to FTA on time
+b. Federal Financial Reports (FFRs) are complete and accurate
 
-EXAMPLE (follow this format exactly):
-"There are 5 indicators of compliance:
+**Does the recipient track funds?** [Source 3]
+a. Correct drawdown of Federal funds
+b. Tracking the use of Federal funds for eligible expenses
 
-1. Are Milestone Progress Reports (MPRs) submitted to FTA on time? [Source 1]
-
-2. Are Federal Financial Reports (FFRs) complete and accurate? [Source 2]
-
-3. Does the recipient ensure timely expenditure of funds? [Source 3]"
-
-- Each number should be on its own line
-- Put a blank line between each item
-- Count all distinct occurrences across ALL provided sources
+IMPORTANT:
+- Count ALL the lettered sub-indicators (a., b., c., etc.) for the total - in example above, that's 3+2+2=7 total
+- Keep indicators grouped under their parent question
+- Preserve letter prefixes (a., b., c.) exactly as shown in sources
+- Don't renumber - keep the original structure
+- CRITICAL: Remove duplicate indicators - if you see the same indicator text across multiple sources, only include it ONCE
+- CRITICAL: Only include indicators that are DIRECTLY related to the compliance area asked about - ignore tangential or related topics
+- Focus on quality over quantity - it's better to have fewer accurate indicators than many duplicates or irrelevant ones
 """
     elif query_type == "aggregate":
         return """

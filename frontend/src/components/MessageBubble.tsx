@@ -125,7 +125,7 @@ export const MessageBubble: React.FC<MessageBubbleProps> = ({ message }) => {
 
             {/* Answer Content */}
             <div className="px-6 py-5">
-              <div className="text-gray-800 leading-relaxed text-base">
+              <div className="text-gray-800 leading-relaxed text-base whitespace-pre-wrap">
                 {formatAnswerWithSourceBadges(message.content)}
               </div>
             </div>
