@@ -97,9 +97,11 @@ def get_system_prompt_modifier(query_type: QueryType) -> str:
         return """
 IMPORTANT: This is a COUNTING/ENUMERATION query.
 - Count all distinct occurrences across ALL provided sources
-- List each distinct item you find
-- Provide the total count
+- List each distinct item you find as a NUMBERED LIST (each item on its own line)
+- Provide the total count at the beginning
+- Format your answer as: "There are [X] indicators of compliance:\n\n1. [First indicator]\n\n2. [Second indicator]\n\n3. [Third indicator]..."
 - Be thorough and check every source for matches
+- Each numbered item should be on a new line with double line breaks between them
 """
     elif query_type == "aggregate":
         return """
