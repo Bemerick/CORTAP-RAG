@@ -58,10 +58,12 @@ CHROMA_DB_PATH=./chroma_db
 ENVIRONMENT=development
 ```
 
-5. Run ingestion to process PDFs:
+5. Run ingestion to process the full FTA guide:
 ```bash
-python ingest.py
+python ingest_full_guide.py
 ```
+
+Note: This processes the entire 767-page FTA manual and creates 1,442 intelligent chunks. Takes ~15 minutes.
 
 6. Start the backend server:
 ```bash
