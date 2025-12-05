@@ -27,6 +27,9 @@ A production-ready RAG (Retrieval-Augmented Generation) Q&A system for FTA compl
 ✅ **1,442 intelligent chunks** covering all 23 FTA compliance sections
 ✅ **Hybrid retrieval** - semantic + keyword matching
 ✅ **Hybrid query approach** - supports both local (specific) and global (counting/aggregation) queries
+✅ **Query type classification** - automatic detection of count/aggregate/specific queries
+✅ **Compliance area dropdown** - Quick access to all 23 compliance areas
+✅ **Structured indicator lists** - Preserves review area groupings and letter prefixes (a., b., c.)
 ✅ **GPT-4 answer generation** with source citations
 ✅ **Confidence scoring** with percentage display (45%/75%/92%)
 ✅ **Inline source badges** (orange numbered citations)
@@ -37,6 +40,7 @@ A production-ready RAG (Retrieval-Augmented Generation) Q&A system for FTA compl
 ✅ **Conversation history** - maintains context across questions
 ✅ **Complete coverage** - Charter Bus, School Bus, and all compliance categories
 ✅ **Deployed to Render.com** (backend + frontend)
+✅ **Local development script** - `start-dev.sh` for easy testing
 
 ---
 
@@ -129,6 +133,17 @@ A production-ready RAG (Retrieval-Augmented Generation) Q&A system for FTA compl
 **Solution**:
 - Increased context window from 1000 to 3000 characters per chunk
 - Improved system prompt to be more helpful and extract partial information
+
+### 10. Indicator Count Query Formatting
+**Problem**: "What are the indicators of compliance" queries returned unformatted JSON or paragraph text
+**Solution**:
+- Added query classification system (count/aggregate/specific)
+- Created specialized prompts for count queries with formatting instructions
+- Preserved review area groupings and letter prefixes (a., b., c.) from source
+- Added `whitespace-pre-wrap` CSS to display line breaks properly
+- Tuned retrieval from 50→40 chunks to balance coverage vs accuracy
+- Added de-duplication instructions to reduce repeated indicators
+- Results now display as structured vertical lists organized by review area
 
 ### 7. Poor UI/UX
 **Problem**: Raw JSON and [Source N] text displayed to users
@@ -233,19 +248,32 @@ The system is:
 ### For Developers
 
 #### Local Development
+
+**Quick Start** (recommended):
+```bash
+./start-dev.sh  # Starts both backend and frontend automatically
+```
+
+**Manual Start**:
 ```bash
 # Backend
 cd backend
 pip install -r requirements.txt
 cp .env.example .env  # Add OPENAI_API_KEY
 python3 ingest.py     # One-time ingestion
-python3 main.py       # Start server on :8000
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
 
 # Frontend (new terminal)
 cd frontend
 npm install
 npm run dev           # Start server on :3000
 ```
+
+Access:
+- Frontend: http://localhost:3000
+- Backend API: http://localhost:8000
+- API Docs: http://localhost:8000/docs
+- Logs: `tail -f /tmp/cortap-backend.log` or `tail -f /tmp/cortap-frontend.log`
 
 #### Deployment
 Push to GitHub → Render auto-deploys via `render.yaml`
@@ -534,7 +562,7 @@ MIT License - See repository for details
 ---
 
 **Status**: ✅ Production Ready
-**Last Updated**: December 4, 2025
-**Version**: 1.0.0
+**Last Updated**: December 5, 2025
+**Version**: 1.1.0
 
 🚀 **The system is fully operational and ready for use!**
