@@ -61,6 +61,26 @@ class RAGPipeline:
         # Build context
         context = self.build_context(retrieved_chunks)
 
+        # For count queries, modify the JSON format instruction
+        if query_type == "count":
+            json_format_instruction = """
+Format your response as valid JSON with the answer field containing PLAIN TEXT ONLY (do NOT wrap in markdown code blocks):
+{
+  "answer": "There are [X] indicators of compliance:\\n\\n1. First indicator [Source N]\\n\\n2. Second indicator [Source N]\\n\\n3. Third indicator [Source N]",
+  "confidence": "low|medium|high",
+  "reasoning": "Brief explanation of confidence level"
+}
+
+CRITICAL: The "answer" field must be a plain text string with \\n for newlines, NOT a JSON object or array!"""
+        else:
+            json_format_instruction = """
+Format your response as valid JSON (do NOT wrap in markdown code blocks):
+{
+  "answer": "Your detailed answer with [Source N] citations.",
+  "confidence": "low|medium|high",
+  "reasoning": "Brief explanation of confidence level"
+}"""
+
         # Create prompt
         system_prompt = f"""You are an expert FTA (Federal Transit Administration) compliance assistant.
 
@@ -70,7 +90,7 @@ Rules:
 1. Answer the CURRENT question using ONLY the retrieved sources provided below
 2. If previous conversation history is shown, use it ONLY to understand context - do NOT reference previous topics unless the current question explicitly asks about them
 3. When the question topic changes (e.g., from ADA to Charter Bus), completely switch focus to the NEW topic based on the retrieved sources
-4. Cite specific sources using [Source N] notation in your answer
+4. Cite specific sources using [Source N] citations in your answer
 5. If sources mention the topic but don't have complete details, provide what information IS available and note what's missing
 6. Be helpful - extract and synthesize relevant information from the sources even if it's partial
 7. Reference specific compliance requirements, regulations, or review areas mentioned in the sources
@@ -80,12 +100,7 @@ IMPORTANT: Each question should be answered independently based on the retrieved
 
 {query_modifier}
 
-Format your response as valid JSON (do NOT wrap in markdown code blocks):
-{{
-  "answer": "Your detailed answer with [Source N] citations. For counting/enumeration queries, format as a numbered list with each item on its own line using markdown format.",
-  "confidence": "low|medium|high",
-  "reasoning": "Brief explanation of confidence level"
-}}"""
+{json_format_instruction}"""
 
         # Build conversation context if provided
         conversation_context = ""
