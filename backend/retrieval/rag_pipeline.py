@@ -152,7 +152,7 @@ Provide your answer as a valid JSON object (raw JSON, no markdown formatting).""
                         details = answer_data.get('details', answer_data.get('indicators', []))
 
                         # Format as a readable string
-                        formatted = f"**Total: {total} indicators of compliance for Charter Bus**\n\n"
+                        formatted = f"**Total: {total} indicators found**\n\n"
                         for item in details:
                             source_num = item.get('source', '?')
                             indicator = item.get('indicator', item.get('description', ''))
