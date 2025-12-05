@@ -3,6 +3,7 @@ import { useMutation } from '@tanstack/react-query';
 import { MessageList } from './MessageList';
 import { InputBar } from './InputBar';
 import { SuggestedQuestions } from './SuggestedQuestions';
+import { ComplianceAreaSelector } from './ComplianceAreaSelector';
 import { queryAPI } from '../services/api';
 import type { Message } from '../types';
 
@@ -70,6 +71,9 @@ export const ChatContainer: React.FC = () => {
         <h1 className="text-xl font-bold">CORTAP-RAG: FTA Compliance Assistant</h1>
         <p className="text-sm text-blue-100">Ask questions about FTA compliance requirements</p>
       </div>
+
+      {/* Compliance Area Selector */}
+      <ComplianceAreaSelector onSubmit={handleSendMessage} />
 
       {/* Suggested Questions */}
       {messages.length === 0 && (
