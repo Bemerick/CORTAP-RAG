@@ -26,9 +26,12 @@ A production-ready RAG (Retrieval-Augmented Generation) Q&A system for FTA compl
 
 ✅ **1,442 intelligent chunks** covering all 23 FTA compliance sections
 ✅ **Hybrid retrieval** - semantic + keyword matching
+✅ **Hybrid query approach** - supports both local (specific) and global (counting/aggregation) queries
 ✅ **GPT-4 answer generation** with source citations
-✅ **Confidence scoring** (low/medium/high)
+✅ **Confidence scoring** with percentage display (45%/75%/92%)
 ✅ **Inline source badges** (orange numbered citations)
+✅ **Source page numbers** extracted from chunks
+✅ **Info popup** explaining confidence vs retrieval scores
 ✅ **Common questions** suggestions
 ✅ **Responsive chat UI** with professional card design
 ✅ **Conversation history** - maintains context across questions
