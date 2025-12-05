@@ -96,21 +96,30 @@ def get_system_prompt_modifier(query_type: QueryType) -> str:
     if query_type == "count":
         return """
 IMPORTANT: This is a COUNTING/ENUMERATION query.
+DO NOT use JSON format like {"1": "...", "2": "..."} - use plain text markdown instead!
+
+Your answer MUST follow this EXACT format:
+
+There are [X] indicators of compliance:
+
+1. [First indicator from sources]
+
+2. [Second indicator from sources]
+
+3. [Third indicator from sources]
+
+EXAMPLE (follow this format exactly):
+"There are 5 indicators of compliance:
+
+1. Are Milestone Progress Reports (MPRs) submitted to FTA on time? [Source 1]
+
+2. Are Federal Financial Reports (FFRs) complete and accurate? [Source 2]
+
+3. Does the recipient ensure timely expenditure of funds? [Source 3]"
+
+- Each number should be on its own line
+- Put a blank line between each item
 - Count all distinct occurrences across ALL provided sources
-- FORMAT YOUR ANSWER AS A MARKDOWN NUMBERED LIST
-- Start with: "There are [X] indicators of compliance:"
-- Then list each item as: "1. [First indicator]" followed by a blank line
-- Example format:
-  "There are 8 indicators of compliance:
-
-  1. First indicator description [Source 1]
-
-  2. Second indicator description [Source 2]
-
-  3. Third indicator description [Source 3]"
-- Use proper markdown numbered list syntax (number, period, space, text)
-- Include blank lines between each numbered item for readability
-- Be thorough and check every source for matches
 """
     elif query_type == "aggregate":
         return """
