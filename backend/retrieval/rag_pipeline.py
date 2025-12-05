@@ -206,19 +206,33 @@ Provide your answer as a valid JSON object (raw JSON, no markdown formatting).""
                         if isinstance(answer_data, dict):
                             print(f"[DEBUG] Keys: {list(answer_data.keys())}")
 
-                            # Check if there's an "Indicators of Compliance" key with list value
-                            if "Indicators of Compliance" in answer_data:
-                                indicators = answer_data["Indicators of Compliance"]
+                            # Check for various "Indicators of Compliance" key variations
+                            indicators_key = None
+                            for key in ["Indicators of Compliance", "indicators_of_compliance", "indicators"]:
+                                if key in answer_data:
+                                    indicators_key = key
+                                    break
+
+                            if indicators_key:
+                                indicators = answer_data[indicators_key]
                                 if isinstance(indicators, list):
                                     formatted = f"There are {len(indicators)} indicators of compliance:\n\n"
                                     for idx, item in enumerate(indicators, 1):
+                                        # Handle dict items with "indicator" key
+                                        if isinstance(item, dict) and "indicator" in item:
+                                            indicator_text = item["indicator"]
+                                        elif isinstance(item, str):
+                                            indicator_text = item
+                                        else:
+                                            indicator_text = str(item)
+
                                         # Remove letter bullets (a., b., c., etc.) from the beginning
-                                        cleaned_item = item.strip()
+                                        cleaned_item = indicator_text.strip()
                                         if len(cleaned_item) > 2 and cleaned_item[0].isalpha() and cleaned_item[1] == '.':
                                             cleaned_item = cleaned_item[2:].strip()
                                         formatted += f"{idx}. {cleaned_item}\n\n"
                                     result['answer'] = formatted.strip()
-                                    print(f"[DEBUG] Formatted Indicators of Compliance list")
+                                    print(f"[DEBUG] Formatted {indicators_key} list with {len(indicators)} items")
                                 else:
                                     result['answer'] = json.dumps(answer_data, indent=2)
                             else:
