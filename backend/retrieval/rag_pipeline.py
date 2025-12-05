@@ -190,20 +190,37 @@ Provide your answer as a valid JSON object (raw JSON, no markdown formatting).""
                         # Handle dict with numbered keys (indicators)
                         if isinstance(answer_data, dict):
                             print(f"[DEBUG] Keys: {list(answer_data.keys())}")
-                            # Check for numbered indicators pattern
-                            numeric_keys = [k for k in answer_data.keys() if k.isdigit()]
-                            print(f"[DEBUG] Numeric keys found: {numeric_keys}")
-                            if numeric_keys:
-                                # Format as numbered list with count
-                                total = len(numeric_keys)
-                                formatted = f"There are {total} indicators of compliance:\n\n"
-                                for key in sorted(numeric_keys, key=int):
-                                    formatted += f"{key}. {answer_data[key]}\n\n"
-                                result['answer'] = formatted.strip()
-                                print(f"[DEBUG] Formatted answer created")
+
+                            # Check if there's an "Indicators of Compliance" key with list value
+                            if "Indicators of Compliance" in answer_data:
+                                indicators = answer_data["Indicators of Compliance"]
+                                if isinstance(indicators, list):
+                                    formatted = f"There are {len(indicators)} indicators of compliance:\n\n"
+                                    for idx, item in enumerate(indicators, 1):
+                                        # Remove letter bullets (a., b., c., etc.) from the beginning
+                                        cleaned_item = item.strip()
+                                        if len(cleaned_item) > 2 and cleaned_item[0].isalpha() and cleaned_item[1] == '.':
+                                            cleaned_item = cleaned_item[2:].strip()
+                                        formatted += f"{idx}. {cleaned_item}\n\n"
+                                    result['answer'] = formatted.strip()
+                                    print(f"[DEBUG] Formatted Indicators of Compliance list")
+                                else:
+                                    result['answer'] = json.dumps(answer_data, indent=2)
                             else:
-                                # Generic formatting for other dicts
-                                result['answer'] = json.dumps(answer_data, indent=2)
+                                # Check for numbered indicators pattern
+                                numeric_keys = [k for k in answer_data.keys() if k.isdigit()]
+                                print(f"[DEBUG] Numeric keys found: {numeric_keys}")
+                                if numeric_keys:
+                                    # Format as numbered list with count
+                                    total = len(numeric_keys)
+                                    formatted = f"There are {total} indicators of compliance:\n\n"
+                                    for key in sorted(numeric_keys, key=int):
+                                        formatted += f"{key}. {answer_data[key]}\n\n"
+                                    result['answer'] = formatted.strip()
+                                    print(f"[DEBUG] Formatted answer created")
+                                else:
+                                    # Generic formatting for other dicts
+                                    result['answer'] = json.dumps(answer_data, indent=2)
 
                         # Handle array/list format
                         elif isinstance(answer_data, list):
