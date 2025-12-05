@@ -165,25 +165,30 @@ Provide your answer as a valid JSON object (raw JSON, no markdown formatting).""
                     # Fallback for other non-string types
                     result['answer'] = str(answer_data)
             # Check if answer string contains JSON-like structure that needs formatting
-            elif isinstance(result['answer'], str) and result['answer'].strip().startswith('{'):
-                try:
-                    # Try to parse the answer as JSON
-                    answer_data = json.loads(result['answer'])
+            elif isinstance(result['answer'], str):
+                answer_stripped = result['answer'].strip()
+                # Check if it starts with { or contains JSON patterns
+                if answer_stripped.startswith('{') or ('"1":' in answer_stripped and '"2":' in answer_stripped):
+                    try:
+                        # Try to parse the answer as JSON
+                        answer_data = json.loads(answer_stripped)
 
-                    # Check if it contains indicators of compliance format
-                    if 'Indicators of Compliance include' in result['answer'] or isinstance(answer_data, dict):
-                        # Check for numbered indicators pattern
-                        if any(key.isdigit() for key in (answer_data.keys() if isinstance(answer_data, dict) else [])):
-                            formatted = "**Indicators of Compliance:**\n\n"
-                            for key in sorted(answer_data.keys(), key=lambda x: int(x) if x.isdigit() else 999):
-                                formatted += f"{key}. {answer_data[key]}\n\n"
-                            result['answer'] = formatted.strip()
-                        else:
-                            # Generic formatting
-                            result['answer'] = json.dumps(answer_data, indent=2)
-                except (json.JSONDecodeError, ValueError):
-                    # Not valid JSON, leave as-is
-                    pass
+                        # Check if it's a dict with numbered keys (indicators)
+                        if isinstance(answer_data, dict):
+                            # Check for numbered indicators pattern
+                            numeric_keys = [k for k in answer_data.keys() if k.isdigit()]
+                            if numeric_keys:
+                                # Format as numbered list
+                                formatted = "**Indicators of Compliance:**\n\n"
+                                for key in sorted(numeric_keys, key=int):
+                                    formatted += f"{key}. {answer_data[key]}\n\n"
+                                result['answer'] = formatted.strip()
+                            else:
+                                # Generic formatting for other dicts
+                                result['answer'] = json.dumps(answer_data, indent=2)
+                    except (json.JSONDecodeError, ValueError):
+                        # Not valid JSON, leave as-is
+                        pass
         except json.JSONDecodeError:
             # Fallback if JSON parsing fails - just use the content as answer
             result = {
