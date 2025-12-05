@@ -141,6 +141,10 @@ Provide your answer as a valid JSON object (raw JSON, no markdown formatting).""
                     "confidence": "low",
                     "reasoning": "Invalid response format"
                 }
+            # Ensure answer is a string (handle cases where LLM returns structured data)
+            elif not isinstance(result['answer'], str):
+                # Convert non-string answers to formatted string
+                result['answer'] = json.dumps(result['answer'], indent=2)
         except json.JSONDecodeError:
             # Fallback if JSON parsing fails - just use the content as answer
             result = {
