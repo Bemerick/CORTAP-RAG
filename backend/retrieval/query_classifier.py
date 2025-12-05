@@ -97,11 +97,20 @@ def get_system_prompt_modifier(query_type: QueryType) -> str:
         return """
 IMPORTANT: This is a COUNTING/ENUMERATION query.
 - Count all distinct occurrences across ALL provided sources
-- List each distinct item you find as a NUMBERED LIST (each item on its own line)
-- Provide the total count at the beginning
-- Format your answer as: "There are [X] indicators of compliance:\n\n1. [First indicator]\n\n2. [Second indicator]\n\n3. [Third indicator]..."
+- FORMAT YOUR ANSWER AS A MARKDOWN NUMBERED LIST
+- Start with: "There are [X] indicators of compliance:"
+- Then list each item as: "1. [First indicator]" followed by a blank line
+- Example format:
+  "There are 8 indicators of compliance:
+
+  1. First indicator description [Source 1]
+
+  2. Second indicator description [Source 2]
+
+  3. Third indicator description [Source 3]"
+- Use proper markdown numbered list syntax (number, period, space, text)
+- Include blank lines between each numbered item for readability
 - Be thorough and check every source for matches
-- Each numbered item should be on a new line with double line breaks between them
 """
     elif query_type == "aggregate":
         return """

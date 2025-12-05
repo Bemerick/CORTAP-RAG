@@ -82,7 +82,7 @@ IMPORTANT: Each question should be answered independently based on the retrieved
 
 Format your response as valid JSON (do NOT wrap in markdown code blocks):
 {{
-  "answer": "Your detailed answer with [Source N] citations. Include all relevant information found in the sources.",
+  "answer": "Your detailed answer with [Source N] citations. For counting/enumeration queries, format as a numbered list with each item on its own line using markdown format.",
   "confidence": "low|medium|high",
   "reasoning": "Brief explanation of confidence level"
 }}"""
