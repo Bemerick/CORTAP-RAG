@@ -143,8 +143,27 @@ Provide your answer as a valid JSON object (raw JSON, no markdown formatting).""
                 }
             # Ensure answer is a string (handle cases where LLM returns structured data)
             elif not isinstance(result['answer'], str):
-                # Convert non-string answers to formatted string
-                result['answer'] = json.dumps(result['answer'], indent=2)
+                # Format structured count/list responses nicely
+                answer_data = result['answer']
+                if isinstance(answer_data, dict):
+                    # Check if it's a count response
+                    if 'total_indicators' in answer_data or 'total_indicators_of_compliance' in answer_data:
+                        total = answer_data.get('total_indicators') or answer_data.get('total_indicators_of_compliance', 0)
+                        details = answer_data.get('details', answer_data.get('indicators', []))
+
+                        # Format as a readable string
+                        formatted = f"**Total: {total} indicators of compliance for Charter Bus**\n\n"
+                        for item in details:
+                            source_num = item.get('source', '?')
+                            indicator = item.get('indicator', item.get('description', ''))
+                            formatted += f"[Source {source_num}] {indicator}\n\n"
+                        result['answer'] = formatted.strip()
+                    else:
+                        # Generic dict formatting
+                        result['answer'] = json.dumps(answer_data, indent=2)
+                else:
+                    # Fallback for other non-string types
+                    result['answer'] = str(answer_data)
         except json.JSONDecodeError:
             # Fallback if JSON parsing fails - just use the content as answer
             result = {
