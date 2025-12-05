@@ -167,8 +167,15 @@ Provide your answer as a valid JSON object (raw JSON, no markdown formatting).""
             # Check if answer string contains JSON-like structure that needs formatting
             elif isinstance(result['answer'], str):
                 answer_stripped = result['answer'].strip()
-                # Check if it starts with { or contains JSON patterns
-                if answer_stripped.startswith('{') or ('"1":' in answer_stripped and '"2":' in answer_stripped):
+                # Check if it starts with { or contains JSON patterns (various spacing)
+                has_json_pattern = (
+                    answer_stripped.startswith('{') or
+                    '"1"' in answer_stripped or
+                    '{ "1"' in answer_stripped or
+                    answer_stripped.startswith('{"1"')
+                )
+
+                if has_json_pattern:
                     try:
                         # Try to parse the answer as JSON
                         answer_data = json.loads(answer_stripped)
@@ -178,8 +185,9 @@ Provide your answer as a valid JSON object (raw JSON, no markdown formatting).""
                             # Check for numbered indicators pattern
                             numeric_keys = [k for k in answer_data.keys() if k.isdigit()]
                             if numeric_keys:
-                                # Format as numbered list
-                                formatted = "**Indicators of Compliance:**\n\n"
+                                # Format as numbered list with count
+                                total = len(numeric_keys)
+                                formatted = f"There are {total} indicators of compliance:\n\n"
                                 for key in sorted(numeric_keys, key=int):
                                     formatted += f"{key}. {answer_data[key]}\n\n"
                                 result['answer'] = formatted.strip()
