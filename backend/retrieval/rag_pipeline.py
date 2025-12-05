@@ -167,9 +167,10 @@ Provide your answer as a valid JSON object (raw JSON, no markdown formatting).""
             # Check if answer string contains JSON-like structure that needs formatting
             elif isinstance(result['answer'], str):
                 answer_stripped = result['answer'].strip()
-                # Check if it starts with { or contains JSON patterns (various spacing)
+                # Check if it starts with { or [ or contains JSON patterns (various spacing)
                 has_json_pattern = (
                     answer_stripped.startswith('{') or
+                    answer_stripped.startswith('[') or
                     '"1"' in answer_stripped or
                     '{ "1"' in answer_stripped or
                     answer_stripped.startswith('{"1"')
@@ -184,10 +185,11 @@ Provide your answer as a valid JSON object (raw JSON, no markdown formatting).""
                         # Try to parse the answer as JSON
                         answer_data = json.loads(answer_stripped)
                         print(f"[DEBUG] Successfully parsed JSON")
-                        print(f"[DEBUG] Keys: {list(answer_data.keys())}")
+                        print(f"[DEBUG] Type: {type(answer_data)}")
 
-                        # Check if it's a dict with numbered keys (indicators)
+                        # Handle dict with numbered keys (indicators)
                         if isinstance(answer_data, dict):
+                            print(f"[DEBUG] Keys: {list(answer_data.keys())}")
                             # Check for numbered indicators pattern
                             numeric_keys = [k for k in answer_data.keys() if k.isdigit()]
                             print(f"[DEBUG] Numeric keys found: {numeric_keys}")
@@ -202,6 +204,19 @@ Provide your answer as a valid JSON object (raw JSON, no markdown formatting).""
                             else:
                                 # Generic formatting for other dicts
                                 result['answer'] = json.dumps(answer_data, indent=2)
+
+                        # Handle array/list format
+                        elif isinstance(answer_data, list):
+                            print(f"[DEBUG] Got list with {len(answer_data)} items")
+                            # Format list items as numbered list
+                            formatted = f"There are {len(answer_data)} indicators of compliance:\n\n"
+                            for idx, item in enumerate(answer_data, 1):
+                                if isinstance(item, str):
+                                    formatted += f"{idx}. {item}\n\n"
+                                else:
+                                    formatted += f"{idx}. {json.dumps(item)}\n\n"
+                            result['answer'] = formatted.strip()
+                            print(f"[DEBUG] Formatted list answer created")
                     except (json.JSONDecodeError, ValueError) as e:
                         # Not valid JSON, leave as-is
                         print(f"[DEBUG] JSON parse error: {e}")
