@@ -12,9 +12,15 @@ const ConfidenceBadge: React.FC<{ confidence: 'low' | 'medium' | 'high' }> = ({ 
     high: 'bg-green-100 text-green-800 border-green-200',
   };
 
+  const percentages = {
+    low: '< 60%',
+    medium: '60-85%',
+    high: '> 85%',
+  };
+
   return (
     <span className={`px-2 py-1 text-xs font-semibold rounded-full border ${colors[confidence]}`}>
-      {confidence.toUpperCase()} CONFIDENCE
+      {confidence.toUpperCase()} ({percentages[confidence]})
     </span>
   );
 };
