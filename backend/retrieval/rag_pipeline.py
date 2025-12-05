@@ -4,6 +4,7 @@ from langchain_openai import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate
 from langchain.schema import HumanMessage, SystemMessage
 import json
+from .query_classifier import classify_query, get_system_prompt_modifier
 
 
 class RAGPipeline:
@@ -53,11 +54,15 @@ class RAGPipeline:
         Returns:
             Dict with answer, confidence, and formatted sources
         """
+        # Classify query type
+        query_type = classify_query(question)
+        query_modifier = get_system_prompt_modifier(query_type)
+
         # Build context
         context = self.build_context(retrieved_chunks)
 
         # Create prompt
-        system_prompt = """You are an expert FTA (Federal Transit Administration) compliance assistant.
+        system_prompt = f"""You are an expert FTA (Federal Transit Administration) compliance assistant.
 
 Your task is to answer questions based on the provided context from the FTA compliance guide.
 
@@ -73,12 +78,14 @@ Rules:
 
 IMPORTANT: Each question should be answered independently based on the retrieved sources. Do not carry over topics from previous questions unless explicitly asked.
 
+{query_modifier}
+
 Format your response as valid JSON (do NOT wrap in markdown code blocks):
-{
+{{
   "answer": "Your detailed answer with [Source N] citations. Include all relevant information found in the sources.",
   "confidence": "low|medium|high",
   "reasoning": "Brief explanation of confidence level"
-}"""
+}}"""
 
         # Build conversation context if provided
         conversation_context = ""

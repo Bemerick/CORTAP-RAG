@@ -2,6 +2,7 @@
 from typing import Dict, Optional
 from ingestion import EmbeddingManager
 from retrieval import HybridRetriever, RAGPipeline
+from retrieval.query_classifier import classify_query, get_retrieval_params
 from config import settings
 
 
@@ -84,6 +85,13 @@ class RAGService:
         Returns:
             Query response with answer, confidence, and sources
         """
+        # Step 0: Classify query and get retrieval parameters
+        query_type = classify_query(question)
+        retrieval_params = get_retrieval_params(query_type)
+        top_k = retrieval_params["top_k"]
+
+        print(f"Query type: {query_type}, retrieving top {top_k} chunks")
+
         # Step 1: Semantic retrieval from ChromaDB
         filter_metadata = None
         if recipient_type:
@@ -92,7 +100,7 @@ class RAGService:
 
         semantic_results = self.embedding_manager.query_collection(
             query_text=question,
-            n_results=settings.top_k_retrieval,
+            n_results=top_k,
             filter_metadata=filter_metadata
         )
 
@@ -100,7 +108,7 @@ class RAGService:
         retrieved_chunks = self.hybrid_retriever.merge_results(
             semantic_results=semantic_results,
             query=question,
-            top_k=settings.top_k_retrieval
+            top_k=top_k
         )
 
         if not retrieved_chunks:
