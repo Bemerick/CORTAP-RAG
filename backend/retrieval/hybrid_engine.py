@@ -279,8 +279,10 @@ class HybridQueryEngine:
                 if db_result.get('found'):
                     items = db_result.get('deficiencies' if is_deficiencies else 'indicators', [])
                     for item in items:
+                        # Handle both deficiency and indicator structures
+                        item_text = item.get('text') or item.get('deficiency_text') or item.get('indicator_text', '')
                         all_items.append({
-                            'text': item['text'],
+                            'text': item_text,
                             'question_code': section_code,
                             'question_text': db_result.get('question', {}).get('text', '')
                         })
