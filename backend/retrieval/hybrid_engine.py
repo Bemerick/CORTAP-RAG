@@ -227,15 +227,19 @@ class HybridQueryEngine:
                 'answer': answer,
                 'confidence': 'high',
                 'sources': [{
-                    'type': 'database',
-                    'sections': route.section_names,
-                    'count': count_value
+                    'chunk_id': f"multi_section_{'_'.join(route.section_names[:3])}",
+                    'category': 'database_aggregate',
+                    'excerpt': f"{count_value} {count_type} across {len(route.section_names)} questions",
+                    'score': 1.0,
+                    'file_path': f"database://compliance_guide/{section_name.lower().replace(' ', '_')}"
                 }],
                 'ranked_chunks': [],
                 'backend': 'database_aggregate',
-                'section_count': len(route.section_names),
-                'total_indicators': total_indicators,
-                'total_deficiencies': total_deficiencies
+                'metadata': {
+                    'section_count': len(route.section_names),
+                    'total_indicators': total_indicators,
+                    'total_deficiencies': total_deficiencies
+                }
             }
 
         # Otherwise, get detailed data for each section
@@ -274,13 +278,15 @@ class HybridQueryEngine:
             'answer': answer,
             'confidence': 'high',
             'sources': [{
-                'type': 'database',
-                'question_code': question_code,
-                'count': count
+                'chunk_id': question_code,
+                'category': 'database_count',
+                'excerpt': f"{question_text[:100]}...",
+                'score': 1.0,
+                'file_path': f"database://compliance_guide/{question_code}"
             }],
             'ranked_chunks': [],
             'backend': 'database',
-            'db_result': db_result
+            'metadata': {'db_result': db_result}
         }
 
     def _format_list_result(self, db_result: Dict[str, Any]) -> Dict[str, Any]:
@@ -326,13 +332,15 @@ class HybridQueryEngine:
             'answer': answer,
             'confidence': 'high',
             'sources': [{
-                'type': 'database',
-                'question_code': question_code,
-                'item_count': len(items)
+                'chunk_id': question_code,
+                'category': 'database_list',
+                'excerpt': f"{question_text[:100]}... ({len(items)} items)",
+                'score': 1.0,
+                'file_path': f"database://compliance_guide/{question_code}"
             }],
             'ranked_chunks': [],
             'backend': 'database',
-            'db_result': db_result
+            'metadata': {'db_result': db_result}
         }
 
     def _format_section_result(self, db_result: Dict[str, Any]) -> Dict[str, Any]:
@@ -380,13 +388,15 @@ class HybridQueryEngine:
             'answer': answer,
             'confidence': 'high',
             'sources': [{
-                'type': 'database',
-                'question_code': question_code,
-                'section': section.get('code')
+                'chunk_id': question_code,
+                'category': 'database_section',
+                'excerpt': f"{question['text'][:100]}...",
+                'score': 1.0,
+                'file_path': f"database://compliance_guide/{section.get('code')}/{question_code}"
             }],
             'ranked_chunks': [],
             'backend': 'database',
-            'db_result': db_result
+            'metadata': {'db_result': db_result}
         }
 
     def _format_aggregate_result(self, db_result: Dict[str, Any], question: str) -> Dict[str, Any]:
@@ -404,12 +414,15 @@ class HybridQueryEngine:
             'answer': answer,
             'confidence': 'high',
             'sources': [{
-                'type': 'database',
-                'aggregate': True
+                'chunk_id': 'aggregate_stats',
+                'category': 'database_aggregate',
+                'excerpt': f"Total stats: {totals['sections']} sections, {totals['questions']} questions, {totals['indicators']} indicators",
+                'score': 1.0,
+                'file_path': 'database://compliance_guide/aggregate'
             }],
             'ranked_chunks': [],
             'backend': 'database_aggregate',
-            'db_result': db_result
+            'metadata': {'db_result': db_result}
         }
 
     def _format_comparison_result(self, section_data: List[Dict[str, Any]], question: str) -> Dict[str, Any]:
@@ -441,12 +454,15 @@ class HybridQueryEngine:
             'answer': answer,
             'confidence': 'high',
             'sources': [{
-                'type': 'database',
-                'sections': [d['question_code'] for d in section_data]
+                'chunk_id': '_'.join([d['question_code'] for d in section_data[:3]]),
+                'category': 'database_comparison',
+                'excerpt': f"Comparison of {len(section_data)} sections",
+                'score': 1.0,
+                'file_path': 'database://compliance_guide/comparison'
             }],
             'ranked_chunks': [],
             'backend': 'database_comparison',
-            'section_count': len(section_data)
+            'metadata': {'section_count': len(section_data)}
         }
 
 
