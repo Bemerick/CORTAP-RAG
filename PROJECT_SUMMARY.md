@@ -1,16 +1,18 @@
 # 🎉 CORTAP-RAG - Hybrid RAG+Database System
 
-**Status**: ✅ Deployed to Production on Render
+**Status**: ✅ Deployed to Production on Render + Local Development Ready
 **Last Updated**: December 8, 2025
-**Version**: 2.3.0
+**Version**: 2.4.0
 
 🚀 **Production Deployment**: Live on Render with PostgreSQL + React frontend
+💻 **Local Development**: Full PostgreSQL setup with database migrations
 🗣️ **Intelligent Query Routing**: RAG for concepts, Database for structured data
-📊 **Multi-Section Queries**: List indicators across sections with one query
-🔄 **Database Migrations**: Automated Alembic migrations on deploy
+📊 **Multi-Section Aggregation**: Combines indicators across multiple questions (CB1+CB2+CB3)
+🔄 **Database Migrations**: Automated Alembic migrations on deploy and local
 ⚡ **Performance**: Sub-50ms for database queries, <2s for RAG
 🎯 **Accuracy**: 100% for structured queries, conceptual summaries for requirements
 ✨ **Smart Distinction**: "What are requirements" → RAG, "What are indicators" → Database
+🎨 **Conceptual Routing**: "What is the purpose" → RAG (not database)
 
 ---
 
@@ -159,19 +161,35 @@ compliance_deficiencies (338 deficiencies with question_id)
 
 ---
 
-## 📋 Recent Deployment Work (Dec 8, 2025)
+## 📋 Recent Work (Dec 8, 2025)
 
-### Issues Fixed During Deployment
+### Phase 1: Production Deployment
 1. ✅ **Blueprint Configuration** - Fixed render.yaml syntax (pserv → databases, removed ipAllowList, updated plan)
 2. ✅ **Python Compatibility** - Upgraded SQLAlchemy (2.0.23 → 2.0.35) and psycopg2 (2.9.9 → 2.9.10) for Python 3.13
 3. ✅ **Migration Schema** - Empty migration file fixed with proper table definitions
 4. ✅ **Database Schema Mismatch** - Added missing `page_range` and `purpose` columns to compliance_sections
 5. ✅ **Data Ingestion** - Successfully loaded 493 indicators + 338 deficiencies across 23 sections
 6. ✅ **Response Validation** - Fixed SourceCitation format (added chunk_id, category, excerpt, score, file_path)
-7. ✅ **Query Routing** - Prioritized RAG for "what are requirements" vs Database for "what are indicators"
-8. ✅ **Multi-Section Lists** - Added support for listing indicators across multiple sections
-9. ✅ **RAG Execution** - Fixed ChromaDB query with proper OpenAI embeddings (text-embedding-3-large, 3072 dims)
-10. ✅ **Embedding Manager** - Corrected method calls for embedding generation
+
+### Phase 2: Query Routing Improvements
+7. ✅ **Conceptual Question Routing** - Prioritize RAG for "purpose/why/explain" questions before section extraction
+8. ✅ **Database vs RAG Distinction** - "What are requirements" → RAG, "What are indicators" → Database
+9. ✅ **Section Extraction Fix** - Handle semantic matching of question codes (CB1, CB2, CB3) correctly
+10. ✅ **RAG Execution** - Fixed ChromaDB query with proper OpenAI embeddings (text-embedding-3-large, 3072 dims)
+
+### Phase 3: Multi-Section Aggregation
+11. ✅ **Multi-Section List Queries** - "What are indicators for Charter Bus" returns all 11 (CB1: 5 + CB2: 2 + CB3: 4)
+12. ✅ **Multi-Section Count Queries** - "How many indicators for DBE" returns 35 across 13 questions
+13. ✅ **Dynamic Formatting** - Remove hardcoded "Charter Bus Section", show actual question codes
+14. ✅ **Source Citations** - Proper chunk_id and file_path for multi-section queries
+15. ✅ **Hybrid Path Safety** - Handle different item structures (text/deficiency_text/indicator_text)
+
+### Phase 4: Local Development Setup
+16. ✅ **Local PostgreSQL** - Database creation, user setup, schema migrations
+17. ✅ **Alembic .env Loading** - Load environment variables for local migrations
+18. ✅ **Ingestion Script .env** - Load environment variables for local data ingestion
+19. ✅ **Full Local Workflow** - Complete backend + frontend + database running locally
+20. ✅ **Test Data Verification** - Confirmed 11 indicators for Charter Bus, 35 for DBE
 
 ### Deployment Process Improvements
 - Created pre-deployment checklist script (`scripts/pre_deploy_check.sh`)
