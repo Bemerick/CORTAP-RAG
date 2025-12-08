@@ -2,17 +2,19 @@
 
 **Status**: ✅ Deployed to Production on Render + Local Development Ready
 **Last Updated**: December 8, 2025
-**Version**: 2.4.0
+**Version**: 2.5.0
 
 🚀 **Production Deployment**: Live on Render with PostgreSQL + React frontend
 💻 **Local Development**: Full PostgreSQL setup with database migrations
 🗣️ **Intelligent Query Routing**: RAG for concepts, Database for structured data
-📊 **Multi-Section Aggregation**: Combines indicators across multiple questions (CB1+CB2+CB3)
+📊 **Hierarchical Response Format**: Groups indicators/deficiencies under parent questions
+📋 **Multi-Section Aggregation**: Combines indicators across multiple questions (CB1+CB2+CB3)
 🔄 **Database Migrations**: Automated Alembic migrations on deploy and local
 ⚡ **Performance**: Sub-50ms for database queries, <2s for RAG
 🎯 **Accuracy**: 100% for structured queries, conceptual summaries for requirements
 ✨ **Smart Distinction**: "What are requirements" → RAG, "What are indicators" → Database
-🎨 **Conceptual Routing**: "What is the purpose" → RAG (not database)
+🎨 **Applicability Support**: "What is applicability for X" → Database (not RAG)
+📝 **Contextual Display**: Shows question text with associated indicators/deficiencies
 
 ---
 
@@ -42,9 +44,11 @@ A production-ready hybrid RAG+Database Q&A system for FTA compliance documentati
 
 ## Key Features Delivered
 
-### 🎯 Hybrid Query System (NEW - Phases 1-5)
+### 🎯 Hybrid Query System (NEW - Phases 1-6)
 ✅ **100% Accurate Structured Queries** - Database queries return deterministic results
 ✅ **Intelligent Query Routing** - Automatic classification (DATABASE/RAG/HYBRID)
+✅ **Hierarchical Response Format** (Phase 6) - Groups indicators/deficiencies under parent questions
+✅ **Applicability Query Support** (Phase 6) - Routes applicability questions to database, not RAG
 ✅ **Natural Language Section Names** (Phase 5) - "Legal section" instead of "L1", "Title VI" instead of "TVI3"
 ✅ **100+ Section Name Mappings** - Recognizes common names, abbreviations, and variations
 ✅ **Smart Count Aggregation** - "How many indicators in Title VI?" → Aggregates across TVI1-TVI10
@@ -56,6 +60,7 @@ A production-ready hybrid RAG+Database Q&A system for FTA compliance documentati
 ✅ **Pattern Recognition** - Supports all 23 section code formats + natural names
 ✅ **Multi-Section Queries** - Compare or aggregate across sections
 ✅ **Aggregate Statistics** - Total counts across all compliance areas
+✅ **Contextual Display** - Shows question text with each indicator/deficiency for better understanding
 
 ### 📊 RAG Foundation (Original)
 ✅ **1,442 intelligent chunks** covering all 23 FTA compliance sections
@@ -206,8 +211,8 @@ compliance_deficiencies (338 deficiencies with question_id)
 - `backend/database/models.py` - SQLAlchemy ORM models (sections, questions, indicators, deficiencies)
 - `backend/database/connection.py` - Database manager with session scopes
 - `backend/database/query_builder.py` - SQL query builder (7 query functions, 455 lines)
-- `backend/retrieval/query_router.py` - Pattern-based + semantic query classifier (260 lines)
-- `backend/retrieval/hybrid_engine.py` - Query orchestration + count aggregation (470 lines)
+- `backend/retrieval/query_router.py` - Pattern-based query classifier with applicability support (280 lines)
+- `backend/retrieval/hybrid_engine.py` - Query orchestration with hierarchical formatting (750 lines)
 - `config/section_mappings.py` - **Phase 5**: Natural language section name mappings (150 lines, 100+ mappings)
 - `backend/scripts/ingest_structured_data.py` - JSON → PostgreSQL ingestion
 - `backend/scripts/test_query_router.py` - Router test suite (28 tests, 92.9% accuracy)
@@ -343,6 +348,31 @@ compliance_deficiencies (338 deficiencies with question_id)
 - Processed entire 767-page FTA manual into 1,442 chunks
 - Keyword-based category detection for accurate metadata
 - All 23 compliance categories now fully represented
+
+### 10. Deficiency Text Extraction (Phase 6)
+**Problem**: Deficiency queries returned empty text - code tried to access non-existent 'text' field
+**Solution**:
+- Fixed data structure handling in `hybrid_engine.py:283-288`
+- Deficiencies use `code` and `title` fields, not `text`
+- Now properly formats as "CODE: Title" (e.g., "CB1-1: Charter service not operated...")
+
+### 11. Applicability Routing to RAG (Phase 6)
+**Problem**: "What are applicability requirements for X" went to RAG instead of database
+**Solution**:
+- Added 'applicability' to database-friendly terms in `query_router.py:218`
+- Added specific regex patterns to recognize applicability queries (lines 59-62)
+- Database has applicability field for each question - now correctly retrieved
+- Shows unique applicability statements with related questions
+
+### 12. Flat List Structure (Phase 6)
+**Problem**: Indicators/deficiencies shown as flat numbered list without question context
+**Solution**:
+- Implemented hierarchical response format in `hybrid_engine.py`
+- Created `_format_hierarchical_list` method (lines 663-757)
+- Groups items under parent questions with markdown headers
+- Shows question text, then indented indicators/deficiencies
+- Works for all query types: questions, indicators, deficiencies
+- Provides proper context for understanding compliance structure
 
 ---
 
