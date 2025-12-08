@@ -8,6 +8,7 @@ class Settings(BaseSettings):
     openai_api_key: str
     chroma_db_path: str = "./chroma_db"
     environment: str = "development"
+    database_url: str | None = None  # Optional database URL for hybrid mode
 
     # Embedding config
     embedding_model: str = "text-embedding-3-large"

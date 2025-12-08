@@ -47,11 +47,14 @@ class QueryRouter:
         (r'how many (?:indicators|deficiencies|questions).+?(?:in|for|under|within)\s+', 'count_in_section'),
         (r'count.+?(?:indicators|deficiencies|questions)', 'count_in_section'),
 
-        # List queries for specific sections
+        # List queries for specific sections (PRIORITY - check before RAG)
         # Matches: "List all indicators in F5", "Show deficiencies for ADA-GEN3"
+        # Also: "What are the indicators for Charter Bus", "Get indicators for TVI3"
         (r'list\s+all\s+(?:indicators|deficiencies|questions)', 'list_in_section'),
         (r'show\s+(?:me\s+)?(?:indicators|deficiencies|questions)', 'list_in_section'),
+        (r'(?:what are|what\'s|get)\s+(?:the\s+)?(?:indicators|deficiencies|questions)\s+(?:in|for|of)', 'list_in_section'),
         (r'(?:all|get)\s+(?:indicators|deficiencies|questions)\s+(?:in|for|under)', 'list_in_section'),
+        (r'(?:indicators|deficiencies|questions)\s+(?:in|for)\s+', 'list_in_section'),
 
         # Direct section queries (without "why" or "purpose")
         # Matches: "What is L1?", "Describe TC-PjM2", "Explain PTASP5"
@@ -84,10 +87,10 @@ class QueryRouter:
     ]
 
     # Pure RAG patterns (conceptual, no specific sections)
+    # NOTE: These are checked AFTER database patterns, so be careful with overlap
     RAG_PATTERNS = [
         # Conceptual questions about requirements/compliance
         r'what (?:is|are)\s+(?:the\s+)?requirements?\s+for',
-        r'what (?:is|are).+?(?:ada|charter|procurement|safety)',
         r'explain.+?(?:compliance|requirements|regulations)',
         r'how (?:do|does|should|can).+?(?:recipients|transit|agencies)',
 
@@ -96,7 +99,7 @@ class QueryRouter:
         r'what steps',
         r'how to',
 
-        # Topic-based (no section IDs)
+        # Topic-based (no section IDs) - only if NOT asking for indicators/deficiencies
         r'tell me about',
         r'information (?:on|about)',
     ]
@@ -173,10 +176,11 @@ class QueryRouter:
         Classify a query and determine routing strategy.
 
         Classification logic:
-        1. RAG (priority): Conceptual "what are requirements" type questions
-        2. Database: Specific section + count/list/lookup queries
-        3. Hybrid: Multiple sections OR section + conceptual OR aggregate queries
-        4. RAG: Other conceptual questions with no section IDs
+        1. Database (priority): Specific indicator/deficiency/question list/count queries
+        2. RAG: Conceptual "what are requirements" type questions
+        3. Database: Specific section + count/list/lookup queries
+        4. Hybrid: Multiple sections OR section + conceptual OR aggregate queries
+        5. RAG: Other conceptual questions with no section IDs
 
         Args:
             query: User query text
@@ -184,11 +188,29 @@ class QueryRouter:
         Returns:
             QueryRoute with classification and metadata
         """
-        # Check RAG patterns FIRST (before section extraction)
-        # This handles "what are requirements for X" as RAG, not database
+        # Check database patterns FIRST for specific data queries
+        # This ensures "what are the indicators" goes to database, not RAG
+        db_match = self._check_database_patterns(query)
+
+        # Check RAG patterns (but only if not a specific database query)
         is_rag_pattern = self._check_rag_patterns(query)
-        if is_rag_pattern:
-            # Pure conceptual query - use RAG regardless of section mentions
+
+        # If it's a database query for indicators/deficiencies/questions, prioritize database
+        if db_match and any(term in query.lower() for term in ['indicator', 'deficienc', 'question']):
+            # This is a specific data query - always use database regardless of RAG pattern
+            sections = self.extract_section_names(query)
+            if sections:
+                pattern_type, confidence = db_match
+                return QueryRoute(
+                    route_type="database",
+                    confidence=0.95,
+                    reasoning=f"Specific data query ({pattern_type}) for structured data: {', '.join(sections)}",
+                    section_names=sections
+                )
+
+        # Check for pure conceptual RAG questions (no specific data requests)
+        if is_rag_pattern and not db_match:
+            # Pure conceptual query - use RAG
             return QueryRoute(
                 route_type="rag",
                 confidence=0.90,
@@ -200,7 +222,6 @@ class QueryRouter:
         sections = self.extract_section_names(query)
 
         # Check patterns
-        db_match = self._check_database_patterns(query)
         is_hybrid_pattern = self._check_hybrid_patterns(query)
 
         # Decision tree

@@ -53,7 +53,7 @@ class RAGService:
         )
 
         # Initialize database manager (for structured queries)
-        db_url = os.getenv('DATABASE_URL')
+        db_url = settings.database_url
         if db_url:
             self.db_manager = get_db_manager(db_url)
             # Initialize hybrid query engine
