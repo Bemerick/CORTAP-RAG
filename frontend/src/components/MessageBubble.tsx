@@ -83,6 +83,58 @@ const ConfidenceBadge: React.FC<{ confidence: 'low' | 'medium' | 'high' }> = ({ 
   );
 };
 
+const BackendBadge: React.FC<{ backend?: string; executionTime?: number }> = ({ backend, executionTime }) => {
+  if (!backend) return null;
+
+  const badgeConfig = {
+    database: {
+      label: '📊 Database Query',
+      color: 'bg-blue-100 text-blue-800 border-blue-200',
+      description: '100% accurate'
+    },
+    database_comparison: {
+      label: '📊 Multi-Section',
+      color: 'bg-blue-100 text-blue-800 border-blue-200',
+      description: 'Database'
+    },
+    database_aggregate: {
+      label: '📊 Statistics',
+      color: 'bg-blue-100 text-blue-800 border-blue-200',
+      description: 'Database'
+    },
+    rag: {
+      label: '🔍 RAG Search',
+      color: 'bg-purple-100 text-purple-800 border-purple-200',
+      description: 'Vector search'
+    },
+    hybrid: {
+      label: '⚡ Hybrid Query',
+      color: 'bg-green-100 text-green-800 border-green-200',
+      description: 'Database + RAG'
+    },
+    rag_unavailable: {
+      label: '⚠️ RAG Unavailable',
+      color: 'bg-gray-100 text-gray-800 border-gray-200',
+      description: 'Database only'
+    }
+  };
+
+  const config = badgeConfig[backend as keyof typeof badgeConfig] || badgeConfig.rag;
+
+  return (
+    <div className="flex items-center gap-2">
+      <span className={`px-2 py-1 text-xs font-semibold rounded-full border ${config.color}`}>
+        {config.label}
+      </span>
+      {executionTime !== undefined && executionTime < 100 && (
+        <span className="text-xs text-gray-500">
+          ⚡ {executionTime.toFixed(1)}ms
+        </span>
+      )}
+    </div>
+  );
+};
+
 const SourceBadge: React.FC<{ number: number }> = ({ number }) => {
   return (
     <span className="inline-flex items-center justify-center w-5 h-5 text-xs font-bold text-white bg-orange-500 rounded-full ml-1">
@@ -112,14 +164,20 @@ export const MessageBubble: React.FC<MessageBubbleProps> = ({ message }) => {
           <p className="whitespace-pre-wrap">{message.content}</p>
         ) : (
           <div className="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
-            {/* Confidence Badge Header */}
+            {/* Confidence & Backend Badge Header */}
             {message.response && (
-              <div className="bg-gradient-to-r from-gray-50 to-gray-100 px-4 py-3 border-b border-gray-200 flex items-center gap-2">
-                <div className="flex items-center">
-                  <span className="text-xs font-medium text-gray-600 uppercase tracking-wide">Confidence:</span>
-                  <InfoPopup />
+              <div className="bg-gradient-to-r from-gray-50 to-gray-100 px-4 py-3 border-b border-gray-200 flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <div className="flex items-center">
+                    <span className="text-xs font-medium text-gray-600 uppercase tracking-wide">Confidence:</span>
+                    <InfoPopup />
+                  </div>
+                  <ConfidenceBadge confidence={message.response.confidence} />
                 </div>
-                <ConfidenceBadge confidence={message.response.confidence} />
+                <BackendBadge
+                  backend={message.response.backend}
+                  executionTime={message.response.metadata?.execution_time_ms}
+                />
               </div>
             )}
 

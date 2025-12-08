@@ -22,13 +22,21 @@ class Settings(BaseSettings):
     semantic_weight: float = 0.7
     keyword_weight: float = 0.3
 
-    # Common questions
+    # Common questions (demonstrating DATABASE, RAG, and HYBRID queries with natural language)
     common_questions: list = [
-        {"question": "What are ADA paratransit eligibility requirements?", "category": "ADA_Complementary_Paratransit"},
-        {"question": "What are the DBE program requirements?", "category": "Disadvantaged_Business_Enterprise"},
-        {"question": "What are Title VI compliance obligations?", "category": "Title_VI"},
-        {"question": "What procurement methods are allowed?", "category": "Procurement"},
-        {"question": "What are the financial management requirements?", "category": "Financial_Management_and_Capacity"},
+        # DATABASE queries (structured data, 100% accurate) - Using natural section names
+        {"question": "How many indicators are in the Legal section?", "category": "Database_Count"},
+        {"question": "List all indicators for Title VI", "category": "Database_List"},
+        {"question": "What are the Charter Bus compliance requirements?", "category": "Database_Structured"},
+
+        # RAG queries (conceptual/contextual questions)
+        {"question": "What are ADA paratransit eligibility requirements?", "category": "ADA_Conceptual"},
+        {"question": "What is the purpose of the DBE program?", "category": "DBE_Conceptual"},
+        {"question": "Explain procurement methods for transit agencies", "category": "Procurement_Conceptual"},
+
+        # HYBRID queries (multi-section or aggregate)
+        {"question": "How many deficiencies are in the Financial Management section?", "category": "Hybrid_Aggregate"},
+        {"question": "How many total indicators are there in the compliance guide?", "category": "Hybrid_Total"},
     ]
 
     class Config:

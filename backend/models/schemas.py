@@ -32,6 +32,8 @@ class QueryResponse(BaseModel):
     confidence: str = Field(..., description="low, medium, or high")
     sources: List[SourceCitation]
     ranked_chunks: List[SourceCitation]
+    backend: str = Field(default="rag", description="Backend used: 'database', 'rag', 'database_comparison', 'database_aggregate', or 'hybrid'")
+    metadata: Optional[Dict] = Field(default={}, description="Query-specific metadata (route type, execution time, etc.)")
 
 
 class CommonQuestion(BaseModel):

@@ -12,6 +12,12 @@ export interface QueryResponse {
   confidence: 'low' | 'medium' | 'high';
   sources: SourceCitation[];
   ranked_chunks: SourceCitation[];
+  backend?: string;
+  metadata?: {
+    route_type?: string;
+    execution_time_ms?: number;
+    sections?: string[];
+  };
 }
 
 export interface ConversationMessage {

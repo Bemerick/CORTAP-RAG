@@ -1,10 +1,12 @@
 """RAG pipeline for query processing and answer generation."""
-from typing import List, Dict
+from typing import List, Dict, Optional
 from langchain_openai import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate
 from langchain.schema import HumanMessage, SystemMessage
 import json
+from difflib import SequenceMatcher
 from .query_classifier import classify_query, get_system_prompt_modifier
+from .query_router import QueryRouter, QueryRoute
 
 
 class RAGPipeline:
@@ -21,6 +23,80 @@ class RAGPipeline:
             temperature=temperature,
             openai_api_key=openai_api_key
         )
+        self.router = QueryRouter()
+
+    def route_query(self, question: str) -> QueryRoute:
+        """
+        Route a query to determine the best processing strategy.
+
+        Args:
+            question: User's question
+
+        Returns:
+            QueryRoute with classification and metadata
+        """
+        route = self.router.classify_query(question)
+        print(f"[ROUTER] Query classified as: {route.route_type.upper()}")
+        print(f"[ROUTER] Confidence: {route.confidence:.2f}")
+        print(f"[ROUTER] Reasoning: {route.reasoning}")
+        if route.section_names:
+            print(f"[ROUTER] Sections: {', '.join(route.section_names)}")
+        return route
+
+    def deduplicate_chunks(self, chunks: List[Dict[str, any]], similarity_threshold: float = 0.85) -> List[Dict[str, any]]:
+        """
+        Remove duplicate chunks based on text similarity and diversify by sub-area.
+
+        Args:
+            chunks: List of retrieved chunks
+            similarity_threshold: Similarity ratio (0-1) above which chunks are considered duplicates
+
+        Returns:
+            Deduplicated and diversified list of chunks
+        """
+        if not chunks:
+            return chunks
+
+        deduplicated = []
+        seen_texts = []
+        seen_sections = {}  # Track how many chunks per section (e.g., TVI3, TVI6)
+
+        for chunk in chunks:
+            chunk_text = chunk['text'].strip()
+            is_duplicate = False
+
+            # Extract section ID (e.g., TVI3, TVI6) from text
+            section_id = None
+            import re
+            section_match = re.search(r'\b(TVI\d+(?:-\d+)?)\b', chunk_text)
+            if section_match:
+                section_id = section_match.group(1)
+
+            # Check text similarity
+            for seen_text in seen_texts:
+                similarity = SequenceMatcher(None, chunk_text, seen_text).ratio()
+                if similarity >= similarity_threshold:
+                    is_duplicate = True
+                    print(f"[DEDUP] Skipping duplicate chunk (similarity: {similarity:.2f})")
+                    break
+
+            # Also limit chunks per section to avoid over-representation
+            if not is_duplicate and section_id:
+                section_count = seen_sections.get(section_id, 0)
+                # Allow max 3 chunks per section to ensure diversity
+                if section_count >= 3:
+                    print(f"[DEDUP] Skipping chunk from {section_id} (already have {section_count} chunks from this section)")
+                    is_duplicate = True
+                else:
+                    seen_sections[section_id] = section_count + 1
+
+            if not is_duplicate:
+                deduplicated.append(chunk)
+                seen_texts.append(chunk_text)
+
+        print(f"[DEDUP] Reduced {len(chunks)} chunks to {len(deduplicated)} unique chunks")
+        print(f"[DEDUP] Sections represented: {list(seen_sections.keys())}")
+        return deduplicated
 
     def build_context(self, retrieved_chunks: List[Dict[str, any]]) -> str:
         """Build context string from retrieved chunks."""
@@ -29,7 +105,7 @@ class RAGPipeline:
         for i, chunk in enumerate(retrieved_chunks, 1):
             category = chunk['metadata'].get('category', 'Unknown')
             chunk_id = chunk['chunk_id']
-            text = chunk['text'][:3000]  # Limit chunk size for context
+            text = chunk['text'][:5000]  # Increased from 3000 to capture more indicators
 
             context_parts.append(
                 f"[Source {i}] Category: {category}, ID: {chunk_id}\n{text}\n"
@@ -311,10 +387,22 @@ Provide your answer as a valid JSON object (raw JSON, no markdown formatting).""
         Returns:
             Formatted response with answer, confidence, and sources
         """
-        # Generate answer
-        llm_result = self.generate_answer(question, retrieved_chunks, conversation_history)
+        # Deduplicate chunks for count queries to improve accuracy
+        query_type = classify_query(question)
+        if query_type == "count":
+            print(f"[QUERY] Count query detected, deduplicating chunks...")
+            deduplicated_chunks = self.deduplicate_chunks(retrieved_chunks, similarity_threshold=0.85)
+        else:
+            deduplicated_chunks = retrieved_chunks
 
-        # Format sources
+        # Generate answer
+        llm_result = self.generate_answer(question, deduplicated_chunks, conversation_history)
+
+        # Post-process answer to remove duplicate sections for count queries
+        if query_type == "count":
+            llm_result['answer'] = self._remove_duplicate_sections(llm_result['answer'])
+
+        # Format sources (use original chunks for source references)
         sources = self.format_sources(retrieved_chunks)
 
         return {
@@ -323,3 +411,61 @@ Provide your answer as a valid JSON object (raw JSON, no markdown formatting).""
             'sources': sources[:3],  # Top 3 for main citations
             'ranked_chunks': sources,  # All results ranked
         }
+
+    def _remove_duplicate_sections(self, answer: str) -> str:
+        """
+        Remove duplicate section headers from indicator count responses.
+
+        Args:
+            answer: The LLM-generated answer
+
+        Returns:
+            Answer with duplicate sections removed
+        """
+        import re
+
+        lines = answer.split('\n')
+        seen_headers = set()
+        cleaned_lines = []
+        skip_until_next_header = False
+
+        for line in lines:
+            # Check if line is a section header (e.g., **TVI6. Does the recipient...)
+            header_match = re.match(r'\*\*(TVI\d+(?:-\d+)?)\.\s+(.+?)\*\*', line)
+
+            if header_match:
+                section_id = header_match.group(1)
+                question_text = header_match.group(2)
+                header_key = f"{section_id}:{question_text[:50]}"  # Use first 50 chars to identify
+
+                if header_key in seen_headers:
+                    print(f"[POSTPROC] Removing duplicate section: {section_id}")
+                    skip_until_next_header = True
+                    continue
+                else:
+                    seen_headers.add(header_key)
+                    skip_until_next_header = False
+                    cleaned_lines.append(line)
+            elif skip_until_next_header:
+                # Skip lines under duplicate header until we hit next header
+                continue
+            else:
+                cleaned_lines.append(line)
+
+        # Recalculate total count
+        cleaned_answer = '\n'.join(cleaned_lines)
+
+        # Count actual indicators (lines starting with a., b., c., etc.)
+        indicator_count = len(re.findall(r'\n[a-z]\.\s+', cleaned_answer))
+
+        # Update the total count in the first line
+        cleaned_answer = re.sub(
+            r'There are \d+ indicators',
+            f'There are {indicator_count} indicators',
+            cleaned_answer,
+            count=1
+        )
+
+        print(f"[POSTPROC] Corrected count to {indicator_count} indicators")
+
+        return cleaned_answer

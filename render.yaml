@@ -1,16 +1,28 @@
 services:
+  # PostgreSQL Database
+  - type: pserv
+    name: cortap-rag-db
+    env: docker
+    region: oregon
+    plan: starter
+    ipAllowList: []
+
   # Backend API Service
   - type: web
     name: cortap-rag-backend
     env: python
     region: oregon
     plan: starter
-    buildCommand: pip install --upgrade pip && pip install -r requirements.txt && python ingest_full_guide.py
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt && alembic upgrade head && python ingest_full_guide.py
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     rootDir: backend
     envVars:
       - key: OPENAI_API_KEY
         sync: false
+      - key: DATABASE_URL
+        fromDatabase:
+          name: cortap-rag-db
+          property: connectionString
       - key: CHROMA_DB_PATH
         value: /opt/render/project/src/chroma_db
       - key: ENVIRONMENT

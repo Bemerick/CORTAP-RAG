@@ -1,8 +1,11 @@
 """RAG service for handling query processing."""
 from typing import Dict, Optional
+import os
 from ingestion import EmbeddingManager
 from retrieval import HybridRetriever, RAGPipeline
 from retrieval.query_classifier import classify_query, get_retrieval_params
+from retrieval.hybrid_engine import HybridQueryEngine
+from database.connection import get_db_manager
 from config import settings
 
 
@@ -49,6 +52,22 @@ class RAGService:
             temperature=settings.llm_temperature
         )
 
+        # Initialize database manager (for structured queries)
+        db_url = os.getenv('DATABASE_URL')
+        if db_url:
+            self.db_manager = get_db_manager(db_url)
+            # Initialize hybrid query engine
+            self.hybrid_engine = HybridQueryEngine(
+                db_manager=self.db_manager,
+                rag_pipeline=self.rag_pipeline,
+                hybrid_retriever=self.hybrid_retriever
+            )
+            print("[RAG SERVICE] Hybrid query engine initialized with database support")
+        else:
+            self.db_manager = None
+            self.hybrid_engine = None
+            print("[RAG SERVICE] No DATABASE_URL found, running in RAG-only mode")
+
     def _build_bm25_index(self):
         """Build BM25 index from all documents in ChromaDB."""
         # Get all documents from collection
@@ -75,7 +94,7 @@ class RAGService:
         conversation_history: Optional[list] = None
     ) -> Dict[str, any]:
         """
-        Process a user query through the RAG pipeline.
+        Process a user query through the hybrid query engine or RAG pipeline.
 
         Args:
             question: User's question
@@ -83,8 +102,20 @@ class RAGService:
             conversation_history: Previous conversation messages (optional)
 
         Returns:
-            Query response with answer, confidence, and sources
+            Query response with answer, confidence, sources, and backend type
         """
+        # Use hybrid engine if available (database + RAG routing)
+        if self.hybrid_engine:
+            print("[RAG SERVICE] Using hybrid query engine")
+            response = self.hybrid_engine.execute_query(
+                question=question,
+                conversation_history=conversation_history
+            )
+            return response
+
+        # Fallback to pure RAG pipeline (no database)
+        print("[RAG SERVICE] Using pure RAG pipeline (no database)")
+
         # Step 0: Classify query and get retrieval parameters
         query_type = classify_query(question)
         retrieval_params = get_retrieval_params(query_type)
@@ -116,7 +147,9 @@ class RAGService:
                 'answer': "I couldn't find relevant information in the FTA compliance guide to answer your question.",
                 'confidence': 'low',
                 'sources': [],
-                'ranked_chunks': []
+                'ranked_chunks': [],
+                'backend': 'rag',
+                'metadata': {}
             }
 
         # Step 3: Generate answer with RAG pipeline
@@ -125,5 +158,9 @@ class RAGService:
             retrieved_chunks=retrieved_chunks,
             conversation_history=conversation_history
         )
+
+        # Add backend type for consistency
+        response['backend'] = 'rag'
+        response['metadata'] = response.get('metadata', {})
 
         return response
