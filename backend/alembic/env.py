@@ -2,6 +2,7 @@ from logging.config import fileConfig
 import os
 import sys
 from pathlib import Path
+from dotenv import load_dotenv
 
 from sqlalchemy import engine_from_config
 from sqlalchemy import pool
@@ -11,6 +12,11 @@ from alembic import context
 # Add backend directory to Python path
 backend_dir = Path(__file__).parent.parent
 sys.path.insert(0, str(backend_dir))
+
+# Load .env file
+env_path = backend_dir / '.env'
+if env_path.exists():
+    load_dotenv(env_path)
 
 # Import our models
 from database.models import Base

@@ -188,15 +188,19 @@ class QueryRouter:
         Returns:
             QueryRoute with classification and metadata
         """
-        # Check database patterns FIRST for specific data queries
-        # This ensures "what are the indicators" goes to database, not RAG
+        # Check for conceptual questions FIRST (before section extraction)
+        # This prevents "What is the purpose of DBE program?" from being routed to database
+        query_lower = query.lower()
+        is_conceptual = any(term in query_lower for term in ['purpose', 'why', 'rationale', 'explain', 'what is', 'what are'])
+
+        # Check database patterns for specific data queries
         db_match = self._check_database_patterns(query)
 
-        # Check RAG patterns (but only if not a specific database query)
+        # Check RAG patterns
         is_rag_pattern = self._check_rag_patterns(query)
 
         # If it's a database query for indicators/deficiencies/questions, prioritize database
-        if db_match and any(term in query.lower() for term in ['indicator', 'deficienc', 'question']):
+        if db_match and any(term in query_lower for term in ['indicator', 'deficienc', 'question']):
             # This is a specific data query - always use database regardless of RAG pattern
             sections = self.extract_section_names(query)
             if sections:
@@ -207,6 +211,17 @@ class QueryRouter:
                     reasoning=f"Specific data query ({pattern_type}) for structured data: {', '.join(sections)}",
                     section_names=sections
                 )
+
+        # If it's a conceptual question (purpose, why, explain) without specific data request
+        # Route to RAG even if section names are mentioned
+        if is_conceptual and not any(term in query_lower for term in ['indicator', 'deficienc', 'question', 'list', 'count', 'how many']):
+            return QueryRoute(
+                route_type="rag",
+                confidence=0.90,
+                reasoning="Conceptual question about purpose/explanation. Best answered by RAG.",
+                section_names=None,
+                keywords=self._extract_keywords(query)
+            )
 
         # Check for pure conceptual RAG questions (no specific data requests)
         if is_rag_pattern and not db_match:

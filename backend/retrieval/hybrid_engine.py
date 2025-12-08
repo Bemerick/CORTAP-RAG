@@ -102,11 +102,43 @@ class HybridQueryEngine:
                 'backend': 'database_error'
             }
 
-        # Use first section (single section queries only reach here)
-        section_code = route.section_names[0]
-
         # Determine query type from question
         question_lower = question.lower()
+
+        # For list/count queries with multiple sections, aggregate across all
+        if len(route.section_names) > 1 and ('list' in question_lower or 'show' in question_lower or 'what are' in question_lower or 'how many' in question_lower):
+            # Multi-section list/count query - aggregate results
+            is_deficiency = 'deficienc' in question_lower
+            is_count = 'how many' in question_lower or 'count' in question_lower
+
+            all_items = []
+            total_count = 0
+
+            for section_code in route.section_names:
+                if is_count:
+                    if is_deficiency:
+                        result = self.query_builder.count_deficiencies(section_code)
+                    else:
+                        result = self.query_builder.count_indicators(section_code)
+                    total_count += result.get('count', 0)
+                else:
+                    if is_deficiency:
+                        result = self.query_builder.list_deficiencies(section_code)
+                        all_items.extend(result.get('deficiencies', []))
+                    else:
+                        result = self.query_builder.list_indicators(section_code)
+                        all_items.extend(result.get('indicators', []))
+
+            if is_count:
+                return self._format_count_result({'count': total_count, 'sections': route.section_names}, question)
+            else:
+                if is_deficiency:
+                    return self._format_list_result({'found': True, 'deficiencies': all_items, 'sections': route.section_names, 'multi_section': True})
+                else:
+                    return self._format_list_result({'found': True, 'indicators': all_items, 'sections': route.section_names, 'multi_section': True})
+
+        # Use first section for single-section queries
+        section_code = route.section_names[0]
 
         if 'how many' in question_lower or 'count' in question_lower:
             # Count query
@@ -339,35 +371,56 @@ class HybridQueryEngine:
 
     def _format_count_result(self, db_result: Dict[str, Any], question: str) -> Dict[str, Any]:
         """Format a count query result."""
-        if not db_result.get('question_info'):
-            return {
-                'answer': f"Question code {db_result.get('question_code', 'unknown')} not found in database.",
-                'confidence': 'low',
-                'sources': [],
-                'ranked_chunks': [],
-                'backend': 'database'
-            }
+        # Check if multi-section aggregation
+        is_multi_section = 'sections' in db_result and not db_result.get('question_info')
 
-        count = db_result['count']
-        question_code = db_result['question_code']
-        question_text = db_result['question_info']['question_text']
+        if is_multi_section:
+            # Multi-section count
+            count = db_result['count']
+            sections = db_result['sections']
+            count_type = 'deficiencies' if 'deficienc' in question.lower() else 'indicators of compliance'
 
-        # Determine what we're counting
-        count_type = 'deficiencies' if 'deficienc' in question.lower() else 'indicators of compliance'
+            answer = f"There are **{count} total {count_type}** across {len(sections)} questions ({', '.join(sections)}).\n\n"
+            answer += f"*Source: Structured database (100% accurate)*"
 
-        answer = f"**{question_code}**: {question_text}\n\n"
-        answer += f"There are **{count} {count_type}** for this question.\n\n"
-        answer += f"*Source: Structured database (100% accurate)*"
+            chunk_id = ', '.join(sections)
+            file_path = f"database://compliance_guide/{'-'.join(sections)}"
+            excerpt = f"Total count from {len(sections)} questions: {count} {count_type}"
+        else:
+            # Single-section count
+            if not db_result.get('question_info'):
+                return {
+                    'answer': f"Question code {db_result.get('question_code', 'unknown')} not found in database.",
+                    'confidence': 'low',
+                    'sources': [],
+                    'ranked_chunks': [],
+                    'backend': 'database'
+                }
+
+            count = db_result['count']
+            question_code = db_result['question_code']
+            question_text = db_result['question_info']['question_text']
+
+            # Determine what we're counting
+            count_type = 'deficiencies' if 'deficienc' in question.lower() else 'indicators of compliance'
+
+            answer = f"**{question_code}**: {question_text}\n\n"
+            answer += f"There are **{count} {count_type}** for this question.\n\n"
+            answer += f"*Source: Structured database (100% accurate)*"
+
+            chunk_id = question_code
+            file_path = f"database://compliance_guide/{question_code}"
+            excerpt = f"{question_text[:100]}..."
 
         return {
             'answer': answer,
             'confidence': 'high',
             'sources': [{
-                'chunk_id': question_code,
+                'chunk_id': chunk_id,
                 'category': 'database_count',
-                'excerpt': f"{question_text[:100]}...",
+                'excerpt': excerpt,
                 'score': 1.0,
-                'file_path': f"database://compliance_guide/{question_code}"
+                'file_path': file_path
             }],
             'ranked_chunks': [],
             'backend': 'database',
@@ -385,43 +438,76 @@ class HybridQueryEngine:
                 'backend': 'database'
             }
 
-        question_code = db_result['question_code']
-        question_text = db_result.get('question', {}).get('text', '')
+        # Check if multi-section aggregation
+        is_multi_section = db_result.get('multi_section', False)
 
-        # Determine if indicators or deficiencies
-        if 'indicators' in db_result:
-            items = db_result['indicators']
-            item_type = 'Indicators of Compliance'
-            answer = f"**{question_code}**: {question_text}\n\n"
-            answer += f"There are **{len(items)} indicators of compliance**:\n\n"
+        if is_multi_section:
+            # Multi-section list result
+            sections = db_result.get('sections', [])
 
-            for item in items:
-                answer += f"{item['letter']}. {item['text']}\n\n"
+            if 'indicators' in db_result:
+                items = db_result['indicators']
+                item_type = 'indicators of compliance'
+                answer = f"**{len(items)} total indicators of compliance** across {len(sections)} questions ({', '.join(sections)}):\n\n"
 
-        else:  # deficiencies
-            items = db_result['deficiencies']
-            item_type = 'Potential Deficiencies'
-            answer = f"**{question_code}**: {question_text}\n\n"
-            answer += f"There are **{len(items)} potential deficiencies**:\n\n"
+                for i, item in enumerate(items, 1):
+                    answer += f"{i}. {item['text']}\n\n"
+            else:
+                items = db_result['deficiencies']
+                item_type = 'potential deficiencies'
+                answer = f"**{len(items)} total potential deficiencies** across {len(sections)} questions ({', '.join(sections)}):\n\n"
 
-            for item in items:
-                answer += f"**{item['code']}**: {item['title']}\n"
-                answer += f"- Determination: {item['determination']}\n"
-                if item.get('corrective_action'):
-                    answer += f"- Corrective Action: {item['corrective_action']}\n"
-                answer += "\n"
+                for i, item in enumerate(items, 1):
+                    answer += f"{i}. **{item.get('code', 'N/A')}**: {item.get('title', item.get('text', ''))}\n\n"
+        else:
+            # Single-section result
+            question_code = db_result['question_code']
+            question_text = db_result.get('question', {}).get('text', '')
+
+            # Determine if indicators or deficiencies
+            if 'indicators' in db_result:
+                items = db_result['indicators']
+                item_type = 'Indicators of Compliance'
+                answer = f"**{question_code}**: {question_text}\n\n"
+                answer += f"There are **{len(items)} indicators of compliance**:\n\n"
+
+                for item in items:
+                    answer += f"{item['letter']}. {item['text']}\n\n"
+
+            else:  # deficiencies
+                items = db_result['deficiencies']
+                item_type = 'Potential Deficiencies'
+                answer = f"**{question_code}**: {question_text}\n\n"
+                answer += f"There are **{len(items)} potential deficiencies**:\n\n"
+
+                for item in items:
+                    answer += f"**{item['code']}**: {item['title']}\n"
+                    answer += f"- Determination: {item['determination']}\n"
+                    if item.get('corrective_action'):
+                        answer += f"- Corrective Action: {item['corrective_action']}\n"
+                    answer += "\n"
 
         answer += f"*Source: Structured database (100% accurate)*"
+
+        # Build source citation
+        if is_multi_section:
+            chunk_id = ', '.join(sections)
+            file_path = f"database://compliance_guide/{'-'.join(sections)}"
+            excerpt = f"Aggregated data from {len(sections)} questions ({len(items)} items)"
+        else:
+            chunk_id = question_code
+            file_path = f"database://compliance_guide/{question_code}"
+            excerpt = f"{question_text[:100]}... ({len(items)} items)"
 
         return {
             'answer': answer,
             'confidence': 'high',
             'sources': [{
-                'chunk_id': question_code,
+                'chunk_id': chunk_id,
                 'category': 'database_list',
-                'excerpt': f"{question_text[:100]}... ({len(items)} items)",
+                'excerpt': excerpt,
                 'score': 1.0,
-                'file_path': f"database://compliance_guide/{question_code}"
+                'file_path': file_path
             }],
             'ranked_chunks': [],
             'backend': 'database',
