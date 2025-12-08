@@ -41,6 +41,9 @@ async def query_endpoint(
         )
         return response
     except Exception as e:
+        import traceback
+        error_detail = f"Query processing failed: {str(e)}\n{traceback.format_exc()}"
+        print(f"[ERROR] {error_detail}")
         raise HTTPException(status_code=500, detail=f"Query processing failed: {str(e)}")
 
 
