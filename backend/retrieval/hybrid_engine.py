@@ -159,9 +159,9 @@ class HybridQueryEngine:
 
         # Retrieve documents from ChromaDB
         # Need to embed the query using OpenAI embeddings (same as collection)
-        query_embedding = self.embedding_manager.embedding_function([question])
+        query_embedding = self.embedding_manager.embeddings.embed_query(question)
         semantic_results = self.embedding_manager.collection.query(
-            query_embeddings=query_embedding,
+            query_embeddings=[query_embedding],
             n_results=5
         )
 
