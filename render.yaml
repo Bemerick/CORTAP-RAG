@@ -5,7 +5,6 @@ services:
     env: docker
     region: oregon
     plan: starter
-    ipAllowList: []
 
   # Backend API Service
   - type: web
