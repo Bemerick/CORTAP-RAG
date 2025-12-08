@@ -3,7 +3,7 @@ databases:
     databaseName: cortap_rag
     user: cortap_user
     region: oregon
-    plan: starter
+    plan: free
 
 services:
 
