@@ -106,36 +106,67 @@ class HybridQueryEngine:
         question_lower = question.lower()
 
         # For list/count queries with multiple sections, aggregate across all
-        if len(route.section_names) > 1 and ('list' in question_lower or 'show' in question_lower or 'what are' in question_lower or 'how many' in question_lower):
-            # Multi-section list/count query - aggregate results
+        if len(route.section_names) > 1 and ('list' in question_lower or 'show' in question_lower or 'what are' in question_lower or 'how many' in question_lower or 'question' in question_lower):
+            # Multi-section list/count query - aggregate results with hierarchical structure
             is_deficiency = 'deficienc' in question_lower
+            is_indicator = 'indicator' in question_lower
             is_count = 'how many' in question_lower or 'count' in question_lower
+            is_questions = 'question' in question_lower
 
-            all_items = []
-            total_count = 0
-
-            for section_code in route.section_names:
-                if is_count:
+            if is_count:
+                # Count aggregation
+                total_count = 0
+                for section_code in route.section_names:
                     if is_deficiency:
                         result = self.query_builder.count_deficiencies(section_code)
                     else:
                         result = self.query_builder.count_indicators(section_code)
                     total_count += result.get('count', 0)
-                else:
-                    if is_deficiency:
-                        result = self.query_builder.list_deficiencies(section_code)
-                        all_items.extend(result.get('deficiencies', []))
-                    else:
-                        result = self.query_builder.list_indicators(section_code)
-                        all_items.extend(result.get('indicators', []))
 
-            if is_count:
                 return self._format_count_result({'count': total_count, 'sections': route.section_names}, question)
             else:
-                if is_deficiency:
-                    return self._format_list_result({'found': True, 'deficiencies': all_items, 'sections': route.section_names, 'multi_section': True})
-                else:
-                    return self._format_list_result({'found': True, 'indicators': all_items, 'sections': route.section_names, 'multi_section': True})
+                # List aggregation - use hierarchical structure
+                sections_data = []
+                total_items = 0
+
+                for section_code in route.section_names:
+                    if is_deficiency:
+                        db_result = self.query_builder.list_deficiencies(section_code)
+                        if db_result.get('found'):
+                            items = db_result.get('deficiencies', [])
+                            sections_data.append({
+                                'question_code': section_code,
+                                'question_text': db_result.get('question', {}).get('text', ''),
+                                'items': items,
+                                'item_type': 'deficiencies'
+                            })
+                            total_items += len(items)
+                    elif is_indicator:
+                        db_result = self.query_builder.list_indicators(section_code)
+                        if db_result.get('found'):
+                            items = db_result.get('indicators', [])
+                            sections_data.append({
+                                'question_code': section_code,
+                                'question_text': db_result.get('question', {}).get('text', ''),
+                                'items': items,
+                                'item_type': 'indicators'
+                            })
+                            total_items += len(items)
+                    else:
+                        # Show questions with both indicators and deficiencies
+                        db_result = self.query_builder.get_section(section_code)
+                        if db_result.get('found'):
+                            indicators = db_result.get('indicators', [])
+                            deficiencies = db_result.get('deficiencies', [])
+                            sections_data.append({
+                                'question_code': section_code,
+                                'question_text': db_result.get('question', {}).get('text', ''),
+                                'items': {'indicators': indicators, 'deficiencies': deficiencies},
+                                'item_type': 'both'
+                            })
+                            total_items += len(indicators) + len(deficiencies)
+
+                return self._format_hierarchical_list(sections_data, total_items, question)
 
         # Use first section for single-section queries
         section_code = route.section_names[0]
@@ -257,43 +288,44 @@ class HybridQueryEngine:
 
         question_lower = question.lower()
 
-        # Check if asking for list vs count
+        # Check if asking for list vs count vs applicability
         is_list_query = any(word in question_lower for word in ['list', 'show', 'what are', 'give me', 'display'])
         is_count_query = any(word in question_lower for word in ['how many', 'count', 'number of'])
+        is_applicability_query = 'applicability' in question_lower
 
-        # If asking for LIST of indicators/deficiencies across multiple sections
-        if is_list_query and len(route.section_names) > 1:
-            print(f"[HYBRID] List query for {len(route.section_names)} sections")
+        # If asking for APPLICABILITY across multiple sections
+        if is_applicability_query and len(route.section_names) > 1:
+            print(f"[HYBRID] Applicability query for {len(route.section_names)} sections")
 
-            # Determine if indicators or deficiencies
-            is_deficiencies = 'deficienc' in question_lower
-
-            # Collect all items from all sections
-            all_items = []
+            applicability_info = []
             for section_code in route.section_names:
-                if is_deficiencies:
-                    db_result = self.query_builder.list_deficiencies(section_code)
-                else:
-                    db_result = self.query_builder.list_indicators(section_code)
-
+                db_result = self.query_builder.get_section(section_code)
                 if db_result.get('found'):
-                    items = db_result.get('deficiencies' if is_deficiencies else 'indicators', [])
-                    for item in items:
-                        # Handle both deficiency and indicator structures
-                        item_text = item.get('text') or item.get('deficiency_text') or item.get('indicator_text', '')
-                        all_items.append({
-                            'text': item_text,
-                            'question_code': section_code,
-                            'question_text': db_result.get('question', {}).get('text', '')
-                        })
+                    applicability_info.append({
+                        'question_code': section_code,
+                        'question_text': db_result['question']['text'],
+                        'applicability': db_result['question'].get('applicability', 'Not specified')
+                    })
 
-            # Format the list
-            item_type = 'Possible Deficiencies' if is_deficiencies else 'Indicators of Compliance'
-            answer = f"**{item_type} for Multiple Questions**\n\n"
-            answer += f"Found **{len(all_items)} {item_type.lower()}** across {len(route.section_names)} questions:\n\n"
+            # Format the applicability response
+            answer = f"**Applicability Requirements for Charter Bus**\n\n"
+            answer += f"The Charter Bus requirements have the following applicability:\n\n"
 
-            for idx, item in enumerate(all_items, 1):
-                answer += f"{idx}. **{item['question_code']}**: {item['text']}\n"
+            # Get unique applicability statements
+            unique_applicability = set()
+            for info in applicability_info:
+                if info['applicability'] and info['applicability'] != 'Not specified':
+                    unique_applicability.add(info['applicability'])
+
+            if unique_applicability:
+                for appl in unique_applicability:
+                    answer += f"- {appl}\n"
+            else:
+                answer += "No specific applicability information found.\n"
+
+            answer += f"\n**Related Questions:**\n"
+            for info in applicability_info:
+                answer += f"- **{info['question_code']}**: {info['question_text']}\n"
 
             answer += f"\n*Source: Structured database (100% accurate)*"
 
@@ -301,9 +333,121 @@ class HybridQueryEngine:
                 'answer': answer,
                 'confidence': 'high',
                 'sources': [{
+                    'chunk_id': '_'.join(route.section_names),
+                    'category': 'database_applicability',
+                    'excerpt': f"Applicability for {len(route.section_names)} Charter Bus questions",
+                    'score': 1.0,
+                    'file_path': 'database://compliance_guide/charter_bus_applicability'
+                }],
+                'ranked_chunks': [],
+                'backend': 'database_applicability',
+                'metadata': {
+                    'section_count': len(route.section_names)
+                }
+            }
+
+        # If asking for LIST of indicators/deficiencies/questions across multiple sections
+        if is_list_query and len(route.section_names) > 1:
+            print(f"[HYBRID] List query for {len(route.section_names)} sections")
+
+            # Determine what they're asking for
+            is_deficiencies = 'deficienc' in question_lower
+            is_indicators = 'indicator' in question_lower
+            is_questions = 'question' in question_lower
+
+            # Collect all sections with their items grouped by question
+            sections_data = []
+            total_items = 0
+
+            for section_code in route.section_names:
+                if is_deficiencies:
+                    db_result = self.query_builder.list_deficiencies(section_code)
+                elif is_indicators:
+                    db_result = self.query_builder.list_indicators(section_code)
+                else:
+                    # Default to getting full section (both indicators and deficiencies)
+                    db_result = self.query_builder.get_section(section_code)
+
+                if db_result.get('found'):
+                    items = []
+                    if is_deficiencies:
+                        items = db_result.get('deficiencies', [])
+                    elif is_indicators:
+                        items = db_result.get('indicators', [])
+                    else:
+                        # For questions, show both indicators and deficiencies
+                        items = {
+                            'indicators': db_result.get('indicators', []),
+                            'deficiencies': db_result.get('deficiencies', [])
+                        }
+
+                    sections_data.append({
+                        'question_code': section_code,
+                        'question_text': db_result.get('question', {}).get('text', ''),
+                        'items': items,
+                        'stats': db_result.get('stats', {})
+                    })
+
+                    if isinstance(items, dict):
+                        total_items += len(items.get('indicators', [])) + len(items.get('deficiencies', []))
+                    else:
+                        total_items += len(items)
+
+            # Format the hierarchical list
+            if is_deficiencies:
+                item_type = 'Deficiencies'
+                answer = f"**Possible Deficiencies Grouped by Question**\n\n"
+            elif is_indicators:
+                item_type = 'Indicators of Compliance'
+                answer = f"**Indicators of Compliance Grouped by Question**\n\n"
+            else:
+                item_type = 'Questions'
+                answer = f"**Questions with Indicators and Deficiencies**\n\n"
+
+            answer += f"Found **{len(sections_data)} questions** with **{total_items} total items**:\n\n"
+
+            # Group items under questions
+            for section in sections_data:
+                answer += f"### {section['question_code']}\n"
+                answer += f"**Question:** {section['question_text']}\n\n"
+
+                if isinstance(section['items'], dict):
+                    # Show both indicators and deficiencies
+                    indicators = section['items'].get('indicators', [])
+                    deficiencies = section['items'].get('deficiencies', [])
+
+                    if indicators:
+                        answer += f"**Indicators of Compliance ({len(indicators)}):**\n"
+                        for ind in indicators:
+                            answer += f"  {ind.get('letter', '')}. {ind.get('text', '')}\n"
+                        answer += "\n"
+
+                    if deficiencies:
+                        answer += f"**Possible Deficiencies ({len(deficiencies)}):**\n"
+                        for def_ in deficiencies:
+                            answer += f"  • **{def_.get('code', 'N/A')}**: {def_.get('title', '')}\n"
+                        answer += "\n"
+                else:
+                    # Show only indicators or only deficiencies
+                    if is_deficiencies:
+                        answer += f"**Possible Deficiencies ({len(section['items'])}):**\n"
+                        for def_ in section['items']:
+                            answer += f"  • **{def_.get('code', 'N/A')}**: {def_.get('title', '')}\n"
+                    else:
+                        answer += f"**Indicators of Compliance ({len(section['items'])}):**\n"
+                        for ind in section['items']:
+                            answer += f"  {ind.get('letter', '')}. {ind.get('text', '')}\n"
+                    answer += "\n"
+
+            answer += f"*Source: Structured database (100% accurate)*"
+
+            return {
+                'answer': answer,
+                'confidence': 'high',
+                'sources': [{
                     'chunk_id': f"list_{'_'.join(route.section_names[:3])}",
                     'category': 'database_list',
-                    'excerpt': f"{len(all_items)} {item_type.lower()} from {len(route.section_names)} questions",
+                    'excerpt': f"{total_items} items from {len(sections_data)} questions",
                     'score': 1.0,
                     'file_path': 'database://compliance_guide/multi_section_list'
                 }],
@@ -311,7 +455,7 @@ class HybridQueryEngine:
                 'backend': 'database_list',
                 'metadata': {
                     'section_count': len(route.section_names),
-                    'item_count': len(all_items)
+                    'item_count': total_items
                 }
             }
 
@@ -514,6 +658,102 @@ class HybridQueryEngine:
             'ranked_chunks': [],
             'backend': 'database',
             'metadata': {'db_result': db_result}
+        }
+
+    def _format_hierarchical_list(self, sections_data: List[Dict[str, Any]], total_items: int, question: str) -> Dict[str, Any]:
+        """
+        Format a hierarchical list showing items grouped under questions.
+
+        Args:
+            sections_data: List of dicts with question_code, question_text, items, item_type
+            total_items: Total count of all items
+            question: Original question text
+
+        Returns:
+            Formatted response dict
+        """
+        if not sections_data:
+            return {
+                'answer': "No data found for the requested sections.",
+                'confidence': 'low',
+                'sources': [],
+                'ranked_chunks': [],
+                'backend': 'database'
+            }
+
+        # Determine title based on query
+        question_lower = question.lower()
+        if 'deficienc' in question_lower:
+            title = "**Possible Deficiencies Grouped by Question**"
+        elif 'indicator' in question_lower:
+            title = "**Indicators of Compliance Grouped by Question**"
+        else:
+            title = "**Questions with Indicators and Deficiencies**"
+
+        answer = f"{title}\n\n"
+        answer += f"Found **{len(sections_data)} questions** with **{total_items} total items**:\n\n"
+
+        # Format each section hierarchically
+        for section in sections_data:
+            answer += f"### {section['question_code']}\n"
+            answer += f"**Question:** {section['question_text']}\n\n"
+
+            if section['item_type'] == 'both':
+                # Show both indicators and deficiencies
+                indicators = section['items'].get('indicators', [])
+                deficiencies = section['items'].get('deficiencies', [])
+
+                if indicators:
+                    answer += f"**Indicators of Compliance ({len(indicators)}):**\n"
+                    for ind in indicators:
+                        answer += f"  {ind.get('letter', '')}. {ind.get('text', '')}\n"
+                    answer += "\n"
+
+                if deficiencies:
+                    answer += f"**Possible Deficiencies ({len(deficiencies)}):**\n"
+                    for def_ in deficiencies:
+                        answer += f"  • **{def_.get('code', 'N/A')}**: {def_.get('title', '')}\n"
+                    answer += "\n"
+
+            elif section['item_type'] == 'deficiencies':
+                # Show only deficiencies
+                items = section['items']
+                if items:
+                    answer += f"**Possible Deficiencies ({len(items)}):**\n"
+                    for def_ in items:
+                        answer += f"  • **{def_.get('code', 'N/A')}**: {def_.get('title', '')}\n"
+                    answer += "\n"
+
+            elif section['item_type'] == 'indicators':
+                # Show only indicators
+                items = section['items']
+                if items:
+                    answer += f"**Indicators of Compliance ({len(items)}):**\n"
+                    for ind in items:
+                        answer += f"  {ind.get('letter', '')}. {ind.get('text', '')}\n"
+                    answer += "\n"
+
+        answer += f"*Source: Structured database (100% accurate)*"
+
+        # Build section codes list for metadata
+        section_codes = [s['question_code'] for s in sections_data]
+
+        return {
+            'answer': answer,
+            'confidence': 'high',
+            'sources': [{
+                'chunk_id': '_'.join(section_codes[:3]) + ('...' if len(section_codes) > 3 else ''),
+                'category': 'database_hierarchical_list',
+                'excerpt': f"{total_items} items from {len(sections_data)} questions",
+                'score': 1.0,
+                'file_path': f"database://compliance_guide/{'-'.join(section_codes[:3])}"
+            }],
+            'ranked_chunks': [],
+            'backend': 'database_hierarchical',
+            'metadata': {
+                'section_count': len(sections_data),
+                'item_count': total_items
+            }
         }
 
     def _format_section_result(self, db_result: Dict[str, Any]) -> Dict[str, Any]:

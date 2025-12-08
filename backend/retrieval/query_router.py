@@ -56,6 +56,11 @@ class QueryRouter:
         (r'(?:all|get)\s+(?:indicators|deficiencies|questions)\s+(?:in|for|under)', 'list_in_section'),
         (r'(?:indicators|deficiencies|questions)\s+(?:in|for)\s+', 'list_in_section'),
 
+        # Applicability queries for specific sections
+        # Matches: "What are the applicability requirements for Charter Bus", "applicability for TVI3"
+        (r'(?:what are|what\'s|get)\s+(?:the\s+)?applicability\s+(?:requirements?\s+)?(?:in|for|of)', 'get_section'),
+        (r'applicability\s+(?:in|for)\s+', 'get_section'),
+
         # Direct section queries (without "why" or "purpose")
         # Matches: "What is L1?", "Describe TC-PjM2", "Explain PTASP5"
         (r'what is \w+\??$', 'get_section'),
@@ -214,7 +219,8 @@ class QueryRouter:
 
         # If it's a conceptual question (purpose, why, explain) without specific data request
         # Route to RAG even if section names are mentioned
-        if is_conceptual and not any(term in query_lower for term in ['indicator', 'deficienc', 'question', 'list', 'count', 'how many']):
+        # BUT: if asking about applicability for a specific section, use database (it has that field)
+        if is_conceptual and not any(term in query_lower for term in ['indicator', 'deficienc', 'question', 'list', 'count', 'how many', 'applicability']):
             return QueryRoute(
                 route_type="rag",
                 confidence=0.90,
