@@ -85,7 +85,8 @@ class QueryRouter:
 
     # Pure RAG patterns (conceptual, no specific sections)
     RAG_PATTERNS = [
-        # Conceptual questions
+        # Conceptual questions about requirements/compliance
+        r'what (?:is|are)\s+(?:the\s+)?requirements?\s+for',
         r'what (?:is|are).+?(?:ada|charter|procurement|safety)',
         r'explain.+?(?:compliance|requirements|regulations)',
         r'how (?:do|does|should|can).+?(?:recipients|transit|agencies)',
@@ -172,9 +173,10 @@ class QueryRouter:
         Classify a query and determine routing strategy.
 
         Classification logic:
-        1. Database: Specific section + count/list/lookup queries
-        2. Hybrid: Multiple sections OR section + conceptual OR aggregate queries
-        3. RAG: Conceptual questions with no section IDs
+        1. RAG (priority): Conceptual "what are requirements" type questions
+        2. Database: Specific section + count/list/lookup queries
+        3. Hybrid: Multiple sections OR section + conceptual OR aggregate queries
+        4. RAG: Other conceptual questions with no section IDs
 
         Args:
             query: User query text
@@ -182,6 +184,19 @@ class QueryRouter:
         Returns:
             QueryRoute with classification and metadata
         """
+        # Check RAG patterns FIRST (before section extraction)
+        # This handles "what are requirements for X" as RAG, not database
+        is_rag_pattern = self._check_rag_patterns(query)
+        if is_rag_pattern:
+            # Pure conceptual query - use RAG regardless of section mentions
+            return QueryRoute(
+                route_type="rag",
+                confidence=0.90,
+                reasoning="Conceptual requirements/explanation question. Best answered by RAG.",
+                section_names=None,
+                keywords=self._extract_keywords(query)
+            )
+
         sections = self.extract_section_names(query)
 
         # Check patterns

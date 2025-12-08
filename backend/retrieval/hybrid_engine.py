@@ -196,8 +196,64 @@ class HybridQueryEngine:
 
         question_lower = question.lower()
 
+        # Check if asking for list vs count
+        is_list_query = any(word in question_lower for word in ['list', 'show', 'what are', 'give me', 'display'])
+        is_count_query = any(word in question_lower for word in ['how many', 'count', 'number of'])
+
+        # If asking for LIST of indicators/deficiencies across multiple sections
+        if is_list_query and len(route.section_names) > 1:
+            print(f"[HYBRID] List query for {len(route.section_names)} sections")
+
+            # Determine if indicators or deficiencies
+            is_deficiencies = 'deficienc' in question_lower
+
+            # Collect all items from all sections
+            all_items = []
+            for section_code in route.section_names:
+                if is_deficiencies:
+                    db_result = self.query_builder.list_deficiencies(section_code)
+                else:
+                    db_result = self.query_builder.list_indicators(section_code)
+
+                if db_result.get('found'):
+                    items = db_result.get('deficiencies' if is_deficiencies else 'indicators', [])
+                    for item in items:
+                        all_items.append({
+                            'text': item['text'],
+                            'question_code': section_code,
+                            'question_text': db_result.get('question', {}).get('text', '')
+                        })
+
+            # Format the list
+            item_type = 'Possible Deficiencies' if is_deficiencies else 'Indicators of Compliance'
+            answer = f"**{item_type} for Multiple Questions**\n\n"
+            answer += f"Found **{len(all_items)} {item_type.lower()}** across {len(route.section_names)} questions:\n\n"
+
+            for idx, item in enumerate(all_items, 1):
+                answer += f"{idx}. **{item['question_code']}**: {item['text']}\n"
+
+            answer += f"\n*Source: Structured database (100% accurate)*"
+
+            return {
+                'answer': answer,
+                'confidence': 'high',
+                'sources': [{
+                    'chunk_id': f"list_{'_'.join(route.section_names[:3])}",
+                    'category': 'database_list',
+                    'excerpt': f"{len(all_items)} {item_type.lower()} from {len(route.section_names)} questions",
+                    'score': 1.0,
+                    'file_path': 'database://compliance_guide/multi_section_list'
+                }],
+                'ranked_chunks': [],
+                'backend': 'database_list',
+                'metadata': {
+                    'section_count': len(route.section_names),
+                    'item_count': len(all_items)
+                }
+            }
+
         # If asking for count across multiple sections, aggregate
-        if ('how many' in question_lower or 'count' in question_lower) and len(route.section_names) > 1:
+        if is_count_query and len(route.section_names) > 1:
             print(f"[HYBRID] Aggregating counts across {len(route.section_names)} sections")
             total_indicators = 0
             total_deficiencies = 0
