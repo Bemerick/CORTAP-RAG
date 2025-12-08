@@ -5,9 +5,9 @@ from pathlib import Path
 from typing import Dict, List, Optional, Literal
 from dataclasses import dataclass
 
-# Add config to path for section mappings
+# Add section_config to path for section mappings
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from config.section_mappings import find_matching_sections
+from section_config.section_mappings import find_matching_sections
 
 
 QueryType = Literal["database", "rag", "hybrid"]
