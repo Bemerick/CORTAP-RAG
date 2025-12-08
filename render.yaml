@@ -1,10 +1,11 @@
-services:
-  # PostgreSQL Database
-  - type: pserv
-    name: cortap-rag-db
-    env: docker
+databases:
+  - name: cortap-rag-db
+    databaseName: cortap_rag
+    user: cortap_user
     region: oregon
     plan: starter
+
+services:
 
   # Backend API Service
   - type: web
