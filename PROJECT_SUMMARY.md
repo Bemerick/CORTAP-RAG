@@ -1,15 +1,16 @@
 # 🎉 CORTAP-RAG - Hybrid RAG+Database System
 
-**Status**: ✅ Production Ready with Database Migrations
-**Last Updated**: December 6, 2025
-**Version**: 2.2.0
+**Status**: ✅ Deployed to Production on Render
+**Last Updated**: December 8, 2025
+**Version**: 2.3.0
 
-🗣️ **Phase 5 Complete**: Natural language section names ("Legal section" vs "L1")
-📊 **Multi-Section Aggregation**: Automatic count totals across sections
-🔄 **Database Migrations**: Alembic configured for schema management
-⚡ **Performance**: Sub-50ms for natural language queries
-🎯 **Accuracy**: 100% for structured queries with 100+ name mappings
-🚀 **Ready for Deployment**: Database migrations and production-ready
+🚀 **Production Deployment**: Live on Render with PostgreSQL + React frontend
+🗣️ **Intelligent Query Routing**: RAG for concepts, Database for structured data
+📊 **Multi-Section Queries**: List indicators across sections with one query
+🔄 **Database Migrations**: Automated Alembic migrations on deploy
+⚡ **Performance**: Sub-50ms for database queries, <2s for RAG
+🎯 **Accuracy**: 100% for structured queries, conceptual summaries for requirements
+✨ **Smart Distinction**: "What are requirements" → RAG, "What are indicators" → Database
 
 ---
 
@@ -132,12 +133,52 @@ compliance_deficiencies (338 deficiencies with question_id)
 
 ---
 
-## Deployment
+## 🚀 Production Deployment (December 8, 2025)
 
+### Live URLs
 - **GitHub**: https://github.com/Bemerick/CORTAP-RAG
 - **Frontend**: https://cortap-rag-frontend.onrender.com
 - **Backend API**: https://cortap-rag-backend.onrender.com
 - **API Docs**: https://cortap-rag-backend.onrender.com/docs
+
+### Infrastructure
+- **Platform**: Render
+- **Database**: PostgreSQL (Free tier)
+- **Backend**: Python 3.13 (upgraded from 3.11 for compatibility)
+- **Frontend**: Static site (React/Vite)
+- **Migrations**: Automated Alembic on every deploy
+- **Cost**: ~$0/month (using free tiers)
+
+### Deployment Features
+✅ **Zero-downtime deploys** - Automatic via Git push
+✅ **Database migrations** - Run automatically during build
+✅ **Environment-based config** - DATABASE_URL auto-linked
+✅ **Health checks** - /health endpoint for monitoring
+✅ **Error logging** - Full traceback in production logs
+✅ **CORS enabled** - Frontend-backend communication
+
+---
+
+## 📋 Recent Deployment Work (Dec 8, 2025)
+
+### Issues Fixed During Deployment
+1. ✅ **Blueprint Configuration** - Fixed render.yaml syntax (pserv → databases, removed ipAllowList, updated plan)
+2. ✅ **Python Compatibility** - Upgraded SQLAlchemy (2.0.23 → 2.0.35) and psycopg2 (2.9.9 → 2.9.10) for Python 3.13
+3. ✅ **Migration Schema** - Empty migration file fixed with proper table definitions
+4. ✅ **Database Schema Mismatch** - Added missing `page_range` and `purpose` columns to compliance_sections
+5. ✅ **Data Ingestion** - Successfully loaded 493 indicators + 338 deficiencies across 23 sections
+6. ✅ **Response Validation** - Fixed SourceCitation format (added chunk_id, category, excerpt, score, file_path)
+7. ✅ **Query Routing** - Prioritized RAG for "what are requirements" vs Database for "what are indicators"
+8. ✅ **Multi-Section Lists** - Added support for listing indicators across multiple sections
+9. ✅ **RAG Execution** - Fixed ChromaDB query with proper OpenAI embeddings (text-embedding-3-large, 3072 dims)
+10. ✅ **Embedding Manager** - Corrected method calls for embedding generation
+
+### Deployment Process Improvements
+- Created pre-deployment checklist script (`scripts/pre_deploy_check.sh`)
+- Comprehensive deployment documentation (`docs/RENDER_DEPLOYMENT.md` - 20+ pages)
+- Quick start guide (`DEPLOY_TO_RENDER.md` - 5 minute deployment)
+- Automated migration verification
+- Database connection testing
 
 ---
 
