@@ -21,7 +21,8 @@ class HybridQueryEngine:
         self,
         db_manager: DatabaseManager,
         rag_pipeline=None,  # RAGPipeline instance (optional for now)
-        hybrid_retriever=None  # HybridRetriever instance (optional)
+        hybrid_retriever=None,  # HybridRetriever instance (optional)
+        embedding_manager=None  # EmbeddingManager for ChromaDB access (optional)
     ):
         """
         Initialize hybrid query engine.
@@ -30,11 +31,13 @@ class HybridQueryEngine:
             db_manager: DatabaseManager for database queries
             rag_pipeline: RAGPipeline for answer generation (optional)
             hybrid_retriever: HybridRetriever for vector search (optional)
+            embedding_manager: EmbeddingManager for ChromaDB access (optional)
         """
         self.router = QueryRouter()
         self.query_builder = QueryBuilder(db_manager)
         self.rag_pipeline = rag_pipeline
         self.hybrid_retriever = hybrid_retriever
+        self.embedding_manager = embedding_manager
 
     def execute_query(
         self,
@@ -145,16 +148,40 @@ class HybridQueryEngine:
         """
         print(f"[RAG] Executing RAG query")
 
-        if not self.rag_pipeline or not self.hybrid_retriever:
+        if not self.rag_pipeline or not self.embedding_manager:
             return {
                 'answer': "RAG pipeline not initialized. Please use database queries for now.",
                 'confidence': 'low',
                 'sources': [],
+                'ranked_chunks': [],
                 'backend': 'rag_unavailable'
             }
 
-        # Retrieve documents
-        retrieved_chunks = self.hybrid_retriever.search(question, top_k=5)
+        # Retrieve documents from ChromaDB
+        semantic_results = self.embedding_manager.collection.query(
+            query_texts=[question],
+            n_results=5
+        )
+
+        # Merge with BM25 if hybrid retriever available
+        if self.hybrid_retriever:
+            retrieved_chunks = self.hybrid_retriever.merge_results(
+                semantic_results,
+                question,
+                top_k=5
+            )
+        else:
+            # Fallback to semantic only
+            retrieved_chunks = []
+            for i in range(len(semantic_results['ids'][0])):
+                retrieved_chunks.append({
+                    'chunk_id': semantic_results['ids'][0][i],
+                    'text': semantic_results['documents'][0][i],
+                    'metadata': semantic_results['metadatas'][0][i],
+                    'semantic_score': 1 - semantic_results['distances'][0][i],
+                    'bm25_score': 0.0,
+                    'hybrid_score': 1 - semantic_results['distances'][0][i]
+                })
 
         # Generate answer
         result = self.rag_pipeline.process_query(

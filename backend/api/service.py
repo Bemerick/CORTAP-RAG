@@ -60,7 +60,8 @@ class RAGService:
             self.hybrid_engine = HybridQueryEngine(
                 db_manager=self.db_manager,
                 rag_pipeline=self.rag_pipeline,
-                hybrid_retriever=self.hybrid_retriever
+                hybrid_retriever=self.hybrid_retriever,
+                embedding_manager=self.embedding_manager
             )
             print("[RAG SERVICE] Hybrid query engine initialized with database support")
         else:
