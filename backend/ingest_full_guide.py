@@ -155,7 +155,7 @@ def create_documents_from_chunks(chunks: list) -> list:
 
 
 def main():
-    """Main re-ingestion pipeline."""
+    """Main ingestion pipeline - skips if data already exists."""
     print("=" * 70)
     print("CORTAP-RAG Full Guide Ingestion")
     print("=" * 70)
