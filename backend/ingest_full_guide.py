@@ -157,8 +157,25 @@ def create_documents_from_chunks(chunks: list) -> list:
 def main():
     """Main re-ingestion pipeline."""
     print("=" * 70)
-    print("CORTAP-RAG Full Guide Re-Ingestion")
+    print("CORTAP-RAG Full Guide Ingestion")
     print("=" * 70)
+
+    # Initialize embedding manager first to check if data exists
+    embedding_manager = EmbeddingManager(
+        db_path=settings.chroma_db_path,
+        openai_api_key=settings.openai_api_key,
+        embedding_model=settings.embedding_model
+    )
+
+    # Check if data already exists
+    current_count = embedding_manager.get_collection_count()
+    if current_count > 1000:  # Expected ~1442 chunks
+        print(f"\n✓ Compliance guide already ingested ({current_count} documents)")
+        print("  Skipping re-ingestion to save time and API costs.")
+        print("  To force re-ingestion, delete the ChromaDB collection first.")
+        return
+
+    print(f"\nCurrent collection has {current_count} documents - proceeding with ingestion...")
 
     # Paths
     project_root = Path(__file__).parent.parent
@@ -190,16 +207,10 @@ def main():
 
     # Step 4: Ingest into ChromaDB
     print("\n[4/4] Ingesting into ChromaDB...")
-    embedding_manager = EmbeddingManager(
-        db_path=settings.chroma_db_path,
-        openai_api_key=settings.openai_api_key,
-        embedding_model=settings.embedding_model
-    )
 
-    # Clear existing collection
-    current_count = embedding_manager.get_collection_count()
+    # Clear existing collection if it has some data but not complete
     if current_count > 0:
-        print(f"\nClearing existing collection ({current_count} documents)...")
+        print(f"\nClearing incomplete collection ({current_count} documents)...")
         embedding_manager.clear_collection()
 
     # Ingest new documents
@@ -208,7 +219,7 @@ def main():
 
     # Summary
     print("\n" + "=" * 70)
-    print("Re-Ingestion Complete!")
+    print("Ingestion Complete!")
     print("=" * 70)
     print(f"Total documents indexed: {embedding_manager.get_collection_count()}")
     print(f"Database location: {settings.chroma_db_path}")
