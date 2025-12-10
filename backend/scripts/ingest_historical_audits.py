@@ -383,7 +383,7 @@ class HistoricalAuditIngestor:
 
 def main():
     parser = argparse.ArgumentParser(description='Ingest historical audit reports into PostgreSQL')
-    parser.add_argument('--input-dir', default='./extracted_data',
+    parser.add_argument('--input-dir', default='./extracted_data_claude',
                         help='Directory containing extracted JSON files')
     parser.add_argument('--dry-run', action='store_true',
                         help='Print what would be done without committing')
