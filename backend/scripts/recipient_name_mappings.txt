@@ -1,0 +1,45 @@
+# Recipient Name Mappings for Manual Database Update
+# Format: source_file | recipient_name | acronym | city | state | region
+
+# Files needing recipient name updates (22 total)
+
+# Region 1 - New Hampshire
+01_NH_2413_Nashua_2023 Final ReportV1 (1).pdf | City of Nashua Transit System | Nashua Transit | Nashua | NH | 1
+
+# Region 1 - Maine
+AVCOG_2023_TR_Final Report.pdf | Androscoggin Valley Council of Governments | AVCOG | Auburn | ME | 1
+BSOOB_2023_TR_Final Report.pdf | Bath-Brunswick Regional Transportation | BSOOB | Bath | ME | 1
+Bangor_2023_TR_Final Report.pdf | City of Bangor | Bangor | Bangor | ME | 1
+GPTD 2023 TR Final Report.pdf | Greater Portland Transit District | GPTD | Portland | ME | 1
+
+# Region 1 - Connecticut
+ETD_2023_TR_Final Report.pdf | Estuary Transit District | ETD | Essex | CT | 1
+GBT 2023 TR Final Report.pdf | Greater Bridgeport Transit | GBT | Bridgeport | CT | 1
+GNHTD_2023_TR_Final Report.pdf | Greater New Haven Transit District | GNHTD | Hamden | CT | 1
+NTD 2023 TR Final Report.pdf | Northwestern Connecticut Transit District | NTD | Torrington | CT | 1
+NVCOG 2023 TR Final Report.pdf | Naugatuck Valley Council of Governments | NVCOG | Waterbury | CT | 1
+
+# Region 1 - Massachusetts
+LRTA_2023_TR_Final Report_REV1.pdf | Lowell Regional Transit Authority | LRTA | Lowell | MA | 1
+MEVA_2023_TR_Final Report.pdf | Merrimack Valley Regional Transit Authority | MEVA | Haverhill | MA | 1
+MTA_2023_TR_Final Report.pdf | Montachusett Regional Transit Authority | MTA | Fitchburg | MA | 1
+SRTA_2023_TR_Final Report.pdf | Southeastern Regional Transit Authority | SRTA | New Bedford | MA | 1
+
+# Region 3 - Pennsylvania
+R3_LCTA_TR23_Final_Letter and Report.pdf | Lehigh and Northampton Transportation Authority | LCTA | Allentown | PA | 3
+R3_PA_ Pottstown Borough_TR23_Final Report and Cover Letter.pdf TGC Signature.pdf | Pottstown Area Rapid Transit | PART | Pottstown | PA | 3
+R3_PA_AMTRAN_TR23_Final_Letter_Report_8.29.pdf TGC Signature.pdf | Cambria County Transit Authority | AMTRAN | Johnstown | PA | 3
+R3_PA_Monroe County TA_TR23_DraftFinal_LetterandReport_7.20.pdf | Monroe County Transit Authority | MCTA | Stroudsburg | PA | 3
+R3_PA_Radford_TR23_Final_Letter_Report_9.05.pdf | Radford Transit | Radford Transit | Radford | VA | 3
+TC_R3_PA_South Central Transit Authority_TR23_Final_Report_Letter_6.28.pdf | South Central Transit Authority | SCTA | Lewistown | PA | 3
+
+# Region 3 - Virginia
+R3_VA_ Petersburg City_TR23_Final_Letter_Report_9.05.pdf | Petersburg Area Transit | PAT | Petersburg | VA | 3
+
+# Region Unknown
+KVRTA_TR23_Final Report and CL.pdf TGC signature.pdf | Kennebec Valley Regional Transit Authority | KVRTA | Augusta | ME | 1
+
+# Notes:
+# - Region numbers inferred from filename patterns or typical FTA regions
+# - Some city/state information may need verification
+# - Acronyms expanded to full agency names where known

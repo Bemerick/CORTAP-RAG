@@ -6,6 +6,7 @@ class Settings(BaseSettings):
     """Application settings loaded from environment variables."""
 
     openai_api_key: str
+    anthropic_api_key: str | None = None  # Optional, used in extraction scripts
     chroma_db_path: str = "./chroma_db"
     environment: str = "development"
     database_url: str | None = None  # Optional database URL for hybrid mode

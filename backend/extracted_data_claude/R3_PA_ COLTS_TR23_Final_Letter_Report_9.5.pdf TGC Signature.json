@@ -1,0 +1,270 @@
+{
+  "recipient": {
+    "name": "County of Lackawanna Transit System",
+    "acronym": "COLTS",
+    "city": "Scranton",
+    "state": "PA",
+    "region_number": 3
+  },
+  "review_info": {
+    "fiscal_year": "FY2023",
+    "review_type": "TR",
+    "report_date": "September 12, 2023"
+  },
+  "assessments": [
+    {
+      "review_area": "Legal",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Financial Management and Capacity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Award Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Program Management and Subrecipient Oversight",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Project Management",
+      "finding": "D",
+      "deficiency_code": "TC-PjM3-1",
+      "description": "Northeastern Transit (NET) operates three (3) fixed bus routes as well as Saturday shared ride services on behalf of COLTS using their own non-Federally funded vehicles. COLTS has access to operational data through the AVAIL and TSI systems installed on the buses and shared ride reports from the operators. COLTS has drafted checklists for ADA equipment maintenance and accessibility oversight but these are not yet in use. COLTS does not conduct comprehensive oversight of NET, including regular monitoring intervals or stated performance goals and expectations.",
+      "corrective_action": "By November 21, 2023, COLTS must submit to the Region 3 office procedures for ensuring that transit management contractors comply with Federal requirements, along with evidence of implementation.",
+      "response_due_date": "11/21/23",
+      "date_closed": null
+    },
+    {
+      "review_area": "Transit Asset Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Satisfactory Continuing Control",
+      "finding": "D",
+      "deficiency_code": "SCC8-4",
+      "description": "COLTS does not conduct a full physical inventory in order to complete the reconciliation with the property records.",
+      "corrective_action": "By November 21, 2023, COLTS must submit to the Region 3 office procedures for completing the physical inventory and reconciling them to records. By February 8, 2024, COLTS must submit to the Region 3 office evidence that it has performed the physical inventory of FTA-funded equipment and has reconciled them to records.",
+      "response_due_date": "11/21/23",
+      "date_closed": null
+    },
+    {
+      "review_area": "Maintenance",
+      "finding": "D",
+      "deficiency_code": "M5-1",
+      "description": "The COLTS Transit Center lessee, MARTZ, holds responsibility for maintenance of the facility. COLTS does not require MARTZ to provide a facility maintenance plan including intervals or documentation evidencing on-time performance.",
+      "corrective_action": "By November 21, 2023, COLTS must submit to the Region 3 office procedures to oversee maintenance of the Transit Center. By February 8, 2024, COLTS must submit to the Region 3 office evidence of procedure implementation such as an amended lease or supplemental agreement incorporating the requirement for a written maintenance plan that includes (a) maintenance standards compatible with FTA requirements, (b) performance measures for timely maintenance, and (c) procedures for pursuing warranty claims.",
+      "response_due_date": "11/21/23",
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "D",
+      "deficiency_code": "P4-1",
+      "description": "COLTS does not have a process for conducting and documenting responsibility.",
+      "corrective_action": "By November 21, 2023, COLTS must submit to the Region 3 office: Documentation verifying the responsibility of contractors for any contracts where the recipient was found to have failed to verify that the contractor was responsible; Documentation of an implemented process to make adequate responsibility determinations prior to award of a contract. By February 8, 2024, COLTS must submit to the Region 3 office documentation that the required process was implemented with the next procurement.",
+      "response_due_date": "11/21/23",
+      "date_closed": null
+    },
+    {
+      "review_area": "Disadvantaged Business Enterprise",
+      "finding": "D",
+      "deficiency_code": "DBE5-1",
+      "description": "The COLTS Fixed Asset Purchases worksheet tracks all elements of the DBE uniform reports. Total dollars for Section A track to total dollars awarded rather than FTA funds only. The total number of awards under Section A does not include all awards for the reporting period.",
+      "corrective_action": "By February 8, 2024, COLTS must: Review DBE reports from 2020 and inform the Office of Civil Rights which reports need revisions; Submit corrected reports in TrAMS; Submit a revised DBE Program that includes procedures for correctly completing Uniform Reports of DBE Awards or Commitments and Payments.",
+      "response_due_date": "2/8/24",
+      "date_closed": null
+    },
+    {
+      "review_area": "Title VI",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - General",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - Complementary Paratransit",
+      "finding": "D",
+      "deficiency_code": "ADA-CPT2-3",
+      "description": "The appeals process did not specify that if a decision is not made within 30 days of completing the appeal process, paratransit service is provided until and unless a decision to deny the appeal is issued. The Paratransit Rider Guide was updated during the review and requires Board approval.",
+      "corrective_action": "By December 22, 2023, COLTS must submit to the RCRO the Board approved eligibility appeals process that provides the applicant with paratransit service when the appeal decision is not made within 30 days of completing the appeal process until and unless a decision to deny the appeal is issued.",
+      "response_due_date": "12/22/23",
+      "date_closed": null
+    },
+    {
+      "review_area": "Equal Employment Opportunity",
+      "finding": "D",
+      "deficiency_code": "EEO3-2",
+      "description": "The current EEO Program lists the Executive Director as the EEO Officer; the Executive Director was not responsible for investigating complaints of EEO discrimination or providing EEO training for employees and managers during the review period. Through the ongoing restructuring the Director of Human Resources has taken on EEO Officer responsibilities. This restructuring is ongoing and the role/responsibility changes must be noted in the FY24 EEO Program update.",
+      "corrective_action": "By December 22, 2023, COLTS must submit evidence that: the EEO Officer is correctly identified in the draft EEO Program update; the EEO Officer reports and is directly responsible to the Executive Director; and that contact information for the EEO Officer is included in internal and external information, as described in the recipient's EEO program.",
+      "response_due_date": "12/22/23",
+      "date_closed": null
+    },
+    {
+      "review_area": "School Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Charter Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug-Free Workplace Act",
+      "finding": "D",
+      "deficiency_code": "DFWA1-2",
+      "description": "COLTS has a Substance Abuse Program that only applies to safety-sensitive employees, not all award-related employees. The Program does not include all three (3) required elements in a distinct section.",
+      "corrective_action": "By December 22, 2023, COLTS must submit to the Region 3 office: The Board approved amended DFWA policy that includes all required elements; Documentation that the revised policy has been distributed to all award-related employees.",
+      "response_due_date": "12/22/23",
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug and Alcohol Program",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5307 Program Requirements",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5310 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5311 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Public Transportation Agency Safety Plan (PTASP)",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Cybersecurity",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    }
+  ],
+  "awards": [
+    {
+      "award_number": "PA-2022-053",
+      "award_year": "2022",
+      "description": "ARPA 5307 COLTS Operating Assistance",
+      "amount": 6136000.0
+    },
+    {
+      "award_number": "PA-2022-047",
+      "award_year": "2022",
+      "description": "COLTS Section 5307 FFYs 2017, 2018 & 2019; Preventative Maintenance, Service Truck; Section 5339 FFYs 2019 & 2020; Office Furniture & Equipment, IT Equipment Purchase, & Bus & Facility Maintenance Equipment",
+      "amount": 1458450.0
+    },
+    {
+      "award_number": "PA-37-X045",
+      "award_year": "2014",
+      "description": "Access to Jobs",
+      "amount": 1946346.0
+    }
+  ],
+  "projects": [
+    {
+      "project_type": "completed",
+      "description": "Fixed Route Intelligent Transportation System (FRITS) project. The FRITS project is a statewide technology product. This project improves data collection, reporting and communications. It also monitors the condition of vehicles and has automatic passenger counts.",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Construction of a new Administration & Maintenance facility. The building will be constructed over the course of 2.5 years and will be primarily funded through the PA Department of Transportation. The estimated cost is 55 million dollars. Procurement will be managed by a project management team at Gannett Fleming.",
+      "completion_date": null,
+      "funding_sources": "PA Department of Transportation"
+    },
+    {
+      "project_type": "future",
+      "description": "Purchasing approximately 12-13 fixed route buses over the next five years. The vehicles will run on compressed natural gas and the total project costs are expected to exceed 9 million dollars. COLTS has piggy-backed off a state-sponsored contract for the purchase of these vehicles.",
+      "completion_date": null,
+      "funding_sources": null
+    }
+  ],
+  "source_file": "R3_PA_ COLTS_TR23_Final_Letter_Report_9.5.pdf TGC Signature.pdf",
+  "extracted_at": "2025-12-10T10:00:54.602641",
+  "extraction_method": "claude-api",
+  "summary": {
+    "total_deficiencies": 8,
+    "total_areas_reviewed": 23
+  }
+}

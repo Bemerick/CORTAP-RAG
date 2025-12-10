@@ -1,0 +1,300 @@
+{
+  "recipient": {
+    "name": "Greater New Haven Transit District",
+    "acronym": "GNHTD",
+    "city": "Hamden",
+    "state": "CT",
+    "region_number": 1
+  },
+  "review_info": {
+    "fiscal_year": "FY2023",
+    "review_type": "TR",
+    "report_date": "August 15, 2023"
+  },
+  "assessments": [
+    {
+      "review_area": "Legal",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Financial Management and Capacity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Award Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Program Management and Subrecipient Oversight",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Project Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Transit Asset Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Satisfactory Continuing Control",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Maintenance",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Disadvantaged Business Enterprise",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Title VI",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - General",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - Complementary Paratransit",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Equal Employment Opportunity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "School Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Charter Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug-Free Workplace Act",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug and Alcohol Program",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5307 Program Requirements",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5310 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5311 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Public Transportation Agency Safety Plan (PTASP)",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Cybersecurity",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    }
+  ],
+  "awards": [
+    {
+      "award_number": "CT-2016-011-00",
+      "award_year": "2016",
+      "description": "Capital Assistance 2016",
+      "amount": 2499440.0
+    },
+    {
+      "award_number": "CT-2016-011-00",
+      "award_year": "2017",
+      "description": "New Facility - ROW and Design",
+      "amount": 5360000.0
+    },
+    {
+      "award_number": "CT-2016-011-00",
+      "award_year": "2018",
+      "description": "Capital Assistance 2018",
+      "amount": 1901200.0
+    },
+    {
+      "award_number": "CT-2016-011-00",
+      "award_year": "2019",
+      "description": "Capital Assistance 2019",
+      "amount": 1772000.0
+    },
+    {
+      "award_number": "CT-2016-011-00",
+      "award_year": "2021",
+      "description": "GNHTD CARES Act",
+      "amount": 2700000.0
+    },
+    {
+      "award_number": "CT-2016-011-00",
+      "award_year": "2020",
+      "description": "2020 Capital Assistance",
+      "amount": 1480000.0
+    },
+    {
+      "award_number": "CT-2016-011-00",
+      "award_year": "2022",
+      "description": "GNHTD-ARP",
+      "amount": 600000.0
+    }
+  ],
+  "projects": [
+    {
+      "project_type": "completed",
+      "description": "Vehicle purchases - successful procurement of new paratransit vehicles and two pilot Ford Transit Wagon vehicles",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Facility rehabilitation - completing the rehabilitation of the Sherman Avenue facility including finishing touches such as carpet, modular furniture, and facility/office related equipment",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Operating projects - establish a facility maintenance team and enter into cooperative procurement for fleet fuel needs, possibly with CTtransit",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Capital projects - seek proposals to purchase electric vehicles, charging stations, and related equipment",
+      "completion_date": null,
+      "funding_sources": null
+    }
+  ],
+  "source_file": "GNHTD_2023_TR_Final Report.pdf",
+  "extracted_at": "2025-12-10T10:03:40.286815",
+  "extraction_method": "claude-api",
+  "summary": {
+    "total_deficiencies": 0,
+    "total_areas_reviewed": 23
+  }
+}

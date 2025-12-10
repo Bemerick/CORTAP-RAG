@@ -1,0 +1,285 @@
+{
+  "recipient": {
+    "name": "Borough of Pottstown",
+    "acronym": null,
+    "city": "Pottstown",
+    "state": "PA",
+    "region_number": 3
+  },
+  "review_info": {
+    "fiscal_year": "FY2023",
+    "review_type": "TR",
+    "report_date": "August 16, 2023"
+  },
+  "assessments": [
+    {
+      "review_area": "Legal",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Financial Management and Capacity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Award Management",
+      "finding": "D",
+      "deficiency_code": "TC-AM2-1",
+      "description": "The Borough of Pottstown has not been reporting Federal cash receipts and disbursements on a cash basis or outlays and unliquidated obligations on an accrual basis of accounting. In addition, the recipient has been incorrectly reporting the unobligated balance of the award as unliquidated obligations.",
+      "corrective_action": "The recipient must submit to the FTA regional office: \u2022 Revised Q2 2023 FFR that includes the corrected information \u2022 Procedures for including all required information in future reports. If the recipient is no longer able to submit the reports electronically, it must upload soft copies of the reports to TrAMS and notify the regional office when the revised reports are submitted.",
+      "response_due_date": "9/21/2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Program Management and Subrecipient Oversight",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Project Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Transit Asset Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Satisfactory Continuing Control",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Maintenance",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "D",
+      "deficiency_code": "P8-7",
+      "description": "The Borough of Pottstown entered into a time and materials contract for the provision of transit service and the contract does not specify a ceiling price.",
+      "corrective_action": "The recipient must submit to the Region 3 office: \u2022 Evidence that it has executed a contract amendment to add a ceiling price to the current time and materials contract. \u2022 Revised procurement procedures that include the requirements for the proper use of FTA-assisted time-and-materials contracts.",
+      "response_due_date": "9/21/2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "D",
+      "deficiency_code": "P11-1",
+      "description": "The contract files for two (2) procurements included in the file sample did not include the required FTA clause: Notice to FTA and U.S. DOT Inspector General of information related to fraud, waste, abuse, or other legal matters.",
+      "corrective_action": "The recipient must submit to the Region 3 office: \u2022 Revised procurement procedures that address inclusion of all FTA-required third-party contract clauses through use of a clause checklist or other mechanism. \u2022 A procedure for updating the required contract clauses on an annual basis.",
+      "response_due_date": "9/21/2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Disadvantaged Business Enterprise",
+      "finding": "D",
+      "deficiency_code": "DBE9-2",
+      "description": "The Borough of Pottstown included a 15% DBE goal in one (1) fuel solicitation; however, there was no documentation that the Borough conducted a review of the contractor's good faith efforts to obtain DBE participation prior to making the contract award.",
+      "corrective_action": "The recipient must submit to FTACivilRightsSupport@dot.gov: \u2022 Procedures for determining \"good faith efforts\" in compliance with the regulation.",
+      "response_due_date": "9/21/2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Title VI",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - General",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - Complementary Paratransit",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Equal Employment Opportunity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "School Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Charter Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug-Free Workplace Act",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug and Alcohol Program",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5307 Program Requirements",
+      "finding": "D",
+      "deficiency_code": "5307:1-2",
+      "description": "The Borough of Pottstown's agreement with its MPO does not include the following required elements: the recipient's responsibilities in carrying out the metropolitan transportation planning process, the development and sharing of information for financial plans, or the development of the annual listing of obligated projects. In addition, the agreement does not address requirements to jointly agree to and develop written provisions for cooperatively developing and sharing performance information.",
+      "corrective_action": "The recipient must submit to the Region 3 office: \u2022 A fully executed agreement that specifies the cooperative procedures for carrying out metropolitan transportation planning and programming and addresses the recipient's responsibilities, the development and sharing of information for financial plans, the development of the annual listing of obligated projects, and requirements to jointly agree to and develop written provisions for cooperatively developing and sharing performance information.",
+      "response_due_date": "11/21/2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5310 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5311 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Public Transportation Agency Safety Plan (PTASP)",
+      "finding": "D",
+      "deficiency_code": "PTASP 3-1",
+      "description": "The recipient ASP has not been updated to include a section on infectious disease exposure as required under the 2021 Bipartisan Infrastructure Law.",
+      "corrective_action": "The recipient must submit to the Region 3 office: \u2022 An updated ASP that addresses all the required elements including infectious disease exposure.",
+      "response_due_date": "11/21/2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Cybersecurity",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    }
+  ],
+  "awards": [
+    {
+      "award_number": "PA-2022-043-00",
+      "award_year": "2022",
+      "description": "Borough of Pottstown FFY20 5307 CARES Act Funding for Operating and Rolling Stock",
+      "amount": 2277968.0
+    },
+    {
+      "award_number": "PA-2023-001-00",
+      "award_year": "2023",
+      "description": "FY2018 5307 Operating Assistance",
+      "amount": 233667.0
+    }
+  ],
+  "projects": [
+    {
+      "project_type": "completed",
+      "description": "Purchased and put into service two new buses",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Installed thermal imaging cameras utilized to check body temperatures in order to identify COVID-19 related symptoms during the height of the pandemic",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Updated signage project. The PennDOT FRITS project will be implemented in 2023",
+      "completion_date": null,
+      "funding_sources": "PennDOT"
+    },
+    {
+      "project_type": "future",
+      "description": "Replace bus shelters that have met their useful life",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Replace a service vehicle that has met its useful life",
+      "completion_date": null,
+      "funding_sources": null
+    }
+  ],
+  "source_file": "R3_PA_ Pottstown Borough_TR23_Final Report and Cover Letter.pdf TGC Signature.pdf",
+  "extracted_at": "2025-12-10T10:05:46.605794",
+  "extraction_method": "claude-api",
+  "summary": {
+    "total_deficiencies": 6,
+    "total_areas_reviewed": 24
+  }
+}

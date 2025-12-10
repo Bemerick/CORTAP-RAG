@@ -12,6 +12,7 @@ if __name__ == "__main__":
 from retrieval.query_router import QueryRouter, QueryRoute
 from database.query_builder import QueryBuilder
 from database.connection import DatabaseManager
+from database.audit_queries import AuditQueryHelper
 
 
 class HybridQueryEngine:
@@ -22,7 +23,8 @@ class HybridQueryEngine:
         db_manager: DatabaseManager,
         rag_pipeline=None,  # RAGPipeline instance (optional for now)
         hybrid_retriever=None,  # HybridRetriever instance (optional)
-        embedding_manager=None  # EmbeddingManager for ChromaDB access (optional)
+        embedding_manager=None,  # EmbeddingManager for ChromaDB access (optional)
+        historical_collection=None  # ChromaDB collection for historical audits (optional)
     ):
         """
         Initialize hybrid query engine.
@@ -32,12 +34,15 @@ class HybridQueryEngine:
             rag_pipeline: RAGPipeline for answer generation (optional)
             hybrid_retriever: HybridRetriever for vector search (optional)
             embedding_manager: EmbeddingManager for ChromaDB access (optional)
+            historical_collection: ChromaDB collection for historical audits (optional)
         """
         self.router = QueryRouter()
         self.query_builder = QueryBuilder(db_manager)
+        self.audit_helper = AuditQueryHelper(db_manager)
         self.rag_pipeline = rag_pipeline
         self.hybrid_retriever = hybrid_retriever
         self.embedding_manager = embedding_manager
+        self.historical_collection = historical_collection
 
     def execute_query(
         self,
@@ -93,6 +98,10 @@ class HybridQueryEngine:
             Formatted database result
         """
         print(f"[DATABASE] Executing database query for: {route.section_names}")
+
+        # Check if this is a historical audit query (section_names will be None for these)
+        if route.section_names is None and 'Historical audit query' in route.reasoning:
+            return self._execute_historical_query(question, route)
 
         if not route.section_names or len(route.section_names) == 0:
             return {
@@ -220,32 +229,89 @@ class HybridQueryEngine:
                 'backend': 'rag_unavailable'
             }
 
-        # Retrieve documents from ChromaDB
-        # Need to embed the query using OpenAI embeddings (same as collection)
+        # Retrieve documents from ChromaDB collections
+        # Need to embed the query using OpenAI embeddings (same as collections)
         query_embedding = self.embedding_manager.embeddings.embed_query(question)
-        semantic_results = self.embedding_manager.collection.query(
+
+        # Query compliance guide collection (primary)
+        compliance_results = self.embedding_manager.collection.query(
             query_embeddings=[query_embedding],
-            n_results=5
+            n_results=3  # Reduced to make room for historical audits
         )
+
+        # Query historical audits collection if available
+        historical_results = None
+        if self.historical_collection:
+            print(f"[RAG] Querying historical audits collection...")
+            historical_results = self.historical_collection.query(
+                query_embeddings=[query_embedding],
+                n_results=3  # Get 3 historical examples
+            )
+
+        # Merge results from both collections
+        all_results = {
+            'ids': [[]],
+            'documents': [[]],
+            'metadatas': [[]],
+            'distances': [[]]
+        }
+
+        # Add compliance guide results
+        if compliance_results and compliance_results['ids'][0]:
+            all_results['ids'][0].extend(compliance_results['ids'][0])
+            all_results['documents'][0].extend(compliance_results['documents'][0])
+            # Add source indicator to metadata
+            for meta in compliance_results['metadatas'][0]:
+                meta['source_collection'] = 'compliance_guide'
+            all_results['metadatas'][0].extend(compliance_results['metadatas'][0])
+            all_results['distances'][0].extend(compliance_results['distances'][0])
+
+        # Add historical audit results
+        if historical_results and historical_results['ids'][0]:
+            all_results['ids'][0].extend(historical_results['ids'][0])
+            all_results['documents'][0].extend(historical_results['documents'][0])
+            # Add source indicator to metadata
+            for meta in historical_results['metadatas'][0]:
+                meta['source_collection'] = 'historical_audits'
+            all_results['metadatas'][0].extend(historical_results['metadatas'][0])
+            all_results['distances'][0].extend(historical_results['distances'][0])
+
+        # Sort by distance (lower is better) and take top 5
+        if all_results['ids'][0]:
+            combined = list(zip(
+                all_results['ids'][0],
+                all_results['documents'][0],
+                all_results['metadatas'][0],
+                all_results['distances'][0]
+            ))
+            combined.sort(key=lambda x: x[3])  # Sort by distance
+            combined = combined[:5]  # Take top 5
+
+            all_results = {
+                'ids': [[x[0] for x in combined]],
+                'documents': [[x[1] for x in combined]],
+                'metadatas': [[x[2] for x in combined]],
+                'distances': [[x[3] for x in combined]]
+            }
 
         # Merge with BM25 if hybrid retriever available
         if self.hybrid_retriever:
             retrieved_chunks = self.hybrid_retriever.merge_results(
-                semantic_results,
+                all_results,
                 question,
                 top_k=5
             )
         else:
             # Fallback to semantic only
             retrieved_chunks = []
-            for i in range(len(semantic_results['ids'][0])):
+            for i in range(len(all_results['ids'][0])):
                 retrieved_chunks.append({
-                    'chunk_id': semantic_results['ids'][0][i],
-                    'text': semantic_results['documents'][0][i],
-                    'metadata': semantic_results['metadatas'][0][i],
-                    'semantic_score': 1 - semantic_results['distances'][0][i],
+                    'chunk_id': all_results['ids'][0][i],
+                    'text': all_results['documents'][0][i],
+                    'metadata': all_results['metadatas'][0][i],
+                    'semantic_score': 1 - all_results['distances'][0][i],
                     'bm25_score': 0.0,
-                    'hybrid_score': 1 - semantic_results['distances'][0][i]
+                    'hybrid_score': 1 - all_results['distances'][0][i]
                 })
 
         # Generate answer
@@ -876,6 +942,342 @@ class HybridQueryEngine:
             'ranked_chunks': [],
             'backend': 'database_comparison',
             'metadata': {'section_count': len(section_data)}
+        }
+
+    def _execute_historical_query(self, question: str, route: QueryRoute) -> Dict[str, Any]:
+        """
+        Execute a historical audit query.
+
+        Args:
+            question: User's question
+            route: QueryRoute with pattern_type in keywords
+
+        Returns:
+            Formatted historical audit result
+        """
+        import re
+
+        question_lower = question.lower()
+        print(f"[HISTORICAL] Executing historical audit query: {route.reasoning}")
+
+        # Extract recipient identifier from question
+        # Strategy: Try multiple patterns to capture both acronyms and multi-word names
+
+        # Pattern 1: Uppercase acronyms (e.g., "GNHTD", "AMTRAN")
+        acronym_pattern = r'\b([A-Z]{2,10})\b'
+        acronym_matches = re.findall(acronym_pattern, question)
+
+        # Filter out common words
+        common_words = {'FTA', 'FY', 'TR', 'SMR', 'ADA', 'DBE', 'REGION', 'THE', 'AND', 'FOR', 'WITH'}
+        recipient_candidates = [m for m in acronym_matches if m not in common_words]
+
+        # Pattern 2: Multi-word capitalized names (e.g., "Alameda CTC", "Greater New Haven Transit")
+        # This pattern matches:
+        # - Capitalized word + acronym (e.g., "Alameda CTC")
+        # - Multiple capitalized words (e.g., "Greater New Haven Transit")
+        multiword_patterns = [
+            r'\b([A-Z][a-z]+\s+[A-Z]{2,10})\b',  # Word + Acronym (e.g., "Alameda CTC")
+            r'\b([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\b'  # Multiple words (e.g., "Greater New Haven")
+        ]
+        multiword_matches = []
+        for pattern in multiword_patterns:
+            multiword_matches.extend(re.findall(pattern, question))
+
+        # Combine both patterns (prefer multiword matches as they're more specific)
+        recipient_candidates = multiword_matches + recipient_candidates
+
+        print(f"[HISTORICAL] Extracted recipient candidates: {recipient_candidates}")
+
+        # Handle recipient-specific queries
+        if 'deficienc' in question_lower and recipient_candidates:
+            recipient = recipient_candidates[0]
+            fiscal_year = None
+
+            # Extract fiscal year if mentioned
+            fy_pattern = r'(FY\s*\d{4}|\d{4})'
+            fy_match = re.search(fy_pattern, question, re.IGNORECASE)
+            if fy_match:
+                fiscal_year = fy_match.group(1)
+
+            result = self.audit_helper.get_recipient_deficiencies(recipient, fiscal_year)
+            return self._format_recipient_deficiencies(result, recipient)
+
+        # Handle regional queries
+        if 'region' in question_lower:
+            region_match = re.search(r'region\s+(\d+)', question_lower)
+            if region_match:
+                region_num = int(region_match.group(1))
+
+                # Check if filtering by review area
+                review_area = None
+                if 'procurement' in question_lower:
+                    review_area = 'Procurement'
+                elif 'legal' in question_lower:
+                    review_area = 'Legal'
+                elif 'maintenance' in question_lower:
+                    review_area = 'Maintenance'
+                elif 'title vi' in question_lower or 'title 6' in question_lower:
+                    review_area = 'Title VI'
+
+                result = self.audit_helper.get_regional_deficiencies(region_num, review_area)
+                return self._format_regional_deficiencies(result)
+
+        # Handle common deficiencies queries
+        if 'common' in question_lower or 'typical' in question_lower or 'frequent' in question_lower:
+            review_area = None
+            if 'procurement' in question_lower:
+                review_area = 'Procurement'
+            elif 'legal' in question_lower:
+                review_area = 'Legal'
+            elif 'maintenance' in question_lower:
+                review_area = 'Maintenance'
+
+            result = self.audit_helper.get_common_deficiencies(review_area, min_occurrences=2)
+            return self._format_common_deficiencies(result)
+
+        # Handle ranking queries
+        if 'ranking_query' in route.reasoning or any(term in question_lower for term in ['most', 'worst', 'best', 'least', 'highest', 'lowest', 'top', 'bottom']):
+            # Determine order (most/worst/highest = desc, least/best/lowest = asc)
+            order = 'desc'
+            if any(term in question_lower for term in ['least', 'best', 'lowest', 'fewest']):
+                order = 'asc'
+
+            result = self.audit_helper.get_recipients_by_deficiency_count(limit=10, order=order)
+            return self._format_ranking_result(result, question)
+
+        # Handle list all recipients query
+        if 'list' in question_lower and ('recipient' in question_lower or 'agenc' in question_lower):
+            region_num = None
+            region_match = re.search(r'region\s+(\d+)', question_lower)
+            if region_match:
+                region_num = int(region_match.group(1))
+
+            result = self.audit_helper.list_all_recipients(region_number=region_num)
+            return self._format_recipients_list(result)
+
+        # Default: couldn't parse historical query
+        return {
+            'answer': "I understand you're asking about historical audit data, but I couldn't parse your specific question. Try asking:\n\n- 'What deficiencies did [ACRONYM] have?' (e.g., GNHTD, AMTRAN)\n- 'Region 1 deficiencies'\n- 'Common procurement deficiencies'\n- 'List all recipients'",
+            'confidence': 'low',
+            'sources': [],
+            'ranked_chunks': [],
+            'backend': 'historical_query_error'
+        }
+
+    def _format_recipient_deficiencies(self, result: Dict[str, Any], recipient_id: str) -> Dict[str, Any]:
+        """Format recipient deficiency query results."""
+        if 'error' in result:
+            return {
+                'answer': result['error'],
+                'confidence': 'low',
+                'sources': [],
+                'ranked_chunks': [],
+                'backend': 'historical_not_found'
+            }
+
+        recipient = result['recipient']
+        deficiencies = result['deficiencies']
+
+        answer = f"## {recipient['name']} ({recipient['acronym']})\n\n"
+        answer += f"**Location**: {recipient['city']}, {recipient['state']}\n"
+        answer += f"**FTA Region**: {recipient['region']}\n\n"
+        answer += f"**Total Deficiencies**: {result['total_deficiencies']}\n\n"
+
+        if deficiencies:
+            answer += "### Deficiencies by Review Area\n\n"
+
+            # Group by review area
+            by_area = {}
+            for d in deficiencies:
+                area = d['review_area']
+                if area not in by_area:
+                    by_area[area] = []
+                by_area[area].append(d)
+
+            for area, items in sorted(by_area.items()):
+                answer += f"**{area}** ({len(items)} deficienc{'y' if len(items) == 1 else 'ies'}):\n\n"
+                for d in items:
+                    if d['deficiency_code']:
+                        answer += f"- **{d['deficiency_code']}**: {d['description'][:200] if d['description'] else 'No description'}\n"
+                    else:
+                        answer += f"- {d['description'][:200] if d['description'] else 'No description'}\n"
+                answer += "\n"
+        else:
+            answer += "*No deficiencies found for this recipient.*\n"
+
+        answer += "\n*Source: Historical FTA Audit Reviews Database*"
+
+        return {
+            'answer': answer,
+            'confidence': 'high',
+            'sources': [{
+                'chunk_id': f"audit_{recipient['acronym']}",
+                'category': 'historical_audit',
+                'excerpt': f"{recipient['name']} audit deficiencies",
+                'score': 1.0,
+                'file_path': 'database://historical_audits/recipient_deficiencies',
+                'source_collection': 'historical_audits'
+            }],
+            'ranked_chunks': [],
+            'backend': 'historical_audit'
+        }
+
+    def _format_regional_deficiencies(self, result: Dict[str, Any]) -> Dict[str, Any]:
+        """Format regional deficiency query results."""
+        region = result['region']
+        recipients = result['recipients']
+
+        answer = f"## Region {region} Deficiencies\n\n"
+        answer += f"**Total Recipients with Deficiencies**: {result['total_recipients']}\n\n"
+
+        if recipients:
+            for r in recipients:
+                answer += f"### {r['name']} ({r['acronym']}) - {r['state']}\n\n"
+                for d in r['deficiencies']:
+                    answer += f"- **{d['review_area']}**: {d['count']} deficienc{'y' if d['count'] == 1 else 'ies'}\n"
+                answer += "\n"
+        else:
+            answer += "*No deficiencies found for this region.*\n"
+
+        answer += "\n*Source: Historical FTA Audit Reviews Database*"
+
+        return {
+            'answer': answer,
+            'confidence': 'high',
+            'sources': [{
+                'chunk_id': f"region_{region}",
+                'category': 'historical_audit',
+                'excerpt': f"Region {region} audit deficiencies",
+                'score': 1.0,
+                'file_path': 'database://historical_audits/regional_deficiencies',
+                'source_collection': 'historical_audits'
+            }],
+            'ranked_chunks': [],
+            'backend': 'historical_audit'
+        }
+
+    def _format_common_deficiencies(self, result: Dict[str, Any]) -> Dict[str, Any]:
+        """Format common deficiency query results."""
+        deficiencies = result['common_deficiencies']
+
+        answer = "## Common Deficiencies Across All Recipients\n\n"
+
+        if deficiencies:
+            answer += "| Review Area | Recipients Affected | Total Occurrences |\n"
+            answer += "|------------|---------------------|-------------------|\n"
+
+            for d in deficiencies:
+                answer += f"| {d['review_area']} | {d['recipient_count']} | {d['total_deficiencies']} |\n"
+
+            answer += f"\n**Total Areas with Common Deficiencies**: {len(deficiencies)}\n"
+        else:
+            answer += "*No common deficiencies found.*\n"
+
+        answer += "\n*Source: Historical FTA Audit Reviews Database (minimum 2 recipients)*"
+
+        return {
+            'answer': answer,
+            'confidence': 'high',
+            'sources': [{
+                'chunk_id': 'common_deficiencies',
+                'category': 'historical_audit',
+                'excerpt': 'Common deficiencies across recipients',
+                'score': 1.0,
+                'file_path': 'database://historical_audits/common_deficiencies',
+                'source_collection': 'historical_audits'
+            }],
+            'ranked_chunks': [],
+            'backend': 'historical_audit'
+        }
+
+    def _format_ranking_result(self, result: Dict[str, Any], question: str) -> Dict[str, Any]:
+        """Format ranking query results."""
+        recipients = result['recipients']
+        order = result['order']
+
+        # Determine title based on order
+        if order == 'desc':
+            title = "## Recipients with Most Deficiencies\n\n"
+        else:
+            title = "## Recipients with Fewest Deficiencies\n\n"
+
+        answer = title
+
+        if recipients:
+            answer += f"Showing top {len(recipients)} recipients:\n\n"
+            answer += "| Rank | Recipient | Location | Region | Deficiencies |\n"
+            answer += "|------|-----------|----------|--------|-------------|\n"
+
+            for i, r in enumerate(recipients, 1):
+                city_str = f"{r['city']}, " if r['city'] else ""
+                location = f"{city_str}{r['state']}"
+                answer += f"| {i} | **{r['name']}** ({r['acronym']}) | {location} | {r['region']} | {r['deficiency_count']} |\n"
+
+            # Add summary
+            if order == 'desc':
+                answer += f"\n**Most deficiencies**: {recipients[0]['name']} with {recipients[0]['deficiency_count']} deficiencies\n"
+            else:
+                answer += f"\n**Fewest deficiencies**: {recipients[0]['name']} with {recipients[0]['deficiency_count']} deficiencies\n"
+        else:
+            answer += "*No recipients found.*\n"
+
+        answer += "\n*Source: Historical FTA Audit Reviews Database*"
+
+        return {
+            'answer': answer,
+            'confidence': 'high',
+            'sources': [{
+                'chunk_id': 'ranking_deficiencies',
+                'category': 'historical_audit',
+                'excerpt': f'Top {len(recipients)} recipients by deficiency count',
+                'score': 1.0,
+                'file_path': 'database://historical_audits/ranking',
+                'source_collection': 'historical_audits'
+            }],
+            'ranked_chunks': [],
+            'backend': 'historical_audit'
+        }
+
+    def _format_recipients_list(self, result: Dict[str, Any]) -> Dict[str, Any]:
+        """Format recipients list query results."""
+        recipients = result['recipients']
+
+        answer = f"## All Recipients ({result['total_recipients']} total)\n\n"
+
+        if recipients:
+            # Group by state
+            by_state = {}
+            for r in recipients:
+                state = r['state'] or 'Unknown'
+                if state not in by_state:
+                    by_state[state] = []
+                by_state[state].append(r)
+
+            for state, items in sorted(by_state.items()):
+                answer += f"### {state}\n\n"
+                for r in items:
+                    city_str = f", {r['city']}" if r['city'] else ""
+                    reviews = f"{r['review_count']} review{'s' if r['review_count'] != 1 else ''}"
+                    answer += f"- **{r['name']}** ({r['acronym']}) - Region {r['region']}{city_str} - *{reviews}*\n"
+                answer += "\n"
+        else:
+            answer += "*No recipients found.*\n"
+
+        answer += "\n*Source: Historical FTA Audit Reviews Database*"
+
+        return {
+            'answer': answer,
+            'confidence': 'high',
+            'sources': [{
+                'chunk_id': 'all_recipients',
+                'category': 'historical_audit',
+                'excerpt': f'{result["total_recipients"]} recipients',
+                'score': 1.0,
+                'file_path': 'database://historical_audits/recipients',
+                'source_collection': 'historical_audits'
+            }],
+            'ranked_chunks': [],
+            'backend': 'historical_audit'
         }
 
 

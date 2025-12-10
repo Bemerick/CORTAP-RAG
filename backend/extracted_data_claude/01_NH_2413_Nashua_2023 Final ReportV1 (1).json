@@ -1,0 +1,306 @@
+{
+  "recipient": {
+    "name": "City of Nashua",
+    "acronym": "NTS",
+    "city": "Nashua",
+    "state": "NH",
+    "region_number": 1
+  },
+  "review_info": {
+    "fiscal_year": "FY2023",
+    "review_type": "TR",
+    "report_date": "July 11, 2023"
+  },
+  "assessments": [
+    {
+      "review_area": "Legal",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Financial Management and Capacity",
+      "finding": "D",
+      "deficiency_code": "F6-3",
+      "description": "Single Audit submission deficient, including late submission. Per 2 CFR Part 200.512 (Uniform Guidance), recipients that meet the threshold for a Single Audit must complete and submit to the Federal Audit Clearinghouse (FAC), its Single Audit and the data collection form within 30 calendar days after receipt of the auditor's report or nine months after the end of the audit period, whichever is earlier. The City of Nashua's fiscal year ends June 30th, so it is required to submit its Single Audit report and data collection form by March 30th. Due to staffing shortages during the review period, the City's FY2020 Single Audit and data collection form were submitted nearly three months late into the FAC, while the FY2021 Single Audit and data collection form were submitted 13 months late. The FY2022 Single Audit and data collection form were due March 30, 2023, and have not yet been submitted.",
+      "corrective_action": "NTS must upload into OTrak procedures to ensure that the Single Audit report, data collection form, and reporting package are submitted on time in the Federal Audit Clearinghouse. NTS shall notify the FTA regional office via email once the procedures have been uploaded into OTrak.",
+      "response_due_date": "March 30, 2024",
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Award Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Program Management and Subrecipient Oversight",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Project Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Transit Asset Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Satisfactory Continuing Control",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Maintenance",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Disadvantaged Business Enterprise",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Title VI",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - General",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - Complementary Paratransit",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Equal Employment Opportunity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "School Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Charter Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug-Free Workplace Act",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug and Alcohol Program",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5307 Program Requirements",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5310 Program Requirements",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5311 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Public Transportation Agency Safety Plan (PTASP)",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Cybersecurity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    }
+  ],
+  "awards": [
+    {
+      "award_number": "NH-2020-018",
+      "award_year": "2020",
+      "description": "FY2020 Low or No Emission Electric Hybrid Vans; Electric Car & Charging Station",
+      "amount": 356046.0
+    },
+    {
+      "award_number": "NH-2021-003",
+      "award_year": "2021",
+      "description": "Nashua Transit Safety, Security and Passenger Technology Enhancements",
+      "amount": 707057.0
+    },
+    {
+      "award_number": "NH-2021-011",
+      "award_year": "2021",
+      "description": "NTS Transit Center Rehab \u00a75339 funds",
+      "amount": 307968.0
+    },
+    {
+      "award_number": "NH-2022-009",
+      "award_year": "2022",
+      "description": "Nashua Transit System ARPA 2021 Operating, Planning and Preventive Maintenance",
+      "amount": 633115.0
+    },
+    {
+      "award_number": "NH-2022-012",
+      "award_year": "2022",
+      "description": "5310 ADA - Complementary Paratransit Services FFY21 5310 Formula Funding",
+      "amount": 135364.0
+    },
+    {
+      "award_number": "NH-2022-019",
+      "award_year": "2022",
+      "description": "FY23 CAPITAL, OPERATING & PLANNING",
+      "amount": 1995377.0
+    }
+  ],
+  "projects": [
+    {
+      "project_type": "completed",
+      "description": "Purchased six low floor Champion vans",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Purchased one 30-foot CNG low floor bus",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Partnered with BAE systems and purchased two hybrid electric diesel 35-foot buses with a Low-No Emissions award",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Procured two Frontrunner paratransit vans",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Completing the \"punch list\" items in the Transit Center rehabilitation project",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Complete the mid-life overhaul of several revenue vehicles",
+      "completion_date": null,
+      "funding_sources": null
+    }
+  ],
+  "source_file": "01_NH_2413_Nashua_2023 Final ReportV1 (1).pdf",
+  "extracted_at": "2025-12-10T10:15:15.832195",
+  "extraction_method": "claude-api",
+  "summary": {
+    "total_deficiencies": 1,
+    "total_areas_reviewed": 23
+  }
+}

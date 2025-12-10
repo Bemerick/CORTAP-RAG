@@ -1,0 +1,260 @@
+{
+  "recipient": {
+    "name": "Transportation and Motor Buses for Public Use Authority",
+    "acronym": "AMTRAN",
+    "city": "Altoona",
+    "state": "PA",
+    "region_number": 3
+  },
+  "review_info": {
+    "fiscal_year": "FY2023",
+    "review_type": "TR",
+    "report_date": "August 30, 2023"
+  },
+  "assessments": [
+    {
+      "review_area": "Legal",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null
+    },
+    {
+      "review_area": "Financial Management and Capacity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null
+    },
+    {
+      "review_area": "Technical Capacity - Award Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null
+    },
+    {
+      "review_area": "Technical Capacity - Program Management and Subrecipient Oversight",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null
+    },
+    {
+      "review_area": "Technical Capacity - Project Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null
+    },
+    {
+      "review_area": "Transit Asset Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null
+    },
+    {
+      "review_area": "Satisfactory Continuing Control",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null
+    },
+    {
+      "review_area": "Maintenance",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "D",
+      "deficiency_code": "P4-1, P11-1, P12-2",
+      "description": "Three deficiencies found: (1) P4-1: A written responsibility determination was not present in the procurement files for the ERP procurement as required. (2) P11-1: Required FTA clauses were missing from the procurement files for the Auxiliary Garage, Dispatch and Driver's lounge, ERP, Lift replacement, and Suite 100 procurements. (3) P12-2: A signed lobbying certification was not found in the procurement files for the ERP procurement as required.",
+      "corrective_action": "For P4-1: By November 7, 2023: (1) For any contracts where the recipient was found to have failed to verify that the contractor was responsible, AMTRAN must verify the responsibility of contractors and provide evidence of completion to Region 3. (2) Submit documentation of an implemented process to make adequate responsibility determinations prior to award of a contract. (3) Train all procurement related staff on its new process and provide evidence of completed training. For P11-1: By November 7, 2023, submit revised procurement procedures that include a process for annually searching for and including all FTA-required third-party contract clauses through use of a clause checklist or other mechanism. For P12-2: By November 7, 2023, submit procedures for obtaining signed lobbying certifications prior to award of a contract and train all procurement related staff."
+    },
+    {
+      "review_area": "Disadvantaged Business Enterprise",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null
+    },
+    {
+      "review_area": "Title VI",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - General",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - Complementary Paratransit",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null
+    },
+    {
+      "review_area": "Equal Employment Opportunity",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null
+    },
+    {
+      "review_area": "School Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null
+    },
+    {
+      "review_area": "Charter Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null
+    },
+    {
+      "review_area": "Drug-Free Workplace Act",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null
+    },
+    {
+      "review_area": "Drug and Alcohol Program",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null
+    },
+    {
+      "review_area": "Section 5307 Program Requirements",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null
+    },
+    {
+      "review_area": "Section 5310 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null
+    },
+    {
+      "review_area": "Section 5311 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null
+    },
+    {
+      "review_area": "Public Transportation Agency Safety Plan (PTASP)",
+      "finding": "D",
+      "deficiency_code": "PTASP1-5",
+      "description": "AMTRAN's Safety Committee has not yet approved the ASP.",
+      "corrective_action": "By October 10, 2023, AMTRAN must submit to the FTA regional office evidence that the Safety Committee approved its ASP. NOTE: This deficiency was closed on August 25, 2023 when AMTRAN provided evidence of Safety Committee approval."
+    },
+    {
+      "review_area": "Cybersecurity",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null
+    }
+  ],
+  "findings_summary": [
+    {
+      "review_area": "Procurement",
+      "deficiency_code": "P4-1",
+      "code_rationale": "Responsibility determinations were not present in the procurement files for the ERP as required.",
+      "corrective_action_summary": "For any contracts where the recipient was found to have failed to verify that the contractor was responsible, the recipient must verify the responsibility of contractors. The recipient must submit evidence of completion to the Region 3 office. The recipient must submit to the Region 3 office documentation of an implemented process to make adequate responsibility determinations prior to award of a contract. The recipient must train all procurement related staff on its new process and provide evidence of completed training to the Region 3 office.",
+      "response_due_date": "11/7/2023"
+    },
+    {
+      "review_area": "Procurement",
+      "deficiency_code": "P11-1",
+      "code_rationale": "Required FTA clauses were missing from the procurements for the Auxiliary Garage, Dispatch and Driver's lounge, ERP, Lift replacement, and Suite 100.",
+      "corrective_action_summary": "The recipient must submit to the Region 3 office revised procurement procedures that include a process for annually searching for and including all FTA-required third-party contract clauses through use of a clause checklist or other mechanism. This mechanism should be updated immediately to include all currently applicable FTA required clauses and annually thereafter.",
+      "response_due_date": "11/7/2023"
+    },
+    {
+      "review_area": "Procurement",
+      "deficiency_code": "P12-1",
+      "code_rationale": "Signed lobbying certifications were not present in the procurement files for the ERP as required.",
+      "corrective_action_summary": "The recipient must submit to the FTA regional office procedures for obtaining signed lobbying certifications prior to the award of a contract. The recipient must train all procurement related staff on its new procedures and provide evidence of completed training to the FTA regional office.",
+      "response_due_date": "11/7/2023"
+    },
+    {
+      "review_area": "Public Transportation Agency Safety Plans (PTASP)",
+      "deficiency_code": "PTASP1-5",
+      "code_rationale": "The Safety Committee has not yet approved the ASP.",
+      "corrective_action_summary": "The recipient must submit to the FTA regional office evidence that the Safety Committee approved its ASP.",
+      "response_due_date": "10/10/2023"
+    }
+  ],
+  "awards": [
+    {
+      "award_number": "PA-2020-046",
+      "award_year": "2020",
+      "description": "Transportation and Motor Buses for Public Use Authority (Amtran) FFY20 Section 5307 CARES Act Operating and Capital Projects",
+      "amount": 1286868.0
+    }
+  ],
+  "projects": [
+    {
+      "project_type": "completed",
+      "description": "Purchased five (5) new heavy-duty, CNG-powered buses with FTA & PennDOT funding",
+      "completion_date": "August 2021",
+      "funding_sources": "FTA & PennDOT"
+    },
+    {
+      "project_type": "completed",
+      "description": "Built an auxiliary garage storage building with FTA and PennDOT funding",
+      "completion_date": null,
+      "funding_sources": "FTA & PennDOT"
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Continued streamlining of AMTRAN's services to best meet the needs of the communities and riders it serves",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Replacement of facility roofs on Administration and Maintenance buildings",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Renovation and repainting of interior of Maintenance facility",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Purchase three (3) new heavy-duty, CNG-powered buses",
+      "completion_date": "August 2024",
+      "funding_sources": null
+    }
+  ],
+  "source_file": "R3_PA_AMTRAN_TR23_Final_Letter_Report_8.29.pdf TGC Signature.pdf",
+  "extracted_at": "2025-12-10T09:46:01.354581",
+  "extraction_method": "claude-api",
+  "summary": {
+    "total_deficiencies": 2,
+    "total_areas_reviewed": 23
+  }
+}

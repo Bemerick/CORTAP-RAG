@@ -1,0 +1,384 @@
+{
+  "recipient": {
+    "name": "Old Dominion Transit Management, Greater Richmond Transit Center",
+    "acronym": "GRTC",
+    "city": "Richmond",
+    "state": "VA",
+    "region_number": 3
+  },
+  "review_info": {
+    "fiscal_year": "FY2023",
+    "review_type": "TR",
+    "report_date": "September 18, 2023"
+  },
+  "assessments": [
+    {
+      "review_area": "Legal",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Financial Management and Capacity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Award Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Program Management and Subrecipient Oversight",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Project Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Transit Asset Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Satisfactory Continuing Control",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Maintenance",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "D",
+      "deficiency_code": "P10-2",
+      "description": "The contract files for two (2) sole source procurements included in the file sample did not contain the required cost analysis including an analysis of the individual cost elements and contractor profit. 2 CFR 200.324 requires the non-Federal entity must perform a cost or price analysis in connection with every procurement action in excess of the Simplified Acquisition Threshold including contract modifications. The non-Federal entity must negotiate profit as a separate element of the price for each contract in which there is no price competition and in all cases where cost analysis is performed.",
+      "corrective_action": "By February 8, 2024, GRTC must submit to the Region 3 office: Documentation that it has updated its procurement procedures to include performing the applicable cost analysis including an analysis of contractor profit for sole source procurements above the Federal Simplified Acquisition Threshold. Documentation that the required analysis was implemented for the next applicable procurement.",
+      "response_due_date": "2/28/2024",
+      "date_closed": null
+    },
+    {
+      "review_area": "Disadvantaged Business Enterprise",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Title VI",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - General",
+      "finding": "D",
+      "deficiency_code": "ADA-GEN5-1",
+      "description": "GRTC has an agreement with Uber to provide demand-response service along certain routes during the late evening and early morning hours. When Uber is unable to provide accessible vehicles, riders can contact the recipient who will provide this service directly. During the review, it was determined that GRTC is not monitoring the response time for the service they provide directly to ensure it is equivalent to the service provided by Uber.",
+      "corrective_action": "By November 28, 2023, GRTC must submit to FTACivilRightsSupport@dot.gov: Procedures for monitoring the demand-response service to ensure that equivalent service is provided to persons with disabilities, including wheelchair users, according to the criteria described in 49 CFR 37.77(c).",
+      "response_due_date": "11/28/2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - Complementary Paratransit",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Equal Employment Opportunity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "School Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Charter Bus",
+      "finding": "D",
+      "deficiency_code": "CB2-1",
+      "description": "GRTC could not provide documentation demonstrating public notice is given to all charter providers each time charter service is requested. Under 49 CFR Part 604.12, recipients providing charter service under exceptions must maintain required notice and records in an electronic format for at least three years from the date of the service or lease.",
+      "corrective_action": "By November 28, 2023, GRTC must submit to the Region 3 office: Procedures for providing public notices to registered charter providers. Evidence that the procedures have been implemented.",
+      "response_due_date": "11/28/2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug-Free Workplace Act",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug and Alcohol Program",
+      "finding": "D",
+      "deficiency_code": "DA4-1",
+      "description": "GRTC could not provide documentation demonstrating that the substance abuse professionals supporting its drug and alcohol program have up to date certifications. Under 49 CFR 40.281, SAPs must complete continuing education consisting of at least 12 professional development hours during each three-year period to maintain their qualifications.",
+      "corrective_action": "By November 28, 2023, GRTC must submit to the Region 3 office qualifications of the substance abuse professionals that support its programs.",
+      "response_due_date": "11/28/2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5307 Program Requirements",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5310 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5311 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Public Transportation Agency Safety Plan (PTASP)",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Cybersecurity",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    }
+  ],
+  "awards": [
+    {
+      "award_number": "VA-2020-009",
+      "award_year": "2020",
+      "description": "GRTC FFY 2017 and FFY 2018 Section 5307 Capital Projects",
+      "amount": 17013286.0
+    },
+    {
+      "award_number": "VA-2023-008",
+      "award_year": "2023",
+      "description": "The Greater Richmond Transit Company (GRTC) FFY 2020 Section 5307 - Purchase of Security Equip., Hardware, Software, Signage, TSP, Consultant Svcs, Shop Equip, Eng/Design Admin/Maintenance Facility and Rehab/Renovation Admin/Maintenance Facility",
+      "amount": 3807765.0
+    },
+    {
+      "award_number": "VA-2023-005",
+      "award_year": "2023",
+      "description": "The Greater Richmond Transit Company (GRTC) FFY 2022 Section 5339 Low or No Emission Vehicle Program - Bus Purchase",
+      "amount": 12540000.0
+    },
+    {
+      "award_number": "VA-2017-022",
+      "award_year": "2017",
+      "description": "FY 2017 Capital Program",
+      "amount": 15845969.0
+    },
+    {
+      "award_number": "VA-2023-007",
+      "award_year": "2023",
+      "description": "The Greater Richmond Transit Company (GRTC) FY 2008 Surface Transportation Program Funds (STP) Temporary Transfer Center Construction",
+      "amount": 2520218.0
+    },
+    {
+      "award_number": "VA-2021-040",
+      "award_year": "2021",
+      "description": "The Greater Richmond Transit Company (GRTC) FFY 2019 Section 5307 - Purchase of Security Cameras, Hardware, Software, Feasibility Study, TAM Plan Consultant and Rehab/Renovation of an Admin Maintenance Facility",
+      "amount": 4045536.0
+    },
+    {
+      "award_number": "VA-2016-021",
+      "award_year": "2016",
+      "description": "Greater Richmond Transit Company",
+      "amount": 14308962.0
+    },
+    {
+      "award_number": "VA-2016-027",
+      "award_year": "2016",
+      "description": "Greater Richmond Transit Company",
+      "amount": 14942446.0
+    },
+    {
+      "award_number": "VA-2020-011",
+      "award_year": "2020",
+      "description": "GRTC FFY 2017 Section 5339 Purchase Para-transit vans",
+      "amount": 3885960.0
+    },
+    {
+      "award_number": "VA-2018-010",
+      "award_year": "2018",
+      "description": "FFY 2015 High Priority and FY 2017 STP Funds",
+      "amount": 1374450.0
+    },
+    {
+      "award_number": "VA-2022-023",
+      "award_year": "2022",
+      "description": "Greater Richmond Transit Company (GRTC) Section 5307 ARPA Operating Assistance",
+      "amount": 29173123.0
+    },
+    {
+      "award_number": "VA-2022-007",
+      "award_year": "2022",
+      "description": "The Greater Richmond Transit Company (GRTC) FFY 2019 and FFY 2020 Section 5307 Purchase of Security Equipment, Purchase of Storage Shed, Hardware, Software, Support Vehicles, Shop Equipment, Rehab Renovate Administrative Maintenance Facility",
+      "amount": 5758613.0
+    },
+    {
+      "award_number": "VA-2021-034",
+      "award_year": "2021",
+      "description": "The Greater Richmond Transit Company (GRTC) FFY 2018 and FFY 2019 Section 5307 and FFY 2018 and FFY 2019 Section 5339 and CMAQ - Bus Purchase, Capital Cost of Contracting, Preventive Maintenance and ADA paratransit",
+      "amount": 27275797.0
+    }
+  ],
+  "projects": [
+    {
+      "project_type": "completed",
+      "description": "In 2018, Bon Secours and GRTC joined forces to invest in and install new bus stops and related pedestrian improvements in Richmond's East End. After months of planning, and construction delays due to COVID-19, 10 of the 14 shelter installations were complete by Spring 2021.",
+      "completion_date": "Spring 2021",
+      "funding_sources": "Bon Secours and GRTC"
+    },
+    {
+      "project_type": "ongoing",
+      "description": "New Temporary Transfer Station \u2013 GRTC Transit System is relocating the temporary transfer center that currently occupies 9th Street in Downtown Richmond to the adjacent City-owned parcel at 808 E Clay Street. The facility is anticipated to be in-service in May 2023.",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Micro-Transit Pilot \u2013 GRTC plans to pilot micro-transit in 5 zones throughout the region \u2013 Henrico County, Chesterfield County, Ashland, Powhatan, and New Kent.",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Essential Transit Infrastructure Plan (ETI) \u2013 GRTC aspires to provide seating or shelter at 75% of our local stops within 5 years.",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "ERP \u2013 GRTC is undertaking an initiative to replace its current Microsoft Great Plains (2015) ERP system that is no longer supported with an Oracle cloud ERP.",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Station Modification for articulated vehicles \u2013 GRTC will be expanding its fleet with the additional of articulated vehicles. The BRT stations will need minimal modifications to allow for the 3rd door of the vehicles to access the platform.",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Fleet Storage \u2013 GRTC is in the process of making improvements to 325 E. Belt Blvd. This property is adjacent to the administration and maintenance building, and currently utilized for bus parking.",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Downtown Transfer Center \u2013 This project would construct a permanent downtown transfer center location to meet GRTC's current and future needs.",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Dedicated Lanes \u2013 This project would aim to identify and convert corridors or corridor segments system-wide that are good candidates for bus-only dedicated lanes with the aimed of improving system efficiency and increasing overall system reliability and on-time performance.",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Western Pulse \u2013 BRT Expansion - This project would extend the existing BRT Pulse route west to Short Pump.",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Facility Expansion \u2013 GRTC is working on a facilities master plan that will evaluate how GRTC's administration and maintenance building and property are utilized and the fleet storage property at 325 E. Belt Blvd.",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "N/S Pulse \u2013 BRT Expansion \u2013 GRTC is currently conducting a phase 1 study to identify the locally preferred alternative corridors for the N/S Pulse expansion.",
+      "completion_date": null,
+      "funding_sources": null
+    }
+  ],
+  "source_file": "R3_VA_ GRTC_TR23_Final_Report_Letter_9.14.pdf",
+  "extracted_at": "2025-12-10T10:17:17.714125",
+  "extraction_method": "claude-api",
+  "summary": {
+    "total_deficiencies": 4,
+    "total_areas_reviewed": 23
+  }
+}

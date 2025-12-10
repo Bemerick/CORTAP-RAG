@@ -1,0 +1,330 @@
+{
+  "recipient": {
+    "name": "Estuary Transit District",
+    "acronym": "ETD",
+    "city": "Centerbrook",
+    "state": "CT",
+    "region_number": 1
+  },
+  "review_info": {
+    "fiscal_year": "FY2023",
+    "review_type": "TR",
+    "report_date": "October 11, 2023"
+  },
+  "assessments": [
+    {
+      "review_area": "Legal",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Financial Management and Capacity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Award Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Program Management and Subrecipient Oversight",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Project Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Transit Asset Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Satisfactory Continuing Control",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Maintenance",
+      "finding": "D",
+      "deficiency_code": "M2-1",
+      "description": "FTA C. 5010.1E requires that recipients develop and implement maintenance procedures adequate to keep federally assisted property in good condition. Recipients must keep satisfactory records pertaining to the use of federally assisted property and submit to FTA, upon request, such information as may be required to assure compliance with federal requirements. A recipient is deficient if examination of preventive maintenance records shows that the recipient is not performing on-time preventive maintenance in accordance with its program at least 80 percent of the time. An examination of selected preventive maintenance records for fixed-route and demand-response vehicles revealed the ETD is only completing on-time preventive maintenance in accordance with its vehicle maintenance plan 40% of the time. This is a repeat deficiency from ETD's FY 2019 Triennial Review.",
+      "corrective_action": "By January 16, 2024, ETD must submit to the FTA regional office procedures for completing vehicle preventive maintenance inspections on time. By April 15, 2024, ETD must submit monthly reports signed by the chief executive officer or other senior management designee on preventive maintenance results until the data demonstrate the recipient has conducted 80 percent of its preventive maintenance on time for three consecutive months. For each vehicle that received a preventive maintenance inspection during the month, the recipient must include with the submittal to the FTA regional office: \u2022 A report that lists the vehicle number, date of the inspection, mileage of the current inspection, mileage of the previous inspection, and the mileage interval between the two inspections for each vehicle that received a preventive maintenance inspection during the month. List the percentage of the inspections performed on time. \u2022 Back-up documentation for each vehicle (e.g., copy of work order, printout from the maintenance management system) documenting the date and mileage of the inspection.",
+      "response_due_date": "January 16, 2024",
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Disadvantaged Business Enterprise",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Title VI",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - General",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "ADA - Complementary Paratransit",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Equal Employment Opportunity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "School Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Charter Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug Free Workplace Act",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug and Alcohol Program",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5307 Program Requirements",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5310 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5311 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Public Transportation Agency Safety Plan (PTASP)",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Cybersecurity",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    }
+  ],
+  "awards": [
+    {
+      "award_number": "CT-2017-018",
+      "award_year": "2017",
+      "description": "2017 Capital Program",
+      "amount": 1973000.0
+    },
+    {
+      "award_number": "CT-2019-008",
+      "award_year": "2019",
+      "description": "ETD Capital Equipment 2019",
+      "amount": 392000.0
+    },
+    {
+      "award_number": "CT-2018-017",
+      "award_year": "2018",
+      "description": "2018 Capital Program",
+      "amount": 857600.0
+    },
+    {
+      "award_number": "CT-2017-002",
+      "award_year": "2017",
+      "description": "Madison to Middletown Bus Service",
+      "amount": 377405.0
+    },
+    {
+      "award_number": "CT-2020-013",
+      "award_year": "2021",
+      "description": "Estuary Transit Section 5307 CARES ACT Operating, Capital and Preventative Maintenance",
+      "amount": 2600000.0
+    },
+    {
+      "award_number": "CT-2021-012",
+      "award_year": "2021",
+      "description": "FFY 20 & 21 Capital Program",
+      "amount": 1384000.0
+    },
+    {
+      "award_number": "CT-2022-007",
+      "award_year": "2022",
+      "description": "Estuary Transit Section 5307 ARP Operating Assistance",
+      "amount": 1500000.0
+    },
+    {
+      "award_number": "CT-2023-003",
+      "award_year": "2023",
+      "description": "FFY 2022 Capital program",
+      "amount": 2856000.0
+    },
+    {
+      "award_number": "CT-2023-004",
+      "award_year": "2023",
+      "description": "Merging MAT Grants",
+      "amount": 3185651.0
+    },
+    {
+      "award_number": "CT-2023-009",
+      "award_year": "2023",
+      "description": "Estuary Transit District CRRSAA",
+      "amount": 5640000.0
+    }
+  ],
+  "projects": [
+    {
+      "project_type": "completed",
+      "description": "Completed the transfer of all Middletown Transit District assets and services to the Estuary Transit District on July 1, 2022. The past three years were spent largely preparing for the transfer including performing marketing studies, fare studies, and acquiring equipment to make one seamless system.",
+      "completion_date": "July 1, 2022",
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Launched a microtransit pilot project in May 2019, which has become a permanent service due to its popularity.",
+      "completion_date": "May 2019",
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Implementing systemwide recommendations from a 2019 comprehensive operational analysis, which indicated system wide service changes to improve routing and scheduling.",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "In the process of changing the fare structure to be uniform across all services.",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Construct new facilities to accommodate the system's larger fleet. CTDOT will be responsible for procuring property, architecture and engineering services, and building the facilities.",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Renovate and expand a passenger terminal in Middletown. The current facility is over 40 years old and requires renovations and expansion of parking facilities to remain viable. CTDOT has conducted a feasibility study to determine if the parking area expansion could occur at the existing site and is determining the best path forward. CTDOT will be the recipient for any renovation or expansion project.",
+      "completion_date": null,
+      "funding_sources": null
+    }
+  ],
+  "source_file": "ETD_2023_TR_Final Report.pdf",
+  "extracted_at": "2025-12-10T10:22:33.302615",
+  "extraction_method": "claude-api",
+  "summary": {
+    "total_deficiencies": 1,
+    "total_areas_reviewed": 23
+  }
+}

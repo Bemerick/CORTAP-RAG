@@ -1,0 +1,294 @@
+{
+  "recipient": {
+    "name": "Naugatuck Valley Council of Governments",
+    "acronym": "NVCOG",
+    "city": "Waterbury",
+    "state": "CT",
+    "region_number": 1
+  },
+  "review_info": {
+    "fiscal_year": "FY2023",
+    "review_type": "TR",
+    "report_date": "November 16, 2023"
+  },
+  "assessments": [
+    {
+      "review_area": "Legal",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Financial Management and Capacity",
+      "finding": "D",
+      "deficiency_code": "F8-1",
+      "description": "Per FTA Circular 9030.1E, Ch. III, Section 8c. Use of Program Income as Local Share, \"In a grant application requesting operating assistance, the applicant must deduct farebox revenues from operating costs to arrive at the net project cost of an operating assistance project. See Appendix C, 'Operating Assistance Projects,' of this circular for assistance in calculating the net project cost of a grant requesting operating assistance. Recipients must represent all funds used to cover eligible operating expenses in the worksheet. This category includes public transportation farebox revenues.\" NVCOG was awarded operating assistance for the first time in award CT-2020-007-01 CARES Act Relief for NVCOG-Valley Transit District. The reviewer requested documentation to support three ECHO draws made on June 17, 2020 ($331,986), June 30, 2020 ($135,706), and May 20, 2021 ($48,656). The initial review of the operating expense documentation provided for the three ECHO draws from that award did not contain any deduction for farebox revenue, other revenues, or operating subsidy from the state of Connecticut normally provided to the Valley Transit District to provide ADA and Dial-a-Ride services. Subsequently, NVCOG provided annualized financial documentation for January 20, 2020 through June of 2022 that contained revenues from farebox, contracts, other sources, and the Human Services contract revenue from CTDOT. The result of a review of that information indicates the recipient drew down FTA CARES Act Operating Assistance funds in excess of net operating expenses at the time of the three draws noted above.",
+      "corrective_action": "For the deficiency Ineligible operating expense calculation (F8-1), by March 15, 2024, if the NVCOG has received operating funds in excess of allowable amounts, it must work with the FTA regional office and regional counsel to determine the appropriate corrective action.",
+      "response_due_date": "March 15, 2024",
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Award Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Program Management and Subrecipient Oversight",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Project Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Transit Asset Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Satisfactory Continuing Control",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Maintenance",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Disadvantaged Business Enterprise",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Title VI",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - General",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - Complementary Paratransit",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Equal Employment Opportunity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "School Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Charter Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug-Free Workplace Act",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug and Alcohol Program",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5307 Program Requirements",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5310 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5311 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Public Transportation Agency Safety Plan (PTASP)",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Cybersecurity",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    }
+  ],
+  "awards": [
+    {
+      "award_number": "CT-2016-016",
+      "award_year": "2016",
+      "description": "Valley Transit District \u2013 Facility Expansion and Rehabilitation \u2013 Replace 14 Paratransit Vehicles - Admin Capital",
+      "amount": 3744000.0
+    },
+    {
+      "award_number": "CT-2018-015",
+      "award_year": "2018",
+      "description": "Valley Transit District- Admin Capital/Misc Support/Fuel Tank Replace/Program Admin",
+      "amount": 240000.0
+    },
+    {
+      "award_number": "CT-2016-014",
+      "award_year": "2016",
+      "description": "Route 8 Corridor Alt. Modes Analysis",
+      "amount": 523970.0
+    },
+    {
+      "award_number": "CT-2016-013",
+      "award_year": "2016",
+      "description": "Facility Design and Rehab/Renovations",
+      "amount": 7456353.0
+    },
+    {
+      "award_number": "CT-2021-006",
+      "award_year": "2021",
+      "description": "NVCOG/VTD Admin Capital/Misc. Support Equip",
+      "amount": 440000.0
+    },
+    {
+      "award_number": "CT-2020-007",
+      "award_year": "2021",
+      "description": "CARES Act Relief for NVCOG-Valley Transit District",
+      "amount": 1100000.0
+    },
+    {
+      "award_number": "CT-2022-014",
+      "award_year": "2022",
+      "description": "NVCOG/VTD American Rescue Plan (ARP)",
+      "amount": 800000.0
+    },
+    {
+      "award_number": "CT-2023-015",
+      "award_year": "2023",
+      "description": "NVCOG CRRSAA 5307 - Valley Transit District Operating Assistance",
+      "amount": 1735000.0
+    }
+  ],
+  "projects": [
+    {
+      "project_type": "ongoing",
+      "description": "A Valley Transit District Bus Shelter Replacement Project that will install new bus shelters at up to 20 locations including existing locations at which shelters are deteriorated. Currently completing an evaluation of potential locations and developing concept design for the shelters.",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Conducting a Route 8 and Waterbury Branch Line (WBL) Alternative Modes Assessment Project that is assessing opportunities for implementing alternative transit options along the Route 8 corridor and developing a program of projects to improve the WBL infrastructure and enhance rail service. A key component of the project is acquisition of equipment operating on the line, rehabilitation of station areas, including new buildings, and expansion of service. The project includes an on-board passenger survey and count, assessment of TOD opportunities in vicinity of stations, feasibility of instituting BRT along Route 8, and developing a video that visualizes recommendations.",
+      "completion_date": null,
+      "funding_sources": null
+    }
+  ],
+  "source_file": "NVCOG 2023 TR Final Report.pdf",
+  "extracted_at": "2025-12-10T10:24:54.419392",
+  "extraction_method": "claude-api",
+  "summary": {
+    "total_deficiencies": 1,
+    "total_areas_reviewed": 23
+  }
+}

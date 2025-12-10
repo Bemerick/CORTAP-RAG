@@ -1,0 +1,402 @@
+{
+  "recipient": {
+    "name": "Merrimack Valley Regional Transit Authority",
+    "acronym": "MEVA",
+    "city": "Haverhill",
+    "state": "MA",
+    "region_number": 1
+  },
+  "review_info": {
+    "fiscal_year": "FY2023",
+    "review_type": "TR",
+    "report_date": "September 8, 2023"
+  },
+  "assessments": [
+    {
+      "review_area": "Legal",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Financial Management and Capacity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Award Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Program Management and Subrecipient Oversight",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Project Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Transit Asset Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Satisfactory Continuing Control",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Maintenance",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "D",
+      "deficiency_code": "P12-4",
+      "description": "49 CFR 661.6 requires contractors that apply or bid for an award exceeding $150,000 to file the required Buy America certification for procurement of steel or manufactured products. If steel, iron, or manufactured products (as defined in \u00a7\u00a7661.3 and \u00a7\u00a7661.5 of this part) are being procured, the appropriate certificate shall be completed and submitted by each bidder or offeror in accordance with the requirement contained in \u00a7661.13(b). One of the five procurements reviewed, the procurement of Cummins Diesel Engines procured on 5/16/2022, did not have evidence that a signed Buy America Certification was received. MEVA updated its Procurement Policies and Procedures to address the requirement to collect Buy America certifications and provided documentation of a more recent procurement demonstrating that their updated process was implemented.",
+      "corrective_action": "For the deficiency Contract files lacking signed Buy America certifications (P12-4), by October 2, 2023, MEVA must submit to the FTA regional office information documenting that the Cummins Diesel Engines procured on 5/16/2022 complies with the Buy America provisions.",
+      "response_due_date": "October 2, 2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Disadvantaged Business Enterprise",
+      "finding": "D",
+      "deficiency_code": "DBE5-1",
+      "description": "Per 49 CFR 26.37(c), the recipient must have a mechanism on the running tally of actual DBE UNIFORM attainments (e.g., payments actually made to DBE firms), including a means of comparing these attainments to commitments. In the reports of DBE participation to the Department (FTA), you must display both commitments and attainments. For this review, the semi-annual reports for December 2021 and June 2022 were examined to assess the accuracy of the data entries. The semi-annual reports were reviewed against MEVA's 2019-2022 procurement list. The semi-annual report discrepancies were: (1) a contract in the amount $1,169,987 was in the December 2021 semi-annual report, however, the actual contract record was not found on the procurement list; (2) a construction contract was awarded on January 21, 2022 in the amount of $2,482,387, however, the contract award was not included in the June 2022 semi-annual report; and (3) a service contract awarded in August 2022 in the amount of $1,045,387 was on the procurement list but not included in the December 2022 semi-annual report. In addition, the semi-annual reports for June 2019 through December 2022 incorrectly included the payment made to subcontractors as new awards. DBE5-1 is a repeat finding from both the FY 2016 and FY 2019 Triennial Reviews.",
+      "corrective_action": "For the deficiency, Semi-annual Uniform Reports of DBE Awards or Commitments and Payments not completed accurately (DBE5-1), by November 30, 2023, MEVA must submit corrected FY 2019 through FY 2022 Uniform Reports of DBE Awards or Commitments and Payments in TrAMS and notify the FTA Office of Civil Rights (FTA TCR) once those corrected reports have been submitted. In addition, by November 30, 2023, MEVA must submit a revised DBE Program plan to the FTA TCR to correctly describe how it will implement procedures for correctly completing the reports.",
+      "response_due_date": "November 30, 2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Title VI",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - General",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - Complementary Paratransit",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Equal Employment Opportunity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "School Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Charter Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug-Free Workplace Act",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug and Alcohol Program",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5307 Program Requirements",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5310 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5311 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Public Transportation Agency Safety Plan (PTASP)",
+      "finding": "D",
+      "deficiency_code": "PTASP1-5",
+      "description": "Per the requirements stated in 49 U.S.C. \u00a7 5329(d), a transit agency that receives Section 5307 funding and serves a large urbanized area must establish a Safety Committee by July 31, 2022. Once established, the Safety Committee should begin work to meet its responsibilities as soon as practicable. If a transit agency is not yet compliant with the new PTASP requirements, FTA expects the Safety Committee to approve and update the agency's ASP, incorporating applicable PTASP requirements in 49 U.S.C \u00a7 5329(d), by December 31, 2022. MEVA's PTASP documentation did not include evidence of approval by the Safety Committee.",
+      "corrective_action": "For the deficiency ASP not approved by Safety Committee (PTASP1-5), by October 6, 2023, MEVA must submit to the FTA regional office evidence that the Safety Committee approved its Agency Safety Plan.",
+      "response_due_date": "October 6, 2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Cybersecurity",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    }
+  ],
+  "awards": [
+    {
+      "award_number": "MA-2016-017-00",
+      "award_year": "2016",
+      "description": "MVRTA FY2017 CAPITAL & SHORT RANGE PLANNING",
+      "amount": 541080.0
+    },
+    {
+      "award_number": "MA-2019-001-00",
+      "award_year": "2019",
+      "description": "MVRTA FY2019",
+      "amount": 1645910.0
+    },
+    {
+      "award_number": "MA-2019-016-00",
+      "award_year": "2019",
+      "description": "FY2020 ADA, OPERATING, PM, PLANNING and Bike Racks",
+      "amount": 4605225.0
+    },
+    {
+      "award_number": "MA-2020-018-00",
+      "award_year": "2020",
+      "description": "MVRTA CARES ACT OPERATING EXPENSES",
+      "amount": 16914813.0
+    },
+    {
+      "award_number": "MA-2020-026-00",
+      "award_year": "2020",
+      "description": "MVRTA-AUTOMATED PASSENGER COUNTERS",
+      "amount": 371280.0
+    },
+    {
+      "award_number": "MA-2021-002-00",
+      "award_year": "2021",
+      "description": "MVRTA FY21 PROJECTS",
+      "amount": 695040.0
+    },
+    {
+      "award_number": "MA-2021-021-00",
+      "award_year": "2021",
+      "description": "MVRTA FY21 SECURITY UPGRADES",
+      "amount": 264353.0
+    },
+    {
+      "award_number": "MA-2022-002-00",
+      "award_year": "2022",
+      "description": "MVRTA ARPA OPERATING ASSISTANCE AND RECOVERY",
+      "amount": 5825882.0
+    },
+    {
+      "award_number": "MA-2022-011-00",
+      "award_year": "2022",
+      "description": "MVRTA FY22 Operating, Planning, Vehicles, Equipment & Facility Repair",
+      "amount": 10946038.0
+    },
+    {
+      "award_number": "MA-2022-025-00",
+      "award_year": "2022",
+      "description": "MVRTA FY2022 FLEX GRANT",
+      "amount": 1271164.0
+    },
+    {
+      "award_number": "MA-2023-002-00",
+      "award_year": "2023",
+      "description": "MVRTA RIVERBANK STABILIZATION PHASE II AND ACQUISTION OF (8) BUSES",
+      "amount": 4146400.0
+    },
+    {
+      "award_number": "MA-2023-010-00",
+      "award_year": "2023",
+      "description": "MEVA FY23 Capital POP: Vehicles, Equipment, Facility Repair & Planning",
+      "amount": 6149420.0
+    }
+  ],
+  "projects": [
+    {
+      "project_type": "completed",
+      "description": "Contracted for Architectural and Engineering services to assist with the permitting process for the Riverbank Stabilization Project",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Refurbished four vehicle lifts at the Maintenance Facility located in Haverhill, MA",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Purchased three new hybrid buses",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Purchased and installed vehicle and station bike racks",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Completed COVID-19 mitigation projects - Personal Protective Equipment (PPE) and driver barriers",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Implemented an Automatic Passenger Counter system",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Refurbished security cameras at three of MEVA's facilities",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Purchased 16 Ford E2 type replacement vans for paratransit service",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Purchased engines for five bus midlife repower projects",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Purchased nine BRT style replacement buses",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Initiated construction of the Riverbank restoration project at the MEVA Administrative/Maintenance Facility in Haverhill, MA",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Engaged contracted services for the system rebranding contract for design and implementation of the system branding campaign",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Completing and closing out contracts of the Riverbank Stabilization Project at MEVA's Administrative/Maintenance Facility in Haverhill, MA",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Overseeing the completion of the system rebranding project",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Undertake the implementation of its recent FY22 Low-No Ferry award. MEVA will use the funding to restore historic ferry service to the Merrimack River. The service will provide additional access to the Northshore of Boston beach communities and serve as an alternative public transportation route",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Reconfigure the McGovern Transportation Center in Lawrence, MA into MEVA's sole transit hub and prepare the depot for future alternative fuel vehicles",
+      "completion_date": null,
+      "funding_sources": null
+    }
+  ],
+  "source_file": "MEVA_2023_TR_Final Report.pdf",
+  "extracted_at": "2025-12-10T10:26:05.278815",
+  "extraction_method": "claude-api",
+  "summary": {
+    "total_deficiencies": 3,
+    "total_areas_reviewed": 23
+  }
+}

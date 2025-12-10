@@ -1,0 +1,360 @@
+{
+  "recipient": {
+    "name": "Greater Bridgeport Transit",
+    "acronym": "GBT",
+    "city": "Bridgeport",
+    "state": "CT",
+    "region_number": 1
+  },
+  "review_info": {
+    "fiscal_year": "FY2023",
+    "review_type": "TR",
+    "report_date": "July 11, 2023"
+  },
+  "assessments": [
+    {
+      "review_area": "Legal",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Financial Management and Capacity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Award Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Program Management and Subrecipient Oversight",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Project Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Transit Asset Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Satisfactory Continuing Control",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Maintenance",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "D",
+      "deficiency_code": "P12-2",
+      "description": "Per Appendix II to Part 200\u2014Contract Provisions for Non-Federal Entity Contracts Under Federal Awards, and (I) Byrd Anti-Lobbying Amendment (31 U.S.C. 1352), contractors that apply or bid for an award exceeding $100,000 must file the required certification. Each tier certifies to the tier above that it will not and has not used Federal appropriated funds to pay any person or organization for influencing or attempting to influence an officer or employee of any agency, a member of Congress, officer or employee of Congress, or an employee of a member of Congress in connection with obtaining any Federal contract, grant or any other award covered by 31 U.S.C. 1352. Each tier must also disclose any lobbying with non-Federal funds that takes place in connection with obtaining any Federal award. Such disclosures are forwarded from tier-to-tier up to the non-Federal award. The procurement file with Overhead Door Company dated September 28, 2021, was missing the Lobbying clause and the signed Lobbying certification.",
+      "corrective_action": "GBT must upload into OTrak procedures for obtaining signed lobbying certifications, when applicable, from bidders. GBT must also upload into OTrak a copy of the signed lobbying certification with its next applicable procurement. GBT shall notify the FTA regional office via email once the corrective action documentation has been uploaded into OTrak.",
+      "response_due_date": "September 25, 2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Disadvantaged Business Enterprise",
+      "finding": "D",
+      "deficiency_code": "DBE11-1",
+      "description": "The DBE regulations at 49 CFR 26.49 (a) (4) state that FTA recipients are required to submit within 30 days of making an award the name of the successful bidder and the total dollar value of the contract. This notification should be submitted by using the online Transit Vehicle Award Reporting Form located on FTA's Civil Rights DBE Webpage. During the review period, GBT awarded a contract for buses to Coach and Equipment on 12/1/2021 and reported it on 3/9/2022. Another contract was awarded to Proterra on 12/21/2021 and was not reported until 3/8/2022. Both awards were reported late.",
+      "corrective_action": "GBT must upload into OTrak an implemented process to ensure that future awards of FTA-funded transit vehicle purchases are reported timely to the FTA Office of Civil Rights (TCR). GBT shall notify TCR and the regional office once the corrective action documentation has been uploaded into OTrak.",
+      "response_due_date": "September 25, 2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Title VI",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - General",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - Complementary Paratransit",
+      "finding": "D",
+      "deficiency_code": "ADA-CPT6-5",
+      "description": "As found in 49 CFR 37.131, recipients shall not limit the availability of complementary paratransit service to ADA paratransit eligible individuals. In other words, recipients may not have any capacity constraints in the provision of ADA complementary paratransit service. A review of GBT's Operational Report and Management Dashboard documentation revealed capacity constraints in 2022. The report showed 1,332 denied/missed trips and less than a 50% on-time performance. During the follow up meeting, GBT explained that they experienced a severe shortage of qualified operators during and in the immediate post-pandemic period, which led to problems with capacity constraint metrics. It is also noted that GBT changed contractors in November 2021 to MV Transportation. Further analysis indicates that they have made progress through the establishment of a new position, the Director of Mobility on Demand, who is providing greater oversight of the contractor. GBT has also provided additional funding to enable MV Transportation to offer hiring bonuses and referral incentives. During a virtual meeting with MV Transportation, they reported that they are now fully staffed, and service constraints and indicators have improved.",
+      "corrective_action": "GBT must upload into OTrak a plan to eliminate its ADA complementary paratransit capacity constraints. This plan must describe how GBT will improve its on-time performance and reduce the denied and missed trips for its ADA complementary paratransit service. In addition, by October 23, 2023, GBT must upload into OTrak a monthly status report signed by the chief executive officer or other senior management designee regarding its on-time performance and denied and missed trips until such time as the data indicates that there is no pattern or practice of capacity constraints. For both deficiencies, GBT shall notify the FTA TCR and the regional office once the corrective action documentation has been uploaded into OTrak.",
+      "response_due_date": "September 25, 2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Equal Employment Opportunity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "School Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Charter Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug-Free Workplace Act",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug and Alcohol Program",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5307 Program Requirements",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5310 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5311 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Public Transportation Agency Safety Plan (PTASP)",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Cybersecurity",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    }
+  ],
+  "awards": [
+    {
+      "award_number": "CT-90-X526",
+      "award_year": "2015",
+      "description": "2015 - Multiple Capital Projects",
+      "amount": 12286840.0
+    },
+    {
+      "award_number": "CT-95-X013",
+      "award_year": "2013",
+      "description": "Regional TOD Pilot Program",
+      "amount": 640000.0
+    },
+    {
+      "award_number": "CT-2021-002",
+      "award_year": "2020",
+      "description": "Multiple Capital Projects: Fare Collection System Replacement, Intermodal Facility Repairs and Improvements, Maintenance and Administrative Facility Improvements, Administrative and Misc. Support Equipment",
+      "amount": 1750400.0
+    },
+    {
+      "award_number": "CT-90-X512",
+      "award_year": "2013",
+      "description": "Transit Amenity Improvement Projects",
+      "amount": 121274.0
+    },
+    {
+      "award_number": "CT-04-0015",
+      "award_year": "2009",
+      "description": "GBT Bus Maintenance Facility Rehab",
+      "amount": 1971860.0
+    },
+    {
+      "award_number": "CT-2021-011",
+      "award_year": "2021",
+      "description": "Facility Improvements, Supplemental Fire Suppression, Rolling Stock, Public Station Improvements and Support Equipment",
+      "amount": 2760230.0
+    },
+    {
+      "award_number": "CT-2018-004",
+      "award_year": "2018",
+      "description": "Connecticut Low-No Pilot Project",
+      "amount": 1450000.0
+    },
+    {
+      "award_number": "CT-2018-003",
+      "award_year": "2018",
+      "description": "Multiple Capital Projects Facility Improvements, Administrative Support, Shop Tools and Equipment",
+      "amount": 3880000.0
+    },
+    {
+      "award_number": "CT-2022-008",
+      "award_year": "2022",
+      "description": "GBT American Recovery Plan Act Funding",
+      "amount": 5700000.0
+    },
+    {
+      "award_number": "CT-2020-009",
+      "award_year": "2021",
+      "description": "GBT CARES Act Grant",
+      "amount": 12100000.0
+    },
+    {
+      "award_number": "CT-90-X455",
+      "award_year": "2010",
+      "description": "Facilities, shelters, vehicles, farebox",
+      "amount": 5665600.0
+    },
+    {
+      "award_number": "CT-2017-001",
+      "award_year": "2017",
+      "description": "Multiple Capital Projects: Facility Improvements, Administrative Support, Facility Design",
+      "amount": 4655600.0
+    },
+    {
+      "award_number": "CT-2020-021",
+      "award_year": "2020",
+      "description": "Multiple Capital Projects: Intermodal Facility Repairs and Improvements, Maintenance and Administrative Facility Improvements, Administrative and Misc. Support Equipment",
+      "amount": 472000.0
+    },
+    {
+      "award_number": "CT-2019-002",
+      "award_year": "2019",
+      "description": "Multiple Capital Projects: Fixed Route Bus Midlife Overhauls, Facility Improvements, Administrative Support, Shop Tools and Equipment",
+      "amount": 2408040.0
+    }
+  ],
+  "projects": [
+    {
+      "project_type": "completed",
+      "description": "Pavement and Canopy Rehabilitation at 710 Water Street in Bridgeport",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Purchased five Battery Electric Buses (BEBs) for the fixed-route fleet",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Installing supplemental fire suppression in the maintenance facility associated with the incorporation of BEBs into the fleet",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Performing rehabilitation of select areas of the maintenance and administrative facilities including the dispatch center, driver reporting area, the parts department, and the foreman's office areas",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Repowering a portion of GBT's hybrid fixed-route fleet",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Demolishing and replacing GBT's storage facility located at Cross Street in Bridgeport",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Identifying additional properties for satellite charging locations as part of the transition to a zero-emission fleet",
+      "completion_date": null,
+      "funding_sources": null
+    }
+  ],
+  "source_file": "GBT 2023 TR Final Report.pdf",
+  "extracted_at": "2025-12-10T10:19:15.802109",
+  "extraction_method": "claude-api",
+  "summary": {
+    "total_deficiencies": 3,
+    "total_areas_reviewed": 23
+  }
+}

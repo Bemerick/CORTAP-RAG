@@ -1,0 +1,378 @@
+{
+  "recipient": {
+    "name": "Biddeford Saco Old Orchard Beach Transit Committee",
+    "acronym": "BSOOB",
+    "city": "Biddeford",
+    "state": "ME",
+    "region_number": 1
+  },
+  "review_info": {
+    "fiscal_year": "FY2023",
+    "review_type": "TR",
+    "report_date": "August 15, 2023"
+  },
+  "assessments": [
+    {
+      "review_area": "Legal",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Financial Management and Capacity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Award Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Program Management and Subrecipient Oversight",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Project Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Transit Asset Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Satisfactory Continuing Control",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Maintenance",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "D",
+      "deficiency_code": "P11-1",
+      "description": "In one of BSOOB's reviewed procurements, the purchase of Proterra buses, a required clause regarding the prohibition of certain telecommunications and video surveillance services or equipment was missing. This clause, as found in 2 CFR 200.216, went into effect on August 13, 2020. BSOOB awarded the contract for the vehicles on August 12, 2021, so the clause should have been included in the contract. This is a repeat deficiency from BSOOB's FY2019 Triennial Review.",
+      "corrective_action": "By September 30, 2023, BSOOB must submit to the FTA regional office revised procurement procedures that address inclusion of all FTA-required third-party contract clauses through use of a clause checklist or other mechanism. By January 31, 2024, for the next procurement, BSOOB must submit to the FTA regional office documentation that the required process was implemented.",
+      "response_due_date": "September 30, 2023; January 31, 2024",
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "D",
+      "deficiency_code": "P12-2",
+      "description": "Per Appendix II to Part 200\u2014Contract Provisions for Non-Federal Entity Contracts Under Federal Awards, and (I) Byrd Anti-Lobbying Amendment (31 U.S.C. 1352), contractors that apply or bid for an award exceeding $100,000 must file the required certification. An AVL system contract dated 1/17/2022 and a HVAC-UV system contract dated 2/10/2021 were both missing lobbying certifications signed by the contactors. This is a repeat deficiency from BSOOB's FY2019 Triennial Review.",
+      "corrective_action": "By September 30, 2023, BSOOB must submit to the FTA regional office procedures for obtaining signed lobbying certifications. By January 31, 2024, BSOOB must also submit to the FTA regional office a copy of the signed lobbying certification with the next applicable procurement.",
+      "response_due_date": "September 30, 2023; January 31, 2024",
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "D",
+      "deficiency_code": "P12-3",
+      "description": "An AVL system procurement dated 1/17/2022 was missing a Buy America Certification signed by the bidder. Per 49 CFR 661.6, if steel, iron, or manufactured products are being procured, the appropriate certificate must be completed and submitted by each bidder or offeror in accordance with the requirement contained in \u00a7661.13(b) of this part.",
+      "corrective_action": "By September 30, 2023, for the AVL system procurement for which a Buy America certification was not obtained, BSOOB must provide the FTA regional office information documenting that the procurement complies with the Buy America provisions. By September 30, 2023, BSOOB must submit to the FTA regional office revised procurement procedures that require the recipient to include Buy America provisions in solicitation documents and to obtain signed certifications from vendors when procuring steel, iron, or manufactured products not subject to a general waiver. By January 31, 2024, for the next procurement, BSOOB must submit to the FTA regional office documentation that the required process was implemented.",
+      "response_due_date": "September 30, 2023; January 31, 2024",
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "D",
+      "deficiency_code": "P20-2",
+      "description": "BSOOB could not provide documentation of completing pre-award and post-delivery audits for a Prevost bus procurement dated 5/20/2021 and a Proterra bus procurement dated 8/12/2021. Per 49 CFR 663.21 pre-award audit requirements: A recipient purchasing revenue service rolling stock with FTA funds must ensure that a pre-award audit under this part is complete before the recipient enters into a formal contract for the purchase of such rolling stock. Per 49 CFR 663.31 post-delivery audit requirements: A recipient purchasing revenue service rolling stock with FTA funds must ensure that a post-delivery audit under this part is complete before title to the rolling stock is transferred to the recipient.",
+      "corrective_action": "By September 30, 2023, BSOOB must submit to the FTA regional office post-delivery audit documentation for the Prevost and Proterra contracts. By November 30, 2023, BSOOB must submit to the FTA regional office procedures for conducting pre-award and post-delivery review and inspection audits. By September 30, 2024, for the next rolling stock procurement, BSOOB must submit to the FTA regional office documentation that the required process was implemented.",
+      "response_due_date": "September 30, 2023; November 30, 2023; September 30, 2024",
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "D",
+      "deficiency_code": "P20-3",
+      "description": "A recipient purchasing rolling stock with FTA funds is required by 49 CFR 663.31 through 663.41 to perform audits and sign certificates to demonstrate compliance with Buy America, Purchaser's Requirements, and Federal Motor Vehicle Safety Standards (FMVSS) before taking title to the vehicles. BSOOB could not provide documentation of completing pre-award and post-delivery audit certifications for a Prevost bus procurement dated 5/20/2021 and a Proterra bus procurement dated 8/12/2021.",
+      "corrective_action": "By September 30, 2023, BSOOB must submit to the FTA regional office post-delivery audit certifications for the Prevost and Proterra contracts. If they cannot certify compliance, it must confer with the FTA regional office for the appropriate corrective action. By November 30, 2023, BSOOB must submit procedures for completing the applicable pre-award and post-delivery audits certifications for future revenue rolling stock procurements. By September 30, 2024, for the next procurement, BSOOB must submit to the FTA regional office documentation that the required process was implemented.",
+      "response_due_date": "September 30, 2023; November 30, 2023; September 30, 2024",
+      "date_closed": null
+    },
+    {
+      "review_area": "Disadvantaged Business Enterprise",
+      "finding": "D",
+      "deficiency_code": "DBE11-1",
+      "description": "The DBE regulations at 49 CFR 26.49 (a) (4) state that FTA recipients are required to submit within 30 days of making an award the name of the successful bidder and the total dollar value of the contract. This notification should be submitted by using the online Transit Vehicle Award Reporting Form located on FTA's Civil Rights DBE Webpage. During the review period, BSOOB awarded a contract for buses to Prevost on 5/20/2020 and reported it on 8/18/2020. Another contract was awarded to Proterra on 8/20/2021 and again on 12/31/2022 and was not reported until 6/8/2023. All the awards were reported late.",
+      "corrective_action": "By November 30, 2023, BSOOB must submit to the FTA Office of Civil Rights an implemented process to ensure that future awards of FTA-funded transit vehicle purchases are reported timely to the FTA Office of Civil Rights.",
+      "response_due_date": "November 30, 2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Title VI",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - General",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - Complementary Paratransit",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Equal Employment Opportunity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "School Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Charter Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug-Free Workplace Act",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug and Alcohol Program",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5307 Program Requirements",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5310 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5311 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Public Transportation Agency Safety Plan (PTASP)",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Cybersecurity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    }
+  ],
+  "awards": [
+    {
+      "award_number": "ME-2021-019",
+      "award_year": "2021",
+      "description": "FY2022 FTA 5307 Grant",
+      "amount": 1246029.0
+    },
+    {
+      "award_number": "ME-2020-031",
+      "award_year": "2020",
+      "description": "FY2021 FTA 5307 Grant and 5339 (b) Trolley Replacement",
+      "amount": 1923340.0
+    },
+    {
+      "award_number": "ME-2020-022",
+      "award_year": "2020",
+      "description": "Zoom Coaches FY20, 5339 Funding",
+      "amount": 1045460.0
+    },
+    {
+      "award_number": "ME-2022-007",
+      "award_year": "2022",
+      "description": "BSOOB Transit Urbanized Area CARES Act PHASE V Funding",
+      "amount": 792473.0
+    },
+    {
+      "award_number": "ME-2019-020",
+      "award_year": "2019",
+      "description": "FY20 Electric Bus Purchase",
+      "amount": 1270000.0
+    }
+  ],
+  "projects": [
+    {
+      "project_type": "completed",
+      "description": "Purchased four diesel trolleys and two commuter coach buses",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    },
+    {
+      "project_type": "completed",
+      "description": "Purchased two battery-electric buses and installed depot-based charging infrastructure",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    },
+    {
+      "project_type": "completed",
+      "description": "Implemented a timed transfer service redesign",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Acquired cameras for buses, a security surveillance system for its facilities, and implemented an electronic fare collection system",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Engaging with an engineering firm to finalize a security fence site plan and get the appropriate permits and easements to install the security fence in 2023",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Purchasing two additional battery-electric buses",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Developing specifications for three new vehicles including a replacement maintenance truck, a support van, and an ADA-compliant passenger van",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Finalizing a contract award for a new CAD/AVL system that will include APC hardware and other customer and operational management improvements",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    },
+    {
+      "project_type": "future",
+      "description": "Install on-route pantographic charging infrastructure for the battery electric bus fleet at the Saco Transportation Center",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Improve customer facing information including static bus stop signs and digital display terminals at key transit hubs",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Acquire a small fleet of micro transit vehicles, along with the technology to operate the on-demand service",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Replace and upgrade the existing diesel fuel tank and pumping system, which will reach its useful life in 2026",
+      "completion_date": "2026",
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Enhance and improve the maintenance and storage facility at 13 Pomerleau Street including additional bus storage, storage for the active fleet, an improved bus wash facility, and new facility backup electric generators",
+      "completion_date": null,
+      "funding_sources": null
+    }
+  ],
+  "source_file": "BSOOB_2023_TR_Final Report.pdf",
+  "extracted_at": "2025-12-10T10:21:04.575911",
+  "extraction_method": "claude-api",
+  "summary": {
+    "total_deficiencies": 6,
+    "total_areas_reviewed": 27
+  }
+}

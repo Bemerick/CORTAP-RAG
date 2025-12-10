@@ -1,0 +1,270 @@
+{
+  "recipient": {
+    "name": "Monroe County Transportation Authority",
+    "acronym": "MCTA",
+    "city": "Swiftwater",
+    "state": "PA",
+    "region_number": 3
+  },
+  "review_info": {
+    "fiscal_year": "FY2023",
+    "review_type": "TR",
+    "report_date": "July 27, 2023"
+  },
+  "assessments": [
+    {
+      "review_area": "Legal",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Financial Management and Capacity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Award Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Program Management and Subrecipient Oversight",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Project Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Transit Asset Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Satisfactory Continuing Control",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Maintenance",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "D",
+      "deficiency_code": "P4-1, P5-1, P11-1",
+      "description": "P4-1: Written responsibility determinations were not present in the procurement files for the Bus Wash, Maintenance Testing/Training System (MTS), Bike racks, and Bus Shelters/Amenities as required. P5-1: Written documentation of procurement history was not present in procurement files for CNG Buses, and the Bus Wash as required. P11-1: Required FTA clauses were missing from the procurement files for the Wash Bay, Maintenance Training System, Bike racks, and Shelters/Amenities.",
+      "corrective_action": "For any contracts where the recipient was found to have failed to verify that the contractor was responsible, the recipient must verify the responsibility of contractors. The recipient must provide the Region 3 office evidence of completion. The recipient must submit to the Region 3 office documentation of an implemented process to make adequate responsibility determinations prior to award of a contract. The recipient must train all procurement related staff on its new process and provide evidence of completed training to the Region 3 office. For any contracts where the recipient was found to have failed to document the history of the procurement, the recipient must complete appropriate documentation of the procurement's history. The recipient must provide the Region 3 office evidence of completion. The recipient must submit to the Region 3 office evidence of an implemented process to sufficiently document procurement history for all contracts. The recipient must train all procurement related staff on its new process and provide evidence of completed training to the Region 3 office. The recipient must submit to the Region 3 office revised procurement procedures that include a process for annually searching for and including all FTA-required third-party contract clauses through use of a clause checklist or other mechanism. This mechanism should be updated to include all current applicable FTA required clauses and annually thereafter.",
+      "response_due_date": "October 2, 2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Disadvantaged Business Enterprise",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Title VI",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - General",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - Complementary Paratransit",
+      "finding": "D",
+      "deficiency_code": "ADA-CPT6-2",
+      "description": "MCTA's definition of a trip denial did not include those trips that cannot be scheduled within one hour before or after the requested trip time. As a result, trip denials have not been tracked appropriately.",
+      "corrective_action": "The recipient must submit to the FTA Office of Civil Rights via FTACivilRightsSupport@dot.gov documentation, such as an updated definition of denials, and a procedure for capturing and tracking those rides scheduled outside the hour before-or-after the scheduling window. The recipient must submit to the FTA Office of Civil Rights via FTACivilRightsSupport@dot.gov evidence of training completed with relevant staff on the new definition and procedures for appropriately categorizing and tracking denials.",
+      "response_due_date": "October 2, 2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Equal Employment Opportunity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "School Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Charter Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug-Free Workplace Act",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug and Alcohol Program",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5307 Program Requirements",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5310 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5311 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Public Transportation Agency Safety Plan (PTASP)",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Cybersecurity",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    }
+  ],
+  "awards": [
+    {
+      "award_number": "PA-2023-018-00",
+      "award_year": "2023",
+      "description": "MCTA-Monroe FY2018 and 2019 Section 5307 Bus Support Equip/Facilities, and Operating Assistance",
+      "amount": 2598389.0
+    },
+    {
+      "award_number": "PA-2020-035-00",
+      "award_year": "2020",
+      "description": "MCTA-Monroe FY 2015 Section 5307 Bus Accessories and Associated Transit Improvements FFY2015-5307",
+      "amount": 223005.0
+    },
+    {
+      "award_number": "PA-2022-022-00",
+      "award_year": "2022",
+      "description": "MCTA-Monroe FFY2022-23 Section 5307 Operating Assistance",
+      "amount": 1000000.0
+    }
+  ],
+  "projects": [
+    {
+      "project_type": "completed",
+      "description": "Installation of a new Bus Wash",
+      "completion_date": null,
+      "funding_sources": "Section 5307 funds"
+    },
+    {
+      "project_type": "completed",
+      "description": "Purchase of two new 35-foot Gillig CNG buses",
+      "completion_date": null,
+      "funding_sources": "Section 5307 funds"
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Continued streamlining of MCTA services to best meet the needs of the communities and riders it serves",
+      "completion_date": null,
+      "funding_sources": null
+    }
+  ],
+  "source_file": "R3_PA_Monroe County TA_TR23_DraftFinal_LetterandReport_7.20.pdf",
+  "extracted_at": "2025-12-10T10:27:52.564805",
+  "extraction_method": "claude-api",
+  "summary": {
+    "total_deficiencies": 2,
+    "total_areas_reviewed": 23
+  }
+}

@@ -1,0 +1,276 @@
+{
+  "recipient": {
+    "name": "City of Radford",
+    "acronym": "Radford Transit",
+    "city": "Radford",
+    "state": "VA",
+    "region_number": 3
+  },
+  "review_info": {
+    "fiscal_year": "FY2023",
+    "review_type": "TR",
+    "report_date": "September 5, 2023"
+  },
+  "assessments": [
+    {
+      "review_area": "Legal",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Financial Management and Capacity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Award Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Program Management and Subrecipient Oversight",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Project Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Transit Asset Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Satisfactory Continuing Control",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Maintenance",
+      "finding": "D",
+      "deficiency_code": "M5-1",
+      "description": "Inadequate oversight of subrecipient, contractor, or lessee maintenance activities - Review of Radford Transit's contractor supplied maintenance plan found that the plan did not meet FTA requirements. The plan did not include inspection cycles for preventive maintenance or procedures for pursuit of warranty claims. Radford Transit's contract with RTW clearly states what is required in the contractor's maintenance plan. However, Radford Transit did not review the plan to ensure it met FTA requirements. Additionally, Radford Transit does not receive regular reports on the contractor's maintenance activities and has not been monitoring these activities for compliance.",
+      "corrective_action": "By November 20, 2023, Radford Transit must submit to the Region 3 office oversight procedures that include the requirement for review of contractor's written maintenance plan that includes maintenance standards compatible with FTA requirements, performance measures for timely preventive maintenance and procedures for pursuing warranty claims. These procedures should also include regular receipt and review of all completed contractor preventive maintenance activities.",
+      "response_due_date": "November 20, 2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "D",
+      "deficiency_code": "P1-4",
+      "description": "Procurement policies and procedures not followed - Review of the procurement file for Spare Parts provided by Radford Transit indicated that the agency did not follow its own procurement policies and procedures in conducting this procurement. Specifically, the procurement policies and procedures provided clearly define micro and small purchase thresholds and the requirements for conducting each of these methods of procurement. Radford Transit instead included three separate procurement actions in a single procurement that it determined to be available from a sole source. The file contents show that these were three distinctly separate purchases; two (2) micro purchases and one (1) small purchase that were completed with two different vendors. The file contents also show that quotes were received from two vendors for each of these purchases, clearly indicating that these purchases were not sole source procurements.",
+      "corrective_action": "By November 20, 2023, Radford Transit must provide to the Region 3 office revised procurement policies and procedures that clearly outline the processes to be followed when conducting an FTA funded procurement. Radford Transit must consult with the Region 3 office to complete specified procurement training.",
+      "response_due_date": "November 20, 2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Disadvantaged Business Enterprise",
+      "finding": "D",
+      "deficiency_code": "DBE3-2",
+      "description": "DBE goal not submitted - Radford Transit completed and submitted in TrAMS a DBE threshold questionnaire on June 19, 2020, indicating it had no DBE contracting opportunities during the upcoming three-year period. In 2021, Radford Transit was notified by its incumbent Operations and Maintenance contractor that they did not wish to exercise either of the two one-year options remaining on the contract. Radford Transit advertised a new RFP and secured a contract for Operation and Maintenance of its services in July 2022. Radford Transit should have prepared and submitted an appropriate DBE goal when it realized it would have this contracting opportunity.",
+      "corrective_action": "By October 1, 2023, Radford Transit must develop a goal, upload it to TrAMS, and notify the FTA Office of Civil Rights via FTACivilRightsSupport@dot.gov once completed.",
+      "response_due_date": "October 1, 2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Title VI",
+      "finding": "D",
+      "deficiency_code": "TVI1-2",
+      "description": "Revisions to Title VI Program not made - Radford Transit submitted its Title VI Program in TrAMS on September 24, 2019. On October 16, 2019, FTA returned the program for corrections. At the time of the review, Radford Transit provided an updated Title VI program to the Reviewer. A review of the revised program indicated that the revisions made did not fully meet the intent of FTA's comments and the revised program had not been uploaded in TrAMS as required.",
+      "corrective_action": "By October 1, 2023, Radford Transit must revise and upload its Title VI program in TrAMS and notify the FTA Office of Civil Rights via FTACivilRightsSupport@dot.gov once completed.",
+      "response_due_date": "October 1, 2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - General",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - Complementary Paratransit",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Equal Employment Opportunity",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "School Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Charter Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug-Free Workplace Act",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug and Alcohol Program",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5307 Program Requirements",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5310 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5311 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Public Transportation Agency Safety Plan (PTASP)",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Cybersecurity",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    }
+  ],
+  "awards": [
+    {
+      "award_number": "VA-2022-034-00",
+      "award_year": "2022",
+      "description": "City of Radford FFY 2021 Section 5339 Purchase of Buses and Radios",
+      "amount": 91690.0
+    },
+    {
+      "award_number": "VA-2020-045-00",
+      "award_year": "2020",
+      "description": "Radford Transit FFY 2020 Surface Transportation Program (STP) Associated Capital Maintenance (ACM)",
+      "amount": 40000.0
+    },
+    {
+      "award_number": "VA-2023-004-00",
+      "award_year": "2022",
+      "description": "City of Radford FFY 2020, FFY 2021 and FFY 2022 Section 5307 Operating Assistance",
+      "amount": 1402910.0
+    },
+    {
+      "award_number": "VA-2021-018-00",
+      "award_year": "2021",
+      "description": "Radford Transit FFY 2020 Section 5339 Bus and Bus Facility - Bus Purchase",
+      "amount": 408000.0
+    }
+  ],
+  "projects": [
+    {
+      "project_type": "completed",
+      "description": "Purchase of two new 35-foot New Flyer buses",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    },
+    {
+      "project_type": "completed",
+      "description": "Secured an Operations and Maintenance contract for all Radford Transit services with RTW",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Continued streamlining of Radford Transit services to best meet the needs of the communities and riders it serves",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    }
+  ],
+  "source_file": "R3_PA_Radford_TR23_Final_Letter_Report_9.05.pdf",
+  "extracted_at": "2025-12-10T10:02:32.164316",
+  "extraction_method": "claude-api",
+  "summary": {
+    "total_deficiencies": 4,
+    "total_areas_reviewed": 23
+  }
+}

@@ -1,0 +1,480 @@
+{
+  "recipient": {
+    "name": "Delaware River Port Authority",
+    "acronym": "DRPA",
+    "city": "Camden",
+    "state": "NJ",
+    "region_number": 3
+  },
+  "review_info": {
+    "fiscal_year": "FY2023",
+    "review_type": "TR",
+    "report_date": "August 30, 2023"
+  },
+  "assessments": [
+    {
+      "review_area": "Legal",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Financial Management and Capacity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Award Management",
+      "finding": "D",
+      "deficiency_code": "TC-AM5-1",
+      "description": "At the time of the review, DRPA had five (5) awards on the closeout list. As noted in the Milestone Progress Reports, awards may be inactive for years pending retainage for the overall project. DRPA does not initiate closeout within 120 days once activity is completed as required.",
+      "corrective_action": "1. The recipient must submit to the FTA regional office more effective procedures for award management to enable it to close awards. 2. The recipient must submit to the FTA regional office an award closeout plan for all awards.",
+      "response_due_date": "10/30/23",
+      "date_closed": "8/23/23"
+    },
+    {
+      "review_area": "Technical Capacity - Program Management and Subrecipient Oversight",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Project Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Transit Asset Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Satisfactory Continuing Control",
+      "finding": "D",
+      "deficiency_code": "SCC8-4",
+      "description": "The SAP asset listing includes individual assets as well as project-level line items. Departments maintain separate inventories that may be more detailed. The physical inventory memo developed by PATCO is at the project and award-level; the memo does not provide details at the asset level in order to conduct a reconciliation with the assets listed in SAP.",
+      "corrective_action": "1. The recipient must submit to the FTA regional office written inventory control procedures defining roles and responsibilities for tracking FTA-funded assets and reconciling physical inventories to its equipment records. 2. The recipient must submit a timeline for performing the physical inventory and reconciliation of FTA-funded equipment.",
+      "response_due_date": "10/30/23",
+      "date_closed": "8/7/23"
+    },
+    {
+      "review_area": "Maintenance",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "D",
+      "deficiency_code": "P11-1",
+      "description": "The DRPA procurement files do not include the (1) Notice to FTA and U.S. DOT Inspector General of information related to fraud, waste, abuse, or other legal matters, (2) Prohibition on certain telecommunications and video surveillance services or equipment, (3) seatbelt use per FTA Master Agreement Section 34(a), or (4) distracted driving per FTA Master Agreement Section 34(a).",
+      "corrective_action": "The recipient must submit to the FTA regional office: \u2022 Revised procurement procedures that address inclusion of all FTA-required third-party contract clauses through use of a clause checklist or other mechanism. \u2022 A procedure for updating the required contract clauses on an annual basis. \u2022 Evidence of implementation with the next applicable procurement",
+      "response_due_date": "10/30/23",
+      "date_closed": "8/7/23"
+    },
+    {
+      "review_area": "Disadvantaged Business Enterprise",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Title VI",
+      "finding": "D",
+      "deficiency_code": "TVI2-1",
+      "description": "The DRPA Language Assistance Plan notes that training is provided '\u2026on policies and procedures concerning language assistance and ways to determine whether an individual needs assistance services' through the new employee orientation process. DRPA is not providing this training during orientation.",
+      "corrective_action": "The recipient must prepare and submit to the FTA Office of Civil Rights documentation of implementing its LAP, including the completion of required training.",
+      "response_due_date": "10/30/23",
+      "date_closed": "8/22/23"
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - General",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - Complementary Paratransit",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Equal Employment Opportunity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "School Bus",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Charter Bus",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug-Free Workplace Act",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug and Alcohol Program",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5307 Program Requirements",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5310 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5311 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Public Transportation Agency Safety Plan (PTASP)",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Cybersecurity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    }
+  ],
+  "awards": [
+    {
+      "award_number": "NJ-2021-009",
+      "award_year": "2022",
+      "description": "DRPA/PATCO FFY 2019 BUILD Discretionary Grant - Franklin Square Station Reopening Project",
+      "amount": 26212384.0
+    },
+    {
+      "award_number": "NJ-2021-024",
+      "award_year": "2021",
+      "description": "DRPA/PATCO FFY 2021 - Section 5337 - PATCO HSL Improvements",
+      "amount": 12607790.0
+    },
+    {
+      "award_number": "NJ-2021-023",
+      "award_year": "2021",
+      "description": "DRPA/PATCO FFY 2021 - Section 5307/5340 - PATCO HSL Improvements",
+      "amount": 6111792.0
+    },
+    {
+      "award_number": "NJ-2021-012",
+      "award_year": "2021",
+      "description": "DRPA/PATCO - FFY 2019 / FFY 2020 Section 5337 - Franklin Square Station Reopening Project",
+      "amount": 5213417.0
+    },
+    {
+      "award_number": "NJ-2021-011",
+      "award_year": "2021",
+      "description": "DRPA/PATCO FFY 2019 / FFY 2020 - Section 5337 - PATCO HSL Improvements",
+      "amount": 10954336.0
+    },
+    {
+      "award_number": "NJ-2021-007",
+      "award_year": "2021",
+      "description": "DRPA FFY 2020 - Section 5307/5340 - PATCO HSL Improvements",
+      "amount": 5920843.0
+    },
+    {
+      "award_number": "NJ-2020-025",
+      "award_year": "2020",
+      "description": "FFY 2017/FFY 2018/ FFY 2019 - Section 5307/5340 - PATCO HSL Improvements",
+      "amount": 16800807.0
+    },
+    {
+      "award_number": "NJ-2020-017",
+      "award_year": "2020",
+      "description": "FFY 2017/FFY 2018/FFY 2019 - Section 5337 - PATCO HSL Improvements",
+      "amount": 33868605.0
+    },
+    {
+      "award_number": "NJ-2020-022",
+      "award_year": "2020",
+      "description": "FY2016 - Section 5307 - PATCO HSL Improvements",
+      "amount": 3490576.0
+    },
+    {
+      "award_number": "NJ-2019-007",
+      "award_year": "2019",
+      "description": "FY 2016 Section 5337 - PATCO HSL Improvements",
+      "amount": 3773088.0
+    },
+    {
+      "award_number": "NJ-2018-008",
+      "award_year": "2018",
+      "description": "Section 5307/5340 for FY14, FY15 and FY16, and Section 5337 for FY15, FY16",
+      "amount": 24478942.0
+    },
+    {
+      "award_number": "NJ-2017-014",
+      "award_year": "2017",
+      "description": "FY 2014 Section 5307 Urbanized Area Formula Funds and FY 2014 Section 5337 State of Good Repair Formula Funds",
+      "amount": 15649872.0
+    },
+    {
+      "award_number": "NJ-54-0004",
+      "award_year": "2015",
+      "description": "FY 13 State of Good Repair",
+      "amount": 9965074.0
+    },
+    {
+      "award_number": "NJ-05-0032",
+      "award_year": "2015",
+      "description": "FY 12 Fixed Guideway Application",
+      "amount": 9205687.0
+    },
+    {
+      "award_number": "NJ-90-X099",
+      "award_year": "2015",
+      "description": "FY 2012/FY 2013 Program of Projects",
+      "amount": 10713403.0
+    },
+    {
+      "award_number": "NJ-05-0030",
+      "award_year": "2014",
+      "description": "FY 11 Fixed Guideway Application",
+      "amount": 9191976.0
+    },
+    {
+      "award_number": "NJ-05-0026",
+      "award_year": "2010",
+      "description": "FY 10 Fixed Guideway Application",
+      "amount": 9132972.0
+    },
+    {
+      "award_number": "NJ-03-0157",
+      "award_year": "2005",
+      "description": "FY05 Fixed Guideway Application",
+      "amount": 7793304.0
+    }
+  ],
+  "projects": [
+    {
+      "project_type": "completed",
+      "description": "PATCO Train Car Fleet Rehabilitation",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    },
+    {
+      "project_type": "completed",
+      "description": "Lindenwold Yard Track Rehabilitation & Lindenwold Viaduct",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    },
+    {
+      "project_type": "completed",
+      "description": "Upgrade Center Tower SCADA Software",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Install Elevators in Remaining Stations",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Re-opening Franklin Square",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    },
+    {
+      "project_type": "ongoing",
+      "description": "PATCO Rail Replacement \u2013 Ferry to Broadway",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Westmont Platform Headhouses",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Center Tower/Command & Control Center Relocation",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Woodcrest Station Platform Rehabilitation",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Philadelphia Subway Signal Cable",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Viaduct Substructure Preservation (Collingswood & Westmont)",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Embankment Restoration, Drainage Improvements, & Retaining Walls Rehabilitation \u2013 Phase 5",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Negative Feed Power Replacement - Lindenwold Yard",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Replace Electrical Cables in Subways",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Subway Structure Renovation",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    },
+    {
+      "project_type": "ongoing",
+      "description": "PATCO Interlocking and Track Rehabilitation Phase II",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Track Drainage Improvements - Cuthbert & Osage",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    },
+    {
+      "project_type": "future",
+      "description": "Replacement of Track Ties",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    },
+    {
+      "project_type": "future",
+      "description": "Smoke & Fire Control, Forced Air Ventilation",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    },
+    {
+      "project_type": "future",
+      "description": "PATCO Bridges Rehabilitation",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    },
+    {
+      "project_type": "future",
+      "description": "PATCO Track Resurfacing & Profiling",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    },
+    {
+      "project_type": "future",
+      "description": "PATCO Station Modernizations",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    },
+    {
+      "project_type": "future",
+      "description": "Exterior Platform Preservation",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    }
+  ],
+  "source_file": "R3_DE_DRPA_TR23_Final_Letter_and_Report_8.29.pdf TGC Signature (1).pdf",
+  "extracted_at": "2025-12-10T10:09:23.447292",
+  "extraction_method": "claude-api",
+  "summary": {
+    "total_deficiencies": 4,
+    "total_areas_reviewed": 23
+  }
+}

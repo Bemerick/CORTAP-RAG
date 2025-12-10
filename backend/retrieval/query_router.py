@@ -39,6 +39,37 @@ class QueryRouter:
         re.IGNORECASE
     )
 
+    # Historical audit patterns - recipient/agency queries
+    HISTORICAL_PATTERNS = [
+        # Superlative/ranking queries (PRIORITY - check first)
+        # Matches: "What audit had the most deficiencies?", "Which recipient had the worst review?", "Top deficiencies"
+        (r'(?:what|which).+?(?:audit|recipient|agency).+?(?:most|worst|least|best|highest|lowest).+?(?:deficienc|finding|issue)', 'ranking_query'),
+        (r'(?:most|worst|least|best|highest|lowest).+?(?:deficienc|finding|issue)', 'ranking_query'),
+        (r'(?:top|bottom|rank).+?(?:audit|recipient|agency|deficienc)', 'ranking_query'),
+
+        # Specific recipient queries
+        # Matches: "What deficiencies did GNHTD have?", "AMTRAN audit results", "Show COLTS review"
+        (r'(?:what|show|get|list).+?(?:deficienc|finding|result|review).+?(?:did|for|of)\s+\w+', 'recipient_deficiencies'),
+        (r'\w+\s+(?:audit|review|deficienc|finding)', 'recipient_review'),
+        (r'(?:deficienc|finding|result).+?(?:for|of|at)\s+\w+', 'recipient_deficiencies'),
+
+        # Regional queries
+        # Matches: "Region 1 deficiencies", "Compare Region 1 vs Region 3", "Connecticut agencies"
+        (r'region\s+\d+', 'regional_query'),
+        (r'(?:compare|differences?).+?region', 'regional_comparison'),
+        (r'\b(?:CT|MA|ME|NH|PA|VA|DE|WV)\b', 'state_query'),  # State abbreviations
+
+        # Review area/category queries
+        # Matches: "Common procurement deficiencies", "Legal findings across all agencies"
+        (r'(?:common|typical|frequent).+?(?:deficienc|finding|issue)', 'common_deficiencies'),
+        (r'(?:procurement|legal|maintenance|title vi|ada|charter bus).+?(?:deficienc|finding)', 'area_deficiencies'),
+
+        # Aggregate historical queries
+        # Matches: "How many deficiencies total?", "List all agencies reviewed", "Total audits"
+        (r'(?:how many|count|total).+?(?:deficienc|review|audit|agenc)', 'historical_aggregate'),
+        (r'list\s+all\s+(?:agenc|recipient|review)', 'list_historical'),
+    ]
+
     # Database-friendly patterns (exact lookups)
     # Note: These patterns will match any section code via SECTION_PATTERN
     DATABASE_PATTERNS = [
@@ -141,6 +172,21 @@ class QueryRouter:
         # Deduplicate and sort
         return sorted(list(set(sections)))
 
+    def _check_historical_patterns(self, query: str) -> Optional[tuple[str, float]]:
+        """
+        Check if query matches historical audit patterns.
+
+        Returns:
+            Tuple of (pattern_type, confidence) or None
+        """
+        query_lower = query.lower()
+
+        for pattern, pattern_type in self.HISTORICAL_PATTERNS:
+            if re.search(pattern, query_lower):
+                return (pattern_type, 0.9)
+
+        return None
+
     def _check_database_patterns(self, query: str) -> Optional[tuple[str, float]]:
         """
         Check if query matches database patterns.
@@ -181,6 +227,7 @@ class QueryRouter:
         Classify a query and determine routing strategy.
 
         Classification logic:
+        0. Historical audit queries (priority): Queries about past reviews, recipients, deficiencies
         1. Database (priority): Specific indicator/deficiency/question list/count queries
         2. RAG: Conceptual "what are requirements" type questions
         3. Database: Specific section + count/list/lookup queries
@@ -193,9 +240,22 @@ class QueryRouter:
         Returns:
             QueryRoute with classification and metadata
         """
-        # Check for conceptual questions FIRST (before section extraction)
-        # This prevents "What is the purpose of DBE program?" from being routed to database
         query_lower = query.lower()
+
+        # Check for historical audit queries FIRST (highest priority)
+        historical_match = self._check_historical_patterns(query)
+        if historical_match:
+            pattern_type, confidence = historical_match
+            return QueryRoute(
+                route_type="database",
+                confidence=confidence,
+                reasoning=f"Historical audit query ({pattern_type}). Using database for structured historical data.",
+                section_names=None,
+                keywords=self._extract_keywords(query)
+            )
+
+        # Check for conceptual questions (before section extraction)
+        # This prevents "What is the purpose of DBE program?" from being routed to database
         is_conceptual = any(term in query_lower for term in ['purpose', 'why', 'rationale', 'explain', 'what is', 'what are'])
 
         # Check database patterns for specific data queries

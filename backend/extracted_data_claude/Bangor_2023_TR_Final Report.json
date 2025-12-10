@@ -1,0 +1,312 @@
+{
+  "recipient": {
+    "name": "City of Bangor",
+    "acronym": null,
+    "city": "Bangor",
+    "state": "ME",
+    "region_number": 1
+  },
+  "review_info": {
+    "fiscal_year": "FY2023",
+    "review_type": "TR",
+    "report_date": "December 11, 2023"
+  },
+  "assessments": [
+    {
+      "review_area": "Legal",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Financial Management and Capacity",
+      "finding": "D",
+      "deficiency_code": "F6-3",
+      "description": "Single Audit submission deficient, including late submission. As dictated by the Uniform Guidance at 2 CFR 200 Subpart F, all non-federal entities that expend $750,000 or more in federal awards in a year are required to conduct an independent Single Audit. Single Audit reports must be completed and data collection form and reporting package (financial statements, summary schedule of prior audit findings, auditor's report, and corrective action plan) must be submitted to the Federal Audit Clearinghouse (FAC) within the earlier of 30 calendar days after receipt of the auditor's report or nine months after the end of the audit period. During the review period, the City submitted the FY 2021 Single Audit nearly two months late into the FAC, and the City's FY 2022 Single Audit was submitted nearly four months late.",
+      "corrective_action": "The City of Bangor must submit to the FTA regional office procedures to ensure that the Single Audit report, data collection form, and reporting package are submitted to the FAC on time, as well as evidence that the FY 2023 Single Audit report and package were submitted on time.",
+      "response_due_date": "April 1, 2024",
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Award Management",
+      "finding": "D",
+      "deficiency_code": "TC-AM3-1",
+      "description": "MPRs lack required information. As explained in the Uniform Guidance at 2 CFR Part 200 Subpart D and FTA Circular 5010.1D, Chapter III, Section 3, Milestone Progress Reports (MPRs) are the primary written communication between recipients and FTA on the progress of the projects in an award. These Circulars require that basic information is provided in each MPR narrative, as applicable. The City's MPR narratives during the review period did not address any of the required elements and were often blank.",
+      "corrective_action": "The City of Bangor must submit to the FTA regional office procedures for ensuring all required information is included in future MPRs.",
+      "response_due_date": "February 1, 2024",
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Program Management and Subrecipient Oversight",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Project Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Transit Asset Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Satisfactory Continuing Control",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Maintenance",
+      "finding": "D",
+      "deficiency_code": "M1-2",
+      "description": "No written facility/equipment maintenance plan. FTA Circular 5010.1D, FTA Circular 9030.1E, and the Uniform Guidance at 2 CFR 200.313 require recipients of federally funded facilities and equipment to have written procedures for maintaining those assets according to manufacturers' recommendations. A recipient's maintenance plan must describe a system of periodic inspections and preventive maintenance to be performed at certain defined intervals, as specified by the manufacturers of the facility components and equipment, and it should also identify the goals and objectives of a maintenance program and establish how the recipient will meet such goals and objectives. While the City has a facility maintenance plan that includes both the Cold and Warm Bus Barns, it has not yet updated the plan to include its new Transit Center, which opened in December 2022.",
+      "corrective_action": "The City of Bangor must submit to the FTA regional office a written maintenance plan for FTA-funded facilities and equipment that identifies a system of periodic inspections and preventive maintenance performed at certain defined intervals and includes the new Transit Center.",
+      "response_due_date": "July 1, 2024",
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "D",
+      "deficiency_code": "P4-1, P11-1, P12-2, P20-2, P20-3",
+      "description": "Multiple procurement deficiencies: Responsibility determination deficiencies (P4-1) - For two reviewed procurements (ADA vans and fixed-route buses), there was no documentation that the responsibility determination was made prior to awarding the contracts. Missing FTA clauses (P11-1) - Federal clauses were not included in the ADA van procurement, and one required clause was missing from the Transit Center RFP. Lobbying certifications not included or signed by bidders (P12-2) - No lobbying certification signed by the ADA van vendor for a $148,000 procurement. Pre-award and/or post-delivery audits not performed (P20-2) - The City could not provide documentation of completed pre-award and post-delivery audits for ADA vans. Pre-award and/or post-delivery certifications lacking (P20-3) - The City could not provide the pre-award or post-delivery certifications for the ADA vans.",
+      "corrective_action": "Multiple corrective actions required with various due dates ranging from February 1, 2024 to August 1, 2024, including verification of contractor responsibility, revised procurement procedures, lobbying certification procedures, audit procedures, and certification procedures.",
+      "response_due_date": "February 1, 2024 to August 1, 2024",
+      "date_closed": null
+    },
+    {
+      "review_area": "Disadvantaged Business Enterprise",
+      "finding": "D",
+      "deficiency_code": "DBE2-2, DBE3-1, DBE5-1, DBE6-1, DBE12-5",
+      "description": "Multiple DBE deficiencies: Insufficient resources to administer the DBE program (DBE2-2) - The DBELO does not have sufficient resources to implement the DBE program. DBE goal submitted late (DBE3-1) - The FY 2022-2024 DBE goal was submitted nearly one year late. DBE uniform reports contain inaccuracies and/or are missing required information (DBE5-1) - Reports showed inaccuracies and missing contract information, this is a repeat deficiency. DBE goal achievement analysis and corrective plan not completed (DBE6-1) - No FY 2022 shortfall analysis or corrective action plan provided when DBE goal was not met. Recipient does not implement DBE termination/substitution provisions (DBE12-5) - No documentation of receiving and approving contractor's written request for DBE substitution on Transit Center contract.",
+      "corrective_action": "Multiple corrective actions required with due dates of December 29, 2023 and July 1, 2024, including evidence of sufficient DBE program resources, revised procedures, corrected reports, shortfall analysis, and termination/substitution procedures.",
+      "response_due_date": "December 29, 2023 to July 1, 2024",
+      "date_closed": null
+    },
+    {
+      "review_area": "Title VI",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - General",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - Complementary Paratransit",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Equal Employment Opportunity",
+      "finding": "D",
+      "deficiency_code": "EEO4-2, EEO4-3",
+      "description": "Employment practices analyses deficiencies (EEO4-2) - The City's employment practices charts for 2020, 2021, and 2022 were not complete. The City does not track employment hires by race, gender, ethnicity, disability, or veteran status. While tracking promotions, training, and terminations/disciplinary actions by race and gender, it does not track them by other required elements. This is a repeat deficiency. EEO reporting and/or monitoring system deficiencies (EEO4-3) - The City did not provide documentation in support of monitoring its EEO plan's effectiveness and the employment practices statistical data for potential employment disparate impact.",
+      "corrective_action": "Submit revised EEO plan with detailed narrative and complete statistical assessment, employment practices charts with all required statistical data, plan defining assessment frequency, and detailed monitoring and reporting system.",
+      "response_due_date": "July 1, 2024",
+      "date_closed": null
+    },
+    {
+      "review_area": "School Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Charter Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug-Free Workplace Act",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug and Alcohol Program",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5307 Program Requirements",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5310 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5311 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Public Transportation Agency Safety Plan (PTASP)",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Cybersecurity",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    }
+  ],
+  "awards": [
+    {
+      "award_number": "ME-2021-009",
+      "award_year": "2021",
+      "description": "Community Connector CARES ACT FUNDS for Operating and Capital FY20-FY21-FY22",
+      "amount": 3103122.0
+    },
+    {
+      "award_number": "ME-2021-010",
+      "award_year": "2021",
+      "description": "FY 18 - 5339(b) 7 Bus Purchase",
+      "amount": 2890000.0
+    },
+    {
+      "award_number": "ME-2022-017",
+      "award_year": "2022",
+      "description": "Community Connector Bus Technologies",
+      "amount": 238405.0
+    },
+    {
+      "award_number": "ME-2022-018",
+      "award_year": "2022",
+      "description": "Bangor Area Transit Center Construction Grant",
+      "amount": 3076800.0
+    },
+    {
+      "award_number": "ME-2023-011",
+      "award_year": "2023",
+      "description": "5307 American Rescue Plan Funds",
+      "amount": 56632.0
+    },
+    {
+      "award_number": "ME-2023-033",
+      "award_year": "2023",
+      "description": "Bus Stops and Bus Shelters Grant",
+      "amount": 396800.0
+    }
+  ],
+  "projects": [
+    {
+      "project_type": "completed",
+      "description": "Purchased 6 ADA paratransit vans, 5 fixed-route buses, and 2 service vehicles",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Constructed a new Transit Center",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Purchasing 2 fixed-route buses",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Incorporating several forms of smart technology onto the revenue vehicles, such as advance vehicle locators, automated passenger counters, automated annunciators, mobile fares, etc.",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Install bus stop signs",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Incorporate additional forms of smart technology",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Renovate the Cold Bus Barn",
+      "completion_date": null,
+      "funding_sources": null
+    }
+  ],
+  "source_file": "Bangor_2023_TR_Final Report.pdf",
+  "extracted_at": "2025-12-10T10:27:16.445622",
+  "extraction_method": "claude-api",
+  "summary": {
+    "total_deficiencies": 6,
+    "total_areas_reviewed": 23
+  }
+}

@@ -1,0 +1,450 @@
+{
+  "recipient": {
+    "name": "South Central Transit Authority",
+    "acronym": "SCTA",
+    "city": "Lancaster",
+    "state": "PA",
+    "region_number": 3
+  },
+  "review_info": {
+    "fiscal_year": "FY2023",
+    "review_type": "TR",
+    "report_date": "June 28, 2023"
+  },
+  "assessments": [
+    {
+      "review_area": "Legal",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Financial Management and Capacity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity \u2013 Award Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity \u2013 Program Management and Subrecipient Oversight",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity \u2013 Project Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Transit Asset Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Satisfactory Continuing Control",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Maintenance",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "D",
+      "deficiency_code": "P2-2",
+      "description": "The SCTA Procurement Manual Standards of Conduct and the SCTA Personnel Policy dated January 1, 2020, do not include address disciplinary action for conflict of interest violations by officers, employees, or agents. 2 CFR 200.318 (c)(1) & (2) requires that the non-Federal entity must maintain written standards of conduct covering conflicts of interest and governing the actions of its employees engaged in the selection, award and administration of contracts. The standards of conduct must provide for disciplinary actions to be applied for violations of such standards by officers, employees, or agents of the non-Federal entity.",
+      "corrective_action": "By October 13, 2023, SCTA must submit written standards of conduct that include all missing provisions. November 17, 2023, SCTA must develop and submit to the Region 3 office Board approval of revised written standards of conduct.",
+      "response_due_date": "October 13, 2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Disadvantaged Business Enterprise",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Title VI",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) \u2013 General",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) \u2013 Complementary Paratransit",
+      "finding": "D",
+      "deficiency_code": "ADA-CPT4-4",
+      "description": "The Red Rose Transit Authority (RRTA) fixed route fare is set at $1.80. During the review period, the ADA complementary paratransit fare was published as being between $2.40 and $4.50 depending on the mileage of the trip. During the review, SCTA determined that the fares would be either $2.40 (1-5.99 miles) or $3.40 (6 or more miles), ensuring that all complementary paratransit fares would be less than twice the fixed route fares. This change require ratification by the SCTA Board and sufficient publication. 49 CFR 37.131 requires that the fare for a trip charged to an ADA paratransit eligible user of the complementary paratransit service shall not exceed twice the fare that would be charged to an individual paying full fare for a trip of similar length, at a similar time of day, on the entity's fixed route system.",
+      "corrective_action": "Evidence of formal board approval of fare changes that ensure paratransit fares do not exceed twice the fare for a comparable trip using fixed routes. Evidence that the public has been sufficiently notified of the fare change and the new fares have been implemented.",
+      "response_due_date": "August 2, 2023",
+      "date_closed": "June 16, 2023"
+    },
+    {
+      "review_area": "Equal Employment Opportunity",
+      "finding": "D",
+      "deficiency_code": "EEO4-2",
+      "description": "SCTA collects data regarding hiring and terminations in the administrative system and has a tool for tracking disciplinary actions. This is not aggregated to provide statistical data on these practices in the Employment Practices Chart (or similar) to document the impact of employment practices. SCTA does not have a tool for tracking and documenting statistical data for: Number of employees in each job category who applied for promotion or transfer and the number promoted or transferred, cross-referenced by sex and race; Job category training that fosters promotion potential, cross-referenced by sex and race; Individuals with Disabilities and Veterans, the number of applicants for employment and promotions in each job category, and the number hired and promoted, cross-referenced by sex and race. FTA Circular 4704.1A Ch. 2.2.6 requires agencies to provide statistical data that show any potential impact of employment practices on minorities and women.",
+      "corrective_action": "The recipient must submit to the FTA RCRO a detailed narrative and statistical assessment of present employment practices to identify those practices that operate as employment barriers and unjustifiably contribute to underutilization and an employment practices chart that provides all the statistical data in FTA Circular 4704.1A Attachment. Submit to the FTA RCRO a plan that defines how often it will conduct this assessment and how it will utilize the results of the assessment.",
+      "response_due_date": "August 2, 2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "School Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Charter Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug-Free Workplace Act",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug and Alcohol Program",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5307 Program Requirements",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5310 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5311 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Public Transportation Agency Safety Plan (PTASP)",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Cybersecurity",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    }
+  ],
+  "awards": [
+    {
+      "award_number": "PA-2020-053",
+      "award_year": "2020",
+      "description": "READING UZA FY 2020 SECTIONS 5307 AND 5339 FORMULA FUNDS",
+      "amount": 5219100.0
+    },
+    {
+      "award_number": "PA-2019-042",
+      "award_year": "2019",
+      "description": "READING UZA FY 2019 SECTIONS 5307 AND 5339 FORMULA FUNDS",
+      "amount": 5105537.0
+    },
+    {
+      "award_number": "PA-2022-034",
+      "award_year": "2022",
+      "description": "FFY2022 BARTA CMAQ FLEX",
+      "amount": 1125000.0
+    },
+    {
+      "award_number": "PA-2018-039",
+      "award_year": "2018",
+      "description": "READING UZA SECTIONS 5307 AND 5339 FORMULA FUNDS",
+      "amount": 5150956.0
+    },
+    {
+      "award_number": "PA-2019-049",
+      "award_year": "2019",
+      "description": "LANCASTER UZA FFY2019 SECTIONS 5307 AND 5339 FORMULA FUNDS",
+      "amount": 3582424.0
+    },
+    {
+      "award_number": "PA-2022-061",
+      "award_year": "2022",
+      "description": "SCTA-LANCASTER UZA FY 2022 SECTIONS 5307 AND 5339 FORMULA FUNDS: Fixed Route & Paratransit Bus and Vehicle Replacement; Non-Fixed Route ADA Paratransit Service; Access to Jobs; Facility Upgrades; Shop Equipment; PM; Fixed Route Fare Boxes; IT Equip",
+      "amount": 8643946.0
+    },
+    {
+      "award_number": "PA-2018-044",
+      "award_year": "2018",
+      "description": "LANCASTER UZA SECTIONS 5307 AND 5339 FORMULA FUNDS",
+      "amount": 6541945.0
+    },
+    {
+      "award_number": "PA-2016-017",
+      "award_year": "2019",
+      "description": "Lancaster UZA, Reading UZA Sections 5307 and 5339 Formula Funds",
+      "amount": 19712814.0
+    },
+    {
+      "award_number": "PA-2017-031",
+      "award_year": "2018",
+      "description": "LANCASTER UZA SECTIONS 5307 AND 5339 FORMULA FUNDS",
+      "amount": 6277589.0
+    },
+    {
+      "award_number": "PA-2021-043",
+      "award_year": "2021",
+      "description": "SCTA-LANCASTER UZA FY 2021 SECTIONS 5307 AND 5339 FORMULA FUNDS: Fixed Route & Paratransit Bus and Vehicle Replacement; Non-Fixed Route ADA Paratransit Service; Access to Jobs; Facility and Maintenance Upgrades; PM; Mobile Ticketing Fare Collection System",
+      "amount": 2826798.0
+    },
+    {
+      "award_number": "PA-2021-048",
+      "award_year": "2021",
+      "description": "SCTA-READING UZA FY 2021 SECTIONS 5307 AND 5339 FORMULA FUNDS: Fixed Route and Paratransit bus and vehicle replacement, service vehicle replacement; facility upgrades; PM; Mobile Ticketing Fare Collection System",
+      "amount": 5190772.0
+    },
+    {
+      "award_number": "PA-2020-057",
+      "award_year": "2021",
+      "description": "LANCASTER UZA FY 2020 SECTIONS 5307 AND 5339 FORMULA FUNDS",
+      "amount": 2854178.0
+    },
+    {
+      "award_number": "PA-2022-060",
+      "award_year": "2022",
+      "description": "SCTA-READING UZA FY 2022 SECTIONS 5307 AND 5339 FORMULA FUNDS: Fixed Route & Paratransit Bus and Vehicle Replacement; Facility Upgrades; Office Equip; IT Equip; Shop Equipment; Replace Bus Shelters",
+      "amount": 6495971.0
+    },
+    {
+      "award_number": "PA-2022-015",
+      "award_year": "2022",
+      "description": "Lancaster ARP",
+      "amount": null
+    },
+    {
+      "award_number": "PA-2022-014",
+      "award_year": "2022",
+      "description": "Reading ARP",
+      "amount": null
+    },
+    {
+      "award_number": "PA-2020-028",
+      "award_year": "2020",
+      "description": "Reading CARES",
+      "amount": null
+    },
+    {
+      "award_number": "PA-2020-031",
+      "award_year": "2020",
+      "description": "Lancaster CARES",
+      "amount": null
+    },
+    {
+      "award_number": "PA-2021-005",
+      "award_year": "2021",
+      "description": "Reading CRRSAA",
+      "amount": null
+    }
+  ],
+  "projects": [
+    {
+      "project_type": "completed",
+      "description": "BARTA Transportation Center/Garage and BARTA Park-N-Transit Garage Rehab/Renovation",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "BARTA Operations Center Bus Storage Expansion Facility and Renovation of Existing Bus Storage Facility",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "RRTA Queen Street Garage Rehab; Fixed Route Bus Replacements",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Paratransit Bus Replacements",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "BARTA Transportation Center/Garage and BARTA Park-N-Transit Garage Rehab/Renovation",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "BARTA Operations Center Rehabilitation",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "RRTA Queen Street Garage Rehab",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Fixed Route Bus Replacements",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Paratransit Bus Replacements",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Fixed Route and Paratransit Bus Replacements",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "BARTA Transportation Center/Garage Upgrades/Rehab",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "BARTA Park-N-Transit Garage Upgrades/Rehab; BARTA Operations Center Upgrades/Rehab and Installation/Construction of a Solar Panel Field",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "BARTA Operations Center Unleaded Fuel Tank Replacement; BARTA Shop Bus Wash Replacement",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "RRTA Operations Center Concept Plan for Bus Storage Expansion Facility",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "RRTA Queen Street Station/Garage Upgrades/Rehab; SCTA-Lancaster Shared-Ride Operations Center",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Farebox Replacements",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Bus Radio Replacements",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "SCTA-Reading Bus Shelter Replacements",
+      "completion_date": null,
+      "funding_sources": null
+    }
+  ],
+  "source_file": "TC_R3_PA_South Central Transit Authority_TR23_Final_Report_Letter_6.28.pdf",
+  "extracted_at": "2025-12-10T10:06:52.528015",
+  "extraction_method": "claude-api",
+  "summary": {
+    "total_deficiencies": 3,
+    "total_areas_reviewed": 23
+  }
+}

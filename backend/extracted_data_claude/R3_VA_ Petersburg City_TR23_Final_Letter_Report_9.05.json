@@ -1,0 +1,300 @@
+{
+  "recipient": {
+    "name": "Petersburg Area Transit",
+    "acronym": "PAT",
+    "city": "Petersburg",
+    "state": "VA",
+    "region_number": 3
+  },
+  "review_info": {
+    "fiscal_year": "FY2023",
+    "review_type": "TR",
+    "report_date": "September 5, 2023"
+  },
+  "assessments": [
+    {
+      "review_area": "Legal",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Financial Management and Capacity",
+      "finding": "D",
+      "deficiency_code": "F6-3",
+      "description": "Single Audit submission deficient, including late submission. The City of Petersburg fiscal year (FY) 2021 Comprehensive Annual Financial Report (CAFR) and FY 2022 Annual Comprehensive Financial Report (ACFR) were not available for submission with the Recipient Information Request (RIR) but were posted to the City's website by the time of the review. Neither the FY21 nor FY22 Single Audit report, data collection form, or reporting package was uploaded to the Single Audit Clearinghouse.",
+      "corrective_action": "By October 16, 2023, PAT must inform the Region 3 office when the FY21 and FY22 single audits are uploaded to the clearinghouse. By November 13, 2023 the City of Petersburg must submit to the FTA regional office policies and procedures to ensure that the Single Audit report, data collection form, and reporting package are submitted on time.",
+      "response_due_date": "10/16/23 and 11/13/23",
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Award Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Program Management and Subrecipient Oversight",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Project Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Transit Asset Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Satisfactory Continuing Control",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Maintenance",
+      "finding": "D",
+      "deficiency_code": "M2-2",
+      "description": "Late facility/ equipment preventive maintenance. Maintenance files not available for PAT facilities per inspection intervals listed in the Facility Maintenance Plan. Recipients must maintain federally-assisted property in good operating order and keep satisfactory records pertaining to the use of federally-assisted property.",
+      "corrective_action": "By November 13, 2023, PAT must submit to the Region 3 office: procedures for maintaining preventive maintenance inspection documentation; and a monthly report signed by the chief executive officer or other senior management designee on the preventive maintenance results of the item(s) examined during the review until the data demonstrates the recipient has conducted 80 percent of its facility preventive maintenance on time for three (3) consecutive months.",
+      "response_due_date": "11/13/23",
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "D",
+      "deficiency_code": "P4-1, P5-1, P10-1, P11-1",
+      "description": "Four procurement deficiencies found: 1) Responsibility determination deficiencies - The City does not have a process for conducting and documenting responsibility; 2) Incomplete written documentation of procurement history - The City does not have a process for documenting procurement history; 3) Lacking independent cost estimate - Two procurement files for rolling stock were over the Federal Simplified Acquisition Threshold and did not include independent cost estimates; 4) Missing FTA Clauses - The City procurement files do not include required FTA clauses including Notice to FTA and DOT OIG, Telecommunications, Seat Belt, and Distracted Driving clauses.",
+      "corrective_action": "Multiple corrective actions required by November 13, 2023 and December 22, 2023, including submitting revised procedures for responsibility determinations, procurement history documentation, independent cost estimates, and required FTA clauses. Documentation that required processes were implemented for next procurement must be submitted by December 22, 2023.",
+      "response_due_date": "11/13/23 and 12/22/23",
+      "date_closed": null
+    },
+    {
+      "review_area": "Disadvantaged Business Enterprise",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Title VI",
+      "finding": "D",
+      "deficiency_code": "TVI2-1",
+      "description": "Language Assistance Plan implementation deficiencies. PAT does not provide staff with training on the LEP Plan and procedures through staff orientation as stated in the Title VI Program.",
+      "corrective_action": "By November 13, 2023, PAT must submit documentation of implementing its LAP to the Office of Civil Rights via FTACivilRightsSupport@dot.gov (per instructions in Section VII of this report).",
+      "response_due_date": "11/13/23",
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - General",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - Complementary Paratransit",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Equal Employment Opportunity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "School Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Charter Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug-Free Workplace Act",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug and Alcohol Program",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5307 Program Requirements",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5310 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5311 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Public Transportation Agency Safety Plan (PTASP)",
+      "finding": "D",
+      "deficiency_code": "PTASP1-5",
+      "description": "ASP not developed/updated in cooperation with frontline employee representatives. PAT did not implement the updates as required as a participant of the Virginia Department of Rail and Public Transportation Tier II PTASP.",
+      "corrective_action": "By November 13, 2023, PAT must submit to the Region 3 office evidence that the recipient updated its ASP in cooperation with frontline employee representatives.",
+      "response_due_date": "11/13/23",
+      "date_closed": null
+    },
+    {
+      "review_area": "Cybersecurity",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    }
+  ],
+  "awards": [
+    {
+      "award_number": "VA-34-0005",
+      "award_year": "2015",
+      "description": "Capital",
+      "amount": 325459.0
+    },
+    {
+      "award_number": "VA-2023-006",
+      "award_year": "2023",
+      "description": "Petersburg Area Transit (PAT) FFY 2019 Section 5307 Operating Assistance and Section 5339 FFY 2020 and FFY 2021 to Purchase Support Vehicles and Shop Equipment",
+      "amount": 1365000.0
+    },
+    {
+      "award_number": "VA-90-X415",
+      "award_year": "2014",
+      "description": "Capital and Operating",
+      "amount": 3587895.0
+    },
+    {
+      "award_number": "VA-2021-036",
+      "award_year": "2021",
+      "description": "Petersburg Area Transit (PAT) FFY 2018 and 2019 Section 5307 Operating Assistance and Preventive Maintenance and FFY 2019 and FFY 2020 Section 5339 Bus Purchase, Rehab and Renovate the Admin Facility and Purchase of Hardware",
+      "amount": 1590084.0
+    },
+    {
+      "award_number": "VA-2020-024",
+      "award_year": "2020",
+      "description": "Supplemental Funds for operating assistance",
+      "amount": null
+    }
+  ],
+  "projects": [
+    {
+      "project_type": "completed",
+      "description": "Instrumental in developing a structurally balanced (Mass Transit) budget",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Developed and implemented our Agency's Safety Plan",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Oversaw the procurement, specifications and delivery of new transit vehicles",
+      "completion_date": null,
+      "funding_sources": "$394,661.64"
+    },
+    {
+      "project_type": "completed",
+      "description": "Ensured the hiring of three additional Diesel Mechanics to offset workload and lower employee overtime",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Conducting feasibility study relative to the construction of new bus garage",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Determine site for new Maintenance Facility and to expand service routes",
+      "completion_date": null,
+      "funding_sources": null
+    }
+  ],
+  "source_file": "R3_VA_ Petersburg City_TR23_Final_Letter_Report_9.05.pdf",
+  "extracted_at": "2025-12-10T10:21:50.509209",
+  "extraction_method": "claude-api",
+  "summary": {
+    "total_deficiencies": 5,
+    "total_areas_reviewed": 23
+  }
+}

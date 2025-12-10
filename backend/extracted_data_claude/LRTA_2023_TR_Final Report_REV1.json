@@ -1,0 +1,378 @@
+{
+  "recipient": {
+    "name": "Lowell Regional Transit Authority",
+    "acronym": "LRTA",
+    "city": "Lowell",
+    "state": "MA",
+    "region_number": 1
+  },
+  "review_info": {
+    "fiscal_year": "FY2023",
+    "review_type": "TR",
+    "report_date": "October 30, 2023"
+  },
+  "assessments": [
+    {
+      "review_area": "Legal",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Financial Management and Capacity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Award Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Program Management and Subrecipient Oversight",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Project Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Transit Asset Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Satisfactory Continuing Control",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Maintenance",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "D",
+      "deficiency_code": "P11-1 and P8-4",
+      "description": "Missing FTA clauses (P11-1): Per Appendix II to the Uniform Guidance (2 CFR Part 200) and the FTA Master Agreement, certain federal clauses and provisions must be added to federally funded contracts. All four procurements reviewed were missing a required federal clause: 6002 of the Solid Waste Disposal Act. LRTA was not aware that it was a required federal clause. Improper sealed bid procedures used (P8-4): The Uniform Guidance at 2 CFR 200.320 and FTA Circular 4220.1F require FTA recipients to follow specific procedures when conducting sealed bid procurements. During the review period, LRTA issued an Invitation for Bid (IFB) to replace bus shelters and the ticket/information booth at the Kennedy Bus Hub. Initially, LRTA did not intend to use FTA funds for the project. However, there was a small amount of funds remaining in an older FTA award, and this project met the scope of the award, so $11,733 in FTA funds were applied to the project after it had already been awarded to a contractor that had certified non-compliance with Buy America. LRTA did not follow its written procedures for IFB procurements.",
+      "corrective_action": "For P11-1: By January 31, 2024, LRTA must submit to the FTA regional office revised procurement procedures that address inclusion of all FTA-required third-party contract clauses through use of a clause checklist or other mechanism. For P8-4: By December 29, 2023, LRTA must work with the FTA regional office to determine if it must pay back federal funds or to find an alternative resolution.",
+      "response_due_date": "January 31, 2024 and December 29, 2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Disadvantaged Business Enterprise",
+      "finding": "D",
+      "deficiency_code": "DBE5-1",
+      "description": "Per 49 CFR Part 26, Appendix B, recipients of Department of Transportation (DOT) funds are expected to keep accurate data regarding the contracting opportunities available to firms paid with DOT dollars. Failure to submit contracting data relative to the DBE program will result in noncompliance with Part 26. For this review, the December 2020, June 2021, and December 2022 semi-annual reports, as found in TrAMS, were examined to assess the accuracy of the data entries. During the virtual site visit, LRTA acknowledged the December 2020, June 2021, and December 2022 semi-annual reports were not accurate because the reports did not include all the FTA-funded contracts noted in their procurement list and LRTA did not include the on-call contracts. The FTA dollar value missing from the three reports is $1,109,634.16. This is a repeat deficiency from LRTA's FY 2016 and FY 2019 Triennial Reviews.",
+      "corrective_action": "By October 1, 2024, LRTA must submit corrected December 2020, June 2021, and December 2022 Uniform Reports of DBE Awards or Commitments and Payments in TrAMS and notify the FTA Office of Civil Rights (TCR) once those corrected reports have been submitted.",
+      "response_due_date": "October 1, 2024",
+      "date_closed": null
+    },
+    {
+      "review_area": "Title VI",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - General",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - Complementary Paratransit",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Equal Employment Opportunity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "School Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Charter Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug-Free Workplace Act",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug and Alcohol Program",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5307 Program Requirements",
+      "finding": "D",
+      "deficiency_code": "5307:3-3",
+      "description": "FTA Circular 9030.1E, Chapter VI, requires recipients to provide an opportunity for a public hearing or public meeting for any fare increase or major service reduction. Furthermore, during this review period, FTA provided guidance on its website pertaining to temporary service reductions due to issues stemming from the COVID-19 pandemic. Those guidelines state that a temporary service reduction as a result of an emergency is by definition not a 'major reduction in service' unless it lasts longer than a year or otherwise becomes permanent. Therefore, recipients must follow their public comment process for service reductions when the service reduction has exceeded one year. LRTA was forced to reduce service effective January 3, 2022, due to a shortage of bus drivers. It increased wages and provided incentives, so the agency hoped that the reduced service would be temporary. However, at the time of the virtual site visit, LRTA was still experiencing a bus driver shortage, and its service was still reduced. LRTA did not realize that it was required to implement its public comment process for major service reductions.",
+      "corrective_action": "By October 1, 2024, LRTA must provide documentation to the FTA regional office that it has updated its public comment process to include procedures for when temporary service reductions as the result of an emergency meet the definition of major reductions in service.",
+      "response_due_date": "October 1, 2024",
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5310 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5311 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Public Transportation Agency Safety Plan (PTASP)",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Cybersecurity",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    }
+  ],
+  "awards": [
+    {
+      "award_number": "MA-2017-025",
+      "award_year": "2017",
+      "description": "City of Lowell Parks Transit Improvement Project",
+      "amount": 1592292.0
+    },
+    {
+      "award_number": "MA-2017-030",
+      "award_year": "2017",
+      "description": "LRTA Pedestrian Bridge, Spare Parts and Facility's Improvements",
+      "amount": 585000.0
+    },
+    {
+      "award_number": "MA-2019-015",
+      "award_year": "2019",
+      "description": "2020 Operating, Preventive Maintenance and Replacement of (5) Fixed Route Buses",
+      "amount": 5378699.0
+    },
+    {
+      "award_number": "MA-2020-004",
+      "award_year": "2020",
+      "description": "Rehab Intermodal Hub, Support Equipment and Facilities",
+      "amount": 300000.0
+    },
+    {
+      "award_number": "MA-2020-013",
+      "award_year": "2020",
+      "description": "Lowell Regional Transit Authority Boston UZA Section 5307 CARES ACT Operating and Capital Assistance",
+      "amount": 1611105.0
+    },
+    {
+      "award_number": "MA-2020-027",
+      "award_year": "2020",
+      "description": "LRTA Facilities Improvements",
+      "amount": 920000.0
+    },
+    {
+      "award_number": "MA-2021-008",
+      "award_year": "2021",
+      "description": "Replace: (8) Fixed Route Buses and (2) Fixed Route Minibuses",
+      "amount": 4987000.0
+    },
+    {
+      "award_number": "MA-2021-018",
+      "award_year": "2021",
+      "description": "Planning, Facilities & Equipment, IT Equipment and Spare Parts",
+      "amount": 405000.0
+    },
+    {
+      "award_number": "MA-2021-029",
+      "award_year": "2021",
+      "description": "Purchase Automated Passenger Counters",
+      "amount": 240000.0
+    },
+    {
+      "award_number": "MA-2022-009",
+      "award_year": "2022",
+      "description": "FY2022 Facilities & Equipment, Spare Parts, and IT Equipment",
+      "amount": 138393.0
+    },
+    {
+      "award_number": "MA-2022-010",
+      "award_year": "2022",
+      "description": "Lowell Regional Transit Authority Section 5307 ARP Operating Assistance",
+      "amount": 4315711.0
+    },
+    {
+      "award_number": "MA-2023-001",
+      "award_year": "2023",
+      "description": "Planning, Facilities & Equipment, IT Equipment and Spare Parts",
+      "amount": 500000.0
+    }
+  ],
+  "projects": [
+    {
+      "project_type": "completed",
+      "description": "Replaced five bus shelters and the ticket/information booth at the Kennedy Bus Hub",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Completed an emergency shoring repair to the stairway connecting the Gallagher Intermodal Transportation Center to the MBTA Commuter Rail platform",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Replaced 15 diesel and hybrid 35-foot fixed-route buses",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Replaced 2 fixed-route cutaway vehicles",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Replaced 2 paratransit cutaway vehicles",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Replaced a non-revenue service truck/plow",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Rehabbed the roof at the Gallagher Intermodal Transportation Center",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Replaced 5 vehicle lifts at the Fixed Route Operations and Maintenance Facility",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Completing the design and engineering for the replacement and rehab of the ADA and Pedestrian Accessway connecting the Gallagher Intermodal Transportation Center with the MBTA Commuter Rail platform including the pedestrian bridge, stairway, elevator, and interior corridor",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Acquiring a new AVL system for fixed-route service with AVA/audio and visual announcements and automated passenger counters",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Construct and rehab the ADA and Pedestrian Accessway connecting the Gallagher Intermodal Transportation Center with the MBTA Commuter Rail platform, which includes the pedestrian bridge, stairway, elevator, and interior corridor",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Hire a consultant to assist with designing facility improvements at the Fixed Route Operations and Maintenance Center to prepare for zero-emission buses, which includes electric grid/infrastructure improvements and safety improvements, such as enhanced fire suppression and safe storage area",
+      "completion_date": null,
+      "funding_sources": null
+    }
+  ],
+  "source_file": "LRTA_2023_TR_Final Report_REV1.pdf",
+  "extracted_at": "2025-12-10T10:18:20.484465",
+  "extraction_method": "claude-api",
+  "summary": {
+    "total_deficiencies": 3,
+    "total_areas_reviewed": 23
+  }
+}

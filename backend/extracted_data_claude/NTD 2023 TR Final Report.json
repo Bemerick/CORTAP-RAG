@@ -1,0 +1,378 @@
+{
+  "recipient": {
+    "name": "Norwalk Transit District",
+    "acronym": "NTD",
+    "city": "Norwalk",
+    "state": "CT",
+    "region_number": 1
+  },
+  "review_info": {
+    "fiscal_year": "FY2023",
+    "review_type": "TR",
+    "report_date": "July 11, 2023"
+  },
+  "assessments": [
+    {
+      "review_area": "Legal",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Financial Management and Capacity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Award Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Program Management and Subrecipient Oversight",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Project Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Transit Asset Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Satisfactory Continuing Control",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Maintenance",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Disadvantaged Business Enterprise",
+      "finding": "D",
+      "deficiency_code": "DBE12-2",
+      "description": "Insufficient documentation of monitoring DBE work. Per 49 CFR 26.37(b), a recipient's DBE program must include a monitoring and enforcement mechanism to ensure that work committed to DBEs at contract award is actually performed by the DBEs to which the work was committed. This mechanism must include a written certification that the recipient reviewed contracting records and monitored work sites for this purpose. NTD implemented a project during the review period to replace the fuel tank, construct a new fuel island, and to make service lane improvements, which included work completed by a DBE. However, since the DBE Liaison Officer was out on an extended medical leave during this project's completion, it was not monitored for DBE participation, as stated in the recipient's DBE program plan.",
+      "corrective_action": "NTD must submit to the FTA Office of Civil Rights (TCR) evidence that it has implemented its DBE monitoring process to ensure that DBEs are actually performing the stated work.",
+      "response_due_date": "December 31, 2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Title VI",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - General",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - Complementary Paratransit",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Equal Employment Opportunity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "School Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Charter Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug-Free Workplace Act",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug and Alcohol Program",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5307 Program Requirements",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5310 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5311 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Public Transportation Agency Safety Plan (PTASP)",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Cybersecurity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    }
+  ],
+  "awards": [
+    {
+      "award_number": "CT-95-X020",
+      "award_year": "2015",
+      "description": "Planning",
+      "amount": 600000.0
+    },
+    {
+      "award_number": "CT-90-X531",
+      "award_year": "2015",
+      "description": "CAPITAL PROJECTS",
+      "amount": 10126960.0
+    },
+    {
+      "award_number": "CT-2018-013",
+      "award_year": "2018",
+      "description": "FFY16 & 17 - Facility Improvements: Rehab, Repairs, and Upgrades; Administrative, Operations and Maintenance Capital Support Projects, Bus Replacement",
+      "amount": 3060000.0
+    },
+    {
+      "award_number": "CT-2019-004",
+      "award_year": "2019",
+      "description": "FY 2018 Replacement Radio System, and Misc. support equipment",
+      "amount": 1560000.0
+    },
+    {
+      "award_number": "CT-2020-012",
+      "award_year": "2020",
+      "description": "FFY 2019 Program of Projects. Facility Project Section 5307 and 5339, Replacement/Upgrade Farebox System and TVM, Ten Replacement Paratransit Vehicles",
+      "amount": 12400000.0
+    },
+    {
+      "award_number": "CT-2020-016",
+      "award_year": "2021",
+      "description": "Norwalk Transit District, CT, Section 5307, CARES ACT Operating, Capital, and Preventive Maintenance",
+      "amount": 5950000.0
+    }
+  ],
+  "projects": [
+    {
+      "project_type": "completed",
+      "description": "Replaced fixed-route buses, paratransit vehicles, and a service truck",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Transitioned the Westport Commuter Shuttles to a successful microtransit on-demand service",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Integrated AVL technology into its paratransit system for a paperless manifest system",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Implemented an electronic fare payment system for the paratransit service",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Completed the final design for the service line and facility rehabilitation project",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Installed bird netting in the storage barn",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Launched a new website",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Issued an RFP for the Comprehensive Operational Analysis",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Finishing the Comprehensive Operational Analysis",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Carrying out the facility rehabilitation project",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Upgrading bus shelters and bus stops with State assistance",
+      "completion_date": null,
+      "funding_sources": "State assistance"
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Replacing revenue vehicles",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Expanding microtransit service",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Convert the fleet to electric buses",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Expand microtransit to include first/last mile concept",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Procure a fleet maintenance system with advanced phases for AVL to include pre- and post-trip inspection and component monitoring and electronic parking grids",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Review and analyze existing paratransit software for replacement",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Implement a statewide uniform and seamless fare collection mechanism and structure",
+      "completion_date": null,
+      "funding_sources": null
+    }
+  ],
+  "source_file": "NTD 2023 TR Final Report.pdf",
+  "extracted_at": "2025-12-10T10:05:07.854324",
+  "extraction_method": "claude-api",
+  "summary": {
+    "total_deficiencies": 1,
+    "total_areas_reviewed": 23
+  }
+}

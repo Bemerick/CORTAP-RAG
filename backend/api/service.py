@@ -52,6 +52,16 @@ class RAGService:
             temperature=settings.llm_temperature
         )
 
+        # Initialize historical audits collection
+        try:
+            import chromadb
+            chroma_client = chromadb.PersistentClient(path=settings.chroma_db_path)
+            self.historical_collection = chroma_client.get_collection("historical_audits")
+            print(f"[RAG SERVICE] Historical audits collection loaded: {self.historical_collection.count()} documents")
+        except Exception as e:
+            self.historical_collection = None
+            print(f"[RAG SERVICE] Historical audits collection not available: {e}")
+
         # Initialize database manager (for structured queries)
         db_url = settings.database_url
         if db_url:
@@ -61,7 +71,8 @@ class RAGService:
                 db_manager=self.db_manager,
                 rag_pipeline=self.rag_pipeline,
                 hybrid_retriever=self.hybrid_retriever,
-                embedding_manager=self.embedding_manager
+                embedding_manager=self.embedding_manager,
+                historical_collection=self.historical_collection
             )
             print("[RAG SERVICE] Hybrid query engine initialized with database support")
         else:

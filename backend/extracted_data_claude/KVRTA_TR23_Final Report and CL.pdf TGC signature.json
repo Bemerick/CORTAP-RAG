@@ -1,0 +1,363 @@
+{
+  "recipient": {
+    "name": "Kanawha Valley Regional Transportation Authority",
+    "acronym": "KVRTA",
+    "city": "Charleston",
+    "state": "WV",
+    "region_number": 3
+  },
+  "review_info": {
+    "fiscal_year": "FY2023",
+    "review_type": "TR",
+    "report_date": "June 7, 2023"
+  },
+  "assessments": [
+    {
+      "review_area": "Legal",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Financial Management and Capacity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Award Management",
+      "finding": "D",
+      "deficiency_code": "TC-AM2-1",
+      "description": "Recipient did not report unliquidated obligations using an accrual basis of accounting on FY 2022 FFRs.",
+      "corrective_action": "By July 7, 2023, KVRTA must submit to the Region 3 office: 1. Revised reports for Q4 2022 that include the corrected information. 2. Procedures for including all required information in future reports. If the recipient is no longer able to submit the reports electronically, it must upload soft copies of the reports to TrAMS and notify the regional office when the revised reports are submitted.",
+      "response_due_date": "July 7, 2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Award Management",
+      "finding": "D",
+      "deficiency_code": "TC-AM3-1",
+      "description": "FY2022 MPRs for awards WV-2020-019 and WV-2021-017 do not narrative activity status and any problems encountered, detailed discussion of budget or schedule changes, explanations for why scheduled milestones were not met, identification of problem areas, or discussion of the expected impact of the delays.",
+      "corrective_action": "By July 7, 2023, KVRTA must submit to the Region 3 office: 1. Revised reports for Q4 2022 that include the missing information. 2. Procedures for ensuring all required information is included in future reports. If the recipient is no longer able to submit the reports electronically, it must upload soft copies of the reports to TrAMS and notify the regional office when the revised reports are submitted.",
+      "response_due_date": "July 7, 2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Program Management and Subrecipient Oversight",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Project Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Transit Asset Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Satisfactory Continuing Control",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Maintenance",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "D",
+      "deficiency_code": "P1-4",
+      "description": "The recipient has a local small purchase threshold of $25,000; however, two procurements included in the file sample with contract values over this amount but under the federal simplified acquisition threshold were not conducted using a formal method of procurement as required by the recipient's procurement manual.",
+      "corrective_action": "By September 7, 2023, KVRTA must submit to the Region 3 office evidence that it conducted training of all procurement staff on its procurement policies and procedures in the following areas: \u2022 Appropriate use of an IFB \u2022 Independent cost estimates \u2022 Cost and price analysis \u2022 Fair and reasonable price determination for piggyback \u2022 Liquidated damages",
+      "response_due_date": "September 7, 2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "D",
+      "deficiency_code": "P11-1",
+      "description": "The contract files for all five procurements included in the file sample did not include the required FTA clauses for seatbelt use or distracted driving. Three procurement files were also missing required clause: Notice to FTA and U.S. DOT Inspector General of information related to fraud, waste, abuse, or other legal matters. One procurement was missing the required FTA clauses for termination for cause and for convenience and prohibition on certain telecommunications and video surveillance services or equipment.",
+      "corrective_action": "By September 7, 2023, KVRTA must submit to the Region 3 office: 1. Revised procurement procedures that address inclusion of all FTA-required third party contract clauses through use of a clause checklist or other mechanism. 2. A procedure for updating the required contract clauses on an annual basis. 3. Documentation that all procurement staff have received training on the requirements for contract clauses and procedure for updating a clause checklist.",
+      "response_due_date": "September 7, 2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "D",
+      "deficiency_code": "P12-1",
+      "description": "The recipient contract files did not include lobbying requirements or obtain a signed lobbying certification from bidders in one procurement valued over $100,000.",
+      "corrective_action": "By September 7, 2023, KVRTA must submit to the Region 3 office: 1. Procedures for obtaining signed lobbying certifications for all procurements over $100,000. 2. Documentation that all procurement staff have received training on the requirements for lobbying certifications.",
+      "response_due_date": "September 7, 2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "D",
+      "deficiency_code": "P20-2",
+      "description": "The recipient contract files did not include the required pre-award audit for one rolling stock procurement.",
+      "corrective_action": "By September 7, 2023, KVRTA must submit to the Region 3 office: 1. The equivalent of a Buy America pre-award audit for the procurement reviewed. 2. Procedures for conducting pre-award review and inspection. 3. Documentation that all procurement staff have received training on the requirements for Buy America pre-award audits.",
+      "response_due_date": "September 7, 2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "D",
+      "deficiency_code": "P20-3",
+      "description": "The recipient contract files did not include the required pre-award certifications for one rolling stock procurement.",
+      "corrective_action": "By September 7, 2023, KVRTA must submit to the Region 3 office: 1. The certifications for the procurement reviewed. 2. Procedures for completing the applicable pre-award certifications for future revenue rolling stock procurements. 3. Documentation that all procurement staff have received training on the requirements for Buy America pre-award certifications.",
+      "response_due_date": "September 7, 2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Disadvantaged Business Enterprise",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Title VI",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - General",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - Complementary Paratransit",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Equal Employment Opportunity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "School Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Charter Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug-Free Workplace Act",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug and Alcohol Program",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5307 Program Requirements",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5310 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5311 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Public Transportation Agency Safety Plan (PTASP)",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Cybersecurity",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    }
+  ],
+  "awards": [
+    {
+      "award_number": "WV-2023-005",
+      "award_year": "2023",
+      "description": "The Kanawha Valley Regional Transportation Authority FFY 2021 and FFY 2022 Section 5307 and Section 5339 - Operating and Capital Projects",
+      "amount": 9814536.0
+    },
+    {
+      "award_number": "WV-2021-002",
+      "award_year": "2021",
+      "description": "Kanawha Valley Regional Transportation Authority (KVRTA) FFY 2019 and FFY 2020 Section 5307 Replacement Bus, Support Vehicle, Shelters, Hardware, Security Equipment, Ticket Vending Machines and Amenities",
+      "amount": 400000.0
+    },
+    {
+      "award_number": "WV-2021-017",
+      "award_year": "2021",
+      "description": "The Kanawha Valley Regional Transportation Authority (KVRTA) FY 2020 Section 5307 Purchase of Buses, Vans, Hardware, Security and Miscellaneous Equipment Purchase and FFY 2020 and FFY 2021 Section 5339 Bus and Van Purchase",
+      "amount": 4367650.0
+    },
+    {
+      "award_number": "WV-2020-019",
+      "award_year": "2020",
+      "description": "The Kanawha Valley Regional Transportation Authority (KVRTA) Section 5307 FFY 2019 Capital Grant., Purchase of buses, Security Equipment, Computers Hardware & Software and Misc. Communication Equipment for both Facilities and Fixed Route Vehicles.",
+      "amount": 2109760.0
+    },
+    {
+      "award_number": "WV-2019-018",
+      "award_year": "2019",
+      "description": "KVRTA FFY 2018 and FFY 2019 Section 5307 Operating Assistance, Purchase of Security Equipment Computer Hardware and Software and Section 5339 Bus Purchase",
+      "amount": 5007073.0
+    }
+  ],
+  "projects": [
+    {
+      "project_type": "completed",
+      "description": "Technology upgrades",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Renewal of Local Funding Levy",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Bus, Small Bus and ADA Van Replacements",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Introduction of Mobile Ticketing options",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Comprehensive Operational Analysis",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Implementing new AVL/GPS system",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Bus, Small Bus and ADA Van Replacements",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Potential new Facility that will combine Maintenance, Operations, and Admin into one facility.",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Investigating a micro-transit model to increase service areas and efficiencies.",
+      "completion_date": null,
+      "funding_sources": null
+    }
+  ],
+  "source_file": "KVRTA_TR23_Final Report and CL.pdf TGC signature.pdf",
+  "extracted_at": "2025-12-10T10:16:05.934873",
+  "extraction_method": "claude-api",
+  "summary": {
+    "total_deficiencies": 7,
+    "total_areas_reviewed": 28
+  }
+}

@@ -1,0 +1,312 @@
+{
+  "recipient": {
+    "name": "Manchester Transit Authority",
+    "acronym": "MTA",
+    "city": "Manchester",
+    "state": "NH",
+    "region_number": 1
+  },
+  "review_info": {
+    "fiscal_year": "FY2023",
+    "review_type": "TR",
+    "report_date": "October 17, 2023"
+  },
+  "assessments": [
+    {
+      "review_area": "Legal",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Financial Management and Capacity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Award Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Program Management and Subrecipient Oversight",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Project Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Transit Asset Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Satisfactory Continuing Control",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Maintenance",
+      "finding": "D",
+      "deficiency_code": "M2-2",
+      "description": "The federal regulations at 2 CFR 200.313 (Uniform Guidance) and FTA Circular 5010.1E, Chapter IV require recipients of federally funded assets to maintain those assets according to the manufacturers' recommendations. FTA expects that the preventive maintenance (PM) intervals on federally funded assets will occur at least 80-percent on time. The reviewer selected four facility components from MTA's bus garage for a PM interval review. MTA was not able to provide documentation that that it was performing monthly PM inspections on the HVAC system or the overhead doors, as stated in its maintenance plan. MTA staff stated that the PMs were conducted, but they were not documented.",
+      "corrective_action": "By October 31, 2023, MTA must submit to the FTA regional office procedures for completing preventive maintenance (PM) inspections on time. By January 31, 2024, MTA must also submit a monthly report signed by the chief executive officer or other senior management designee on the PM results of the HVAC system and overhead doors until the data demonstrates MTA has conducted 80-percent of its monthly PMs on time for three consecutive months. For both the HVAC system and overhead doors, the recipient must include with the submittal to the FTA regional office: A report listing the items, the dates the inspections are due, and the dates of the actual inspections. List the percentage of the inspections performed on time. Back-up documentation for each item (e.g., copy of work order, printout from the maintenance management system) documenting the date of the inspection.",
+      "response_due_date": "October 31, 2023 and January 31, 2024",
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "D",
+      "deficiency_code": "P10-1",
+      "description": "Four MTA procurements were examined during the Triennial Review. One of those procurements, the mobile ticketing upgrade, did not contain evidence that an independent cost estimate (ICE) was conducted prior to receipt of bids or proposals. However, the federal regulations at 2 CFR 200.324 and FTA Circular 4220.1F, Chapter VI require recipients to conduct an ICE as a tool to assist in determining the reasonableness of the bid or proposal being evaluated; that is, to assist in performing the cost or price analysis after bids or proposals are received.",
+      "corrective_action": "By October 31, 2023, MTA must submit to the FTA regional office documentation that it has updated its procurement procedures to include development of independent cost estimates prior to receipt of bids or proposals above its simplified acquisition threshold. By January 31, 2024, for its next applicable procurement, MTA must submit to the FTA regional office documentation that the required process was implemented.",
+      "response_due_date": "October 31, 2023 and January 31, 2024",
+      "date_closed": null
+    },
+    {
+      "review_area": "Disadvantaged Business Enterprise",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Title VI",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - General",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - Complementary Paratransit",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Equal Employment Opportunity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "School Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Charter Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug-Free Workplace Act",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug and Alcohol Program",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5307 Program Requirements",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5310 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5311 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Public Transportation Agency Safety Plan (PTASP)",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Cybersecurity",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    }
+  ],
+  "awards": [
+    {
+      "award_number": "NH-2020-006",
+      "award_year": "2020",
+      "description": "Manchester Transit Authority Section 5307 CARES ACT Operating Assistance",
+      "amount": 5585000.0
+    },
+    {
+      "award_number": "NH-2020-017",
+      "award_year": "2020",
+      "description": "Replacement of (4) Transit Buses, (1) Cut-Away Van, and Rebuild (5) Maintenance Lifts",
+      "amount": 2038920.0
+    },
+    {
+      "award_number": "NH-2021-013",
+      "award_year": "2021",
+      "description": "Manchester Transit Authority Section 5307 CARES ACT Vehicles, Vehicle Equipment, and Maintenance Equipment",
+      "amount": 1834200.0
+    },
+    {
+      "award_number": "NH-2021-015",
+      "award_year": "2021",
+      "description": "FY 2022-2023 Section 5310 Mobility Management",
+      "amount": 270038.0
+    },
+    {
+      "award_number": "NH-2022-017",
+      "award_year": "2022",
+      "description": "FY 2023 Operating /PM/ADA/MM/ Planning Assistance Subsidy",
+      "amount": 3023168.0
+    },
+    {
+      "award_number": "NH-2022-018",
+      "award_year": "2022",
+      "description": "FFY2021 Section 5307/5310 ARPA",
+      "amount": 1204368.0
+    },
+    {
+      "award_number": "NH-2023-002",
+      "award_year": "2023",
+      "description": "5310 CARES ACT CRRSAA FY 2021 NH-MA UZA Apportionment",
+      "amount": 7477.0
+    }
+  ],
+  "projects": [
+    {
+      "project_type": "completed",
+      "description": "Replaced the revenue vehicles that met their useful life",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Switched to propane for an alternative fuel source",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Absorbed the operations and service area of former FTA recipient CART, which operated in the Salem/Derry region",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Procuring propane powered revenue vehicles",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Rehabilitating three MCI coaches transferred to MTA from the Merrimack Valley Transit Authority",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Build a Transit Center at the current location of MTA's operations and maintenance facility",
+      "completion_date": "three to five years",
+      "funding_sources": null
+    }
+  ],
+  "source_file": "MTA_2023_TR_Final Report.pdf",
+  "extracted_at": "2025-12-10T10:04:23.761029",
+  "extraction_method": "claude-api",
+  "summary": {
+    "total_deficiencies": 2,
+    "total_areas_reviewed": 23
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "recipient": {
+    "name": "Delaware River & Bay Authority",
+    "acronym": "DRBA",
+    "city": "New Castle",
+    "state": "DE",
+    "region_number": 3
+  },
+  "review_info": {
+    "fiscal_year": "FY2023",
+    "review_type": "TR",
+    "report_date": "July 13, 2023"
+  },
+  "assessments": [
+    {
+      "review_area": "Legal",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Financial Management and Capacity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Award Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Program Management and Subrecipient Oversight",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Project Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Transit Asset Management",
+      "finding": "D",
+      "deficiency_code": "TAM1-1",
+      "description": "The DRBA has not developed a TAM plan and is not participating in a group TAM plan as required. 49 CFR 625.3 requires that this part applies to all recipients and subrecipients of Federal financial assistance under 49 U.S.C. Chapter 53 that own, operate, or manage capital assets used for providing public transportation. 49 CFR 625.25 requires that each Tier II provider must develop its own TAM plan or participate in a group TAM plan.",
+      "corrective_action": "By October 10, 2023, DRBA must submit to the FTA regional office its TAM plan.",
+      "response_due_date": "10/10/2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Satisfactory Continuing Control",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Maintenance",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "D",
+      "deficiency_code": "P1-1, P4-2, P5-1, P11-1, P12-2",
+      "description": "Five deficiencies found: 1) P1-1: DRBA does not have compliant procurement policies and procedures that meet Federal requirements. 2) P4-2: The procurement files for the replacement engine and installation did not contain a suspension and debarment clause, a signed suspension and debarment certification, or a SAM check as required. 3) P5-1: The procurement files for the replacement engine and installation did not contain a written history of the procurement as required. 4) P11-1: The procurement files for the replacement engine and installation did not contain FTA clauses as required. 5) P12-2: The procurement files for the replacement engine and installation did not contain lobbying certifications in the solicitations or signed certifications submitted by bidders.",
+      "corrective_action": "Multiple corrective actions required by October 10, 2023: develop and submit compliant procurement policies; provide evidence of procurement training; submit procedures for excluded party determinations and prime contractor flow down requirements; submit evidence of corrected record-keeping process and staff training; submit revised procurement procedures for FTA clauses; submit procedures for obtaining signed lobbying certifications.",
+      "response_due_date": "10/10/2023",
+      "date_closed": "7/12/2023"
+    },
+    {
+      "review_area": "Disadvantaged Business Enterprise",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Title VI",
+      "finding": "D",
+      "deficiency_code": "TVI2-1",
+      "description": "DRBA's Title VI program does not include a Language Assistance Plan (LAP) as required. FTA Circular 4702.1B Chapter III.9.b requires recipients to develop an assistance plan to address the identified needs of the LEP population(s) it serves after completing the Four Factor Analysis.",
+      "corrective_action": "By October 10, 2023, DRBA must prepare and submit to the FTA Office of Civil Rights via FTACivilRightsSupport@dot.gov documentation of preparing and implementing a LAP.",
+      "response_due_date": "10/10/2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - General",
+      "finding": "D",
+      "deficiency_code": "ADA-GEN1-1",
+      "description": "DRBA's ADA complaint process is not easily found and accessible on its website; ADA complaint procedures do not clearly provide information to the public on how to file an ADA complaint; ADA complaint procedures do not provide the contact information for the designated employee or office coordinating complaints; ADA complaint procedures do not provide any detail regarding prompt response or documentation of the response to any individual filing a complaint, including the reason for the response.",
+      "corrective_action": "By October 10, 2023, DRBA must submit to the FTA Office of Civil Rights via FTACivilRightsSupport@dot.gov: 1) evidence that the process for filing an ADA complaint has been relocated on its website to be easier to locate and accessible to the public; 2) evidence that it has advertised the name or title, address, telephone number, and email address of the employee designated to coordinate ADA complaints; 3) ADA complaint procedures that require a prompt response to the individual filing the complaint; 4) ADA complaint procedures that provide for documentation of the response to the individual filing the complaint, including the reason for the response.",
+      "response_due_date": "10/10/2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - Complementary Paratransit",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Equal Employment Opportunity",
+      "finding": "D",
+      "deficiency_code": "EEO3-2",
+      "description": "DRBA's EEO Officer is not concurring in the hiring or promotion processes as required. FTA Circular 4704.1A Ch. 2.2.3 requires the EEO Officer's program responsibilities to include concurring in the hiring and promotion process.",
+      "corrective_action": "By October 10, 2023, DRBA must prepare and submit to the FTA Office of Civil Rights via FTACivilRightsSupport@dot.gov evidence of corrective actions taken to implement the EEO program with appropriately designated personnel.",
+      "response_due_date": "10/10/2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "School Bus",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Charter Bus",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug-Free Workplace Act",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug and Alcohol Program",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5307 Program Requirements",
+      "finding": "D",
+      "deficiency_code": "5307:1-1, 5307:3-2",
+      "description": "Two deficiencies found: 1) 5307:1-1: DRBA is not party to an agreement with the MPO as required by 23 CFR 450.314(a) and (h) which requires the MPO, the State(s), and the providers of public transportation to cooperatively determine their mutual responsibilities in carrying out the metropolitan transportation planning process with clearly identified written agreements. 2) 5307:3-2: DRBA's public comment policy does not define a major service reduction or a process for soliciting and considering public comments prior to fare increases or major service reductions as required by FTA Circular 9030.1E.",
+      "corrective_action": "By October 10, 2023, DRBA must: 1) submit to the FTA regional office a fully executed agreement with the MPO, state(s), and transit providers that specifies the cooperative procedures for carrying out metropolitan transportation planning and programming and addresses the recipient's responsibilities, the development and sharing of information for financial plans, and the development of the annual listing of obligated projects; 2) submit to the FTA regional office a public comment policy that was amended to address the missing element: definition of a major service reduction and the process for soliciting and considering public comments prior to a fare increase or major service reduction.",
+      "response_due_date": "10/10/2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5310 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5311 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Public Transportation Agency Safety Plan (PTASP)",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Cybersecurity",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    }
+  ],
+  "awards": [],
+  "projects": [
+    {
+      "project_type": "completed",
+      "description": "Purchased and installed replacement Ferry engine for Cape May, New Jersey and Lewes, Delaware Ferry service",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    },
+    {
+      "project_type": "future",
+      "description": "New Ferry Motor Vessel Planning, Design, and Eventual Construction",
+      "completion_date": null,
+      "funding_sources": "FTA"
+    }
+  ],
+  "source_file": "R3_DRBA_TR23_Final_Letter_and_Report_7.6.23.pdf TGC Signature.pdf",
+  "extracted_at": "2025-12-10T10:08:17.190510",
+  "extraction_method": "claude-api",
+  "summary": {
+    "total_deficiencies": 6,
+    "total_areas_reviewed": 23
+  }
+}

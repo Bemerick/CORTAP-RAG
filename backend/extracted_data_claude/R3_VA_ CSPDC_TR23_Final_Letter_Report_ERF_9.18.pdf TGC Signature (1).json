@@ -1,0 +1,354 @@
+{
+  "recipient": {
+    "name": "Central Shenandoah Planning District Commission",
+    "acronym": "CSPDC",
+    "city": "Staunton",
+    "state": "VA",
+    "region_number": 3
+  },
+  "review_info": {
+    "fiscal_year": "FY2023",
+    "review_type": "TR",
+    "report_date": "September 21, 2023"
+  },
+  "assessments": [
+    {
+      "review_area": "Legal",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Financial Management and Capacity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Award Management",
+      "finding": "D",
+      "deficiency_code": "TC-AM5-1",
+      "description": "CSPDC completed the final drawdowns for VA-2022-004 and VA-2020-017 in September 2022. As of August 1, 2023, both awards were still open; closeout was not initiated within 120 days. 2 CFR 200.344 requires that recipients submit all financial, performance, and other reports no later than 120 calendar days after the end date of the period of performance, and liquidate all financial obligations within 120 calendar days. FTA Circular 5010.1E requires recipients to initiate closeout of the Award within 90 days after the end of the period of performance.",
+      "corrective_action": "Submit to the Region 3 office: 1. An award closeout plan. 2. More effective procedures and tools for award management (spending older funds first, tracking project progress, identifying project balances, reprogramming unused project funds to other projects, reassigning older projects to newer awards, or closing out projects) to enable it to close awards more timely.",
+      "response_due_date": "11/21/23",
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Program Management and Subrecipient Oversight",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Project Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Transit Asset Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Satisfactory Continuing Control",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Maintenance",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "D",
+      "deficiency_code": "P4-1",
+      "description": "CSPDC does not have a process for consistently reviewing and documenting responsibility. 49 U.S.C 5325(j) requires Federal financial assistance under this chapter may be provided for contracts only if a recipient awards such contracts to responsible contractors possessing the ability to successfully perform under the terms and conditions of a proposed procurement. Before making an award, recipients must consider the integrity of the contractor, compliance with public policy, past performance, and financial and technical resources.",
+      "corrective_action": "Submit to the Region 3 office: 1. Documentation of an implemented process to make adequate responsibility determinations prior to award of a contract. 2. Evidence that, for any ongoing contracts where the recipient was found to have failed to verify that the contractor was responsible, the recipient has verified and documented the responsibility of contractors. 3. For the next procurement, submit to the FTA regional office documentation that the required process was implemented.",
+      "response_due_date": "11/21/23",
+      "date_closed": null
+    },
+    {
+      "review_area": "Disadvantaged Business Enterprise",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Title VI",
+      "finding": "D",
+      "deficiency_code": "TVI2-1",
+      "description": "CSCPDC did not implement the monitoring efforts listed in the FY2020 LAP during the review period. The Language Assistance Plan required various monitoring activities including obtaining information from drivers and dispatchers, addressing LEP person needs based on feedback, determining current LEP population in the service area using Census data, determining if translation services needs have changed, evaluating local language assistance programs, ensuring compliance with LEP Plan goals, tracking complaints concerning LEP services, maintaining Title VI complaint logs including LEP issues, and conducting internal assessments using the FTA Language Assistance Monitoring Checklist.",
+      "corrective_action": "Submit to the RCRO via FTACivilRightsSupport@dot.gov (per instructions in Section VII of this report) documentation of implementing its FY23 LAP.",
+      "response_due_date": "1/2/24",
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - General",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - Complementary Paratransit",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Equal Employment Opportunity",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "School Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Charter Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug-Free Workplace Act",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug and Alcohol Program",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5307 Program Requirements",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5310 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5311 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Public Transportation Agency Safety Plan (PTASP)",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Cybersecurity",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    }
+  ],
+  "awards": [
+    {
+      "award_number": "VA-2019-002",
+      "award_year": "2018",
+      "description": "FY19 - 5307 Capital and Operating",
+      "amount": 1000085.0
+    },
+    {
+      "award_number": "VA-2019-025",
+      "award_year": "2019",
+      "description": "FFY 2017, FFY 2018 and FFY 2019 Section 5307 Capital Cost of Contracting and Operating",
+      "amount": 1576268.0
+    },
+    {
+      "award_number": "VA-2022-020",
+      "award_year": "2022",
+      "description": "Central Shenandoah Planning District Commission (CSPDC) FFY 2020 Section 5307 Operating Assistance, Capital Cost of Contracting, Engineering and Design and Purchase and Installation of Mobile Data Collection System",
+      "amount": 1294569.0
+    },
+    {
+      "award_number": "VA-2022-035",
+      "award_year": "2022",
+      "description": "CENTRAL SHENANDOAH PLANNING DISTRICT (CSPDC) Section 5339 Discretionary Engineering and Design, Construction and Construction Management of a Transit Hub",
+      "amount": 1145625.0
+    },
+    {
+      "award_number": "VA-2020-017",
+      "award_year": "2020",
+      "description": "The Central Shenandoah Planning District Commission (CSPDC) Section 5307 CARES ACT Operating Grant",
+      "amount": 2272563.0
+    },
+    {
+      "award_number": "VA-2022-004",
+      "award_year": "2022",
+      "description": "Central Shenandoah Planning District Commission (CSPDC) FFY 2021 Section 5307 American Rescue Plan (ARP) Operating",
+      "amount": 219886.0
+    },
+    {
+      "award_number": "VA-2023-017",
+      "award_year": "2023",
+      "description": "Central Shenandoah Planning District Commission (CSPDC) FFY 2021 Section 5307 Operating Assistance and Capital Cost of Contracting",
+      "amount": 1310753.0
+    }
+  ],
+  "projects": [
+    {
+      "project_type": "completed",
+      "description": "Added Saturday service on the North and West Loop(s) and Waynesboro Circulator routes",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Initiated Afton Express commuter bus service connecting Staunton, Fishersville and Waynesboro to Charlottesville/Albemarle destinations with DRPT Demonstration grant funding",
+      "completion_date": null,
+      "funding_sources": "DRPT Demonstration grant funding"
+    },
+    {
+      "project_type": "completed",
+      "description": "Purchased Lewis Street Transit Hub property with local transit funds",
+      "completion_date": null,
+      "funding_sources": "local transit funds"
+    },
+    {
+      "project_type": "completed",
+      "description": "Development of Transit Development Plan",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Initiated components of ITS Plan",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Completing rehabilitation of Lewis Street Hub to improve rider and operator access",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Finalizing Transit Development Plan for adoption",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Continue implementation of ITS Plan components",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Acquire new paratransit software and expand dedicated paratransit to Saturdays",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Implement realtime schedule information",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Implement Microtransit",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Implement Staunton South route",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Implement Sunday service",
+      "completion_date": null,
+      "funding_sources": null
+    }
+  ],
+  "source_file": "R3_VA_ CSPDC_TR23_Final_Letter_Report_ERF_9.18.pdf TGC Signature (1).pdf",
+  "extracted_at": "2025-12-10T10:01:47.289082",
+  "extraction_method": "claude-api",
+  "summary": {
+    "total_deficiencies": 3,
+    "total_areas_reviewed": 23
+  }
+}

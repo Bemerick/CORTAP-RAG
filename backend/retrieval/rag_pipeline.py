@@ -366,6 +366,7 @@ Provide your answer as a valid JSON object (raw JSON, no markdown formatting).""
                 'score': round(chunk['hybrid_score'], 3),
                 'file_path': metadata.get('file_path', ''),
                 'page_range': metadata.get('page_range', None),
+                'source_collection': metadata.get('source_collection', 'compliance_guide'),  # Default to compliance guide for backward compatibility
             })
 
         return sources

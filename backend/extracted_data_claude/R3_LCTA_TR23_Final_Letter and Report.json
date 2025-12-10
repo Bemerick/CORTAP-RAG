@@ -1,0 +1,336 @@
+{
+  "recipient": {
+    "name": "Luzerne County Transportation Authority",
+    "acronym": "LCTA",
+    "city": "Kingston",
+    "state": "PA",
+    "region_number": 3
+  },
+  "review_info": {
+    "fiscal_year": "FY2023",
+    "review_type": "TR",
+    "report_date": "June 20, 2023"
+  },
+  "assessments": [
+    {
+      "review_area": "Legal",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Financial Management and Capacity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity \u2013 Award Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity \u2013 Program Management and Subrecipient Oversight",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity \u2013 Project Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Transit Asset Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Satisfactory Continuing Control",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Maintenance",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "D",
+      "deficiency_code": "P4-1",
+      "description": "The LCTA does not have a formal process for documenting responsibility determinations. Additionally, a written responsibility determination was not present in the procurement file for diesel services. 49 U.S.C 5325(j) requires that Federal financial assistance under this chapter may be provided for contracts only if a recipient awards such contracts to responsible contractors possessing the ability to successfully perform under the terms and conditions of a proposed procurement.",
+      "corrective_action": "For any contracts where the recipient was found to have failed to verify that the contractor was responsible, the recipient must verify the responsibility of contractors. Additionally, LCTA must submit to the FTA regional office documentation of an implemented process to make adequate responsibility determinations prior to award of a contract.",
+      "response_due_date": "7/27/2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "D",
+      "deficiency_code": "P5-1",
+      "description": "The LCTA does not have a formal process for maintaining written documentation of procurement history. Additionally, written documentation of procurement history was not present in the procurement files for diesel services. 2 CFR 200.318(i) requires the non-Federal entity must maintain records sufficient to detail the history of the procurement.",
+      "corrective_action": "Submit to the FTA regional office evidence that the deficiencies identified in its record-keeping process have been corrected and that procurement staff have been trained on documenting procurement history.",
+      "response_due_date": "7/27/2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "D",
+      "deficiency_code": "P11-1",
+      "description": "Review of selected procurement files found that LCTA's method for including required clauses in its purchase orders references an outdated link which does not include the following clauses: Notice to FTA and DOT IG of instances of fraud, waste, and abuse, Telecommunications, Distracted driving, and Seatbelt use. The Telecommunications clause was also missing from the construction contract. This is a repeat deficiency from the 2019 Triennial Review of LCTA.",
+      "corrective_action": "Submit to the FTA regional office revised procurement procedures that include a process for annually searching for and including all FTA-required third-party contract clauses through use of a clause checklist or other mechanism.",
+      "response_due_date": "7/27/2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Disadvantaged Business Enterprise",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Title VI",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) \u2013 General",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) \u2013 Complementary Paratransit",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Equal Employment Opportunity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "School Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Charter Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug-Free Workplace Act",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug and Alcohol Program",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5307 Program Requirements",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5310 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5311 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Public Transportation Agency Safety Plan (PTASP)",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Cybersecurity",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    }
+  ],
+  "awards": [
+    {
+      "award_number": "PA-2021-004-00",
+      "award_year": "2021",
+      "description": "LCTA FY 2020 Section 5307 Flex CMAQ - CNG Bus Replacement Purchase",
+      "amount": 1350000.0
+    },
+    {
+      "award_number": "PA-2019-008-00",
+      "award_year": "2019",
+      "description": "5307 and 5339 LCTA Capital Projects",
+      "amount": 609789.0
+    },
+    {
+      "award_number": "PA-2020-059-00",
+      "award_year": "2020",
+      "description": "LCTA FY2020 Section 5307 Murray Complex Fencing (Safety and Security)",
+      "amount": 248000.0
+    },
+    {
+      "award_number": "PA-2022-048-00",
+      "award_year": "2022",
+      "description": "Luzerne County Transportation Authority (LCTA) FFY 2021 Section 5307 Capital Projects",
+      "amount": 2739811.0
+    },
+    {
+      "award_number": "PA-2020-049-00",
+      "award_year": "2020",
+      "description": "LCTA FFYs19-20 Sections 5307 and 5339 Bus Shelter, Software, ACMI, Scenic Beautification, ADA Projects",
+      "amount": 396757.0
+    },
+    {
+      "award_number": "PA-2022-036-00",
+      "award_year": "2022",
+      "description": "Luzerne County Transportation Authority (LCTA) FFY 2021 Section 5307 Flex STP and FFY 2019 Section 5339 Construction of Administrative/Maintenance Facility (formerly Murray Complex)",
+      "amount": 5244800.0
+    }
+  ],
+  "projects": [
+    {
+      "project_type": "completed",
+      "description": "Miscellaneous micro and small equipment purchases such as computer software/hardware, and signage",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Phone system",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Radios",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Construction of Administrative and Maintenance Facility",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Replacement bus purchases",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Shelters",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Replacement bus purchases",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Continued bus stop improvements",
+      "completion_date": null,
+      "funding_sources": null
+    }
+  ],
+  "source_file": "R3_LCTA_TR23_Final_Letter and Report.pdf",
+  "extracted_at": "2025-12-10T10:03:12.363436",
+  "extraction_method": "claude-api",
+  "summary": {
+    "total_deficiencies": 3,
+    "total_areas_reviewed": 25
+  }
+}

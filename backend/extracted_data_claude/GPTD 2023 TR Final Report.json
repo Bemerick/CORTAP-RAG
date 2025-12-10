@@ -1,0 +1,360 @@
+{
+  "recipient": {
+    "name": "Greater Portland Transit District",
+    "acronym": "GPTD",
+    "city": "Portland",
+    "state": "ME",
+    "region_number": 1
+  },
+  "review_info": {
+    "fiscal_year": "FY2023",
+    "review_type": "TR",
+    "report_date": "July 11, 2023"
+  },
+  "assessments": [
+    {
+      "review_area": "Legal",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Financial Management and Capacity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Award Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Program Management and Subrecipient Oversight",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Project Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Transit Asset Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Satisfactory Continuing Control",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Maintenance",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "D",
+      "deficiency_code": "P11-1",
+      "description": "In one of GPTD's reviewed procurements, the purchase of New Flyer buses, the required clause regarding the prohibition of certain telecommunications and video surveillance services or equipment was missing. This clause, as found in 2 CFR 200.216, went into effect on August 13, 2020. GPTD awarded the contract for the vehicles on March 31, 2022, so the clause should have been included in the contract.",
+      "corrective_action": "By November 30, 2023, GPTD must submit to the FTA regional office revised procurement procedures that address inclusion of all FTA-required third-party contract clauses through use of a clause checklist or other mechanism. For GPTD's next procurement, it must submit to the FTA regional office documentation that the required process was implemented. Subsequent to the site visit, GPTD provided documentation of a revised clause checklist to ensure that future procurements include all FTA-required third-party contract clauses. GPTD also provided with their June 20, 2023 response to the draft report, documentation of using the new procurement checklist in a Request to Initiate Procurement Process for a service vehicle dated June 14, 2023.",
+      "response_due_date": "May 9, 2023",
+      "date_closed": "June 26, 2023"
+    },
+    {
+      "review_area": "Disadvantaged Business Enterprise",
+      "finding": "D",
+      "deficiency_code": "DBE5-1",
+      "description": "GPTD included in its semi-annual DBE Uniform Reports revenue contract funds generated and retained by a DBE advertising firm. GPTD maintained a revenue contract with the advertising firm, which sold advertising space on GPTD's buses to third-party advertisers. The advertisers paid the advertising firm and based on a revenue-sharing agreement with GPTD, the advertising firm kept its portion of the revenue generated (30%) from the sale of advertising space and passed through to GPTD its portion of the revenue. During the site visit, GPTD stated it reported the portion of revenue kept by the advertising company as an award and payment to a DBE firm in its semi-annual DBE Uniform Reports. The FTA Regional Civil Rights Officer (RCRO) explained that revenue contracts cannot be counted as awards or payments toward DBE attainment.",
+      "corrective_action": "By November 30, 2023 GPTD must submit to the FTA Office of Civil Rights corrected reports for 2020, 2021, and 2022, along with implemented procedures for correctly completing Uniform Reports of DBE Awards or Commitments and Payments. By November 30, 2023, GPTD must also develop a DBE goal that includes a description of the revised methodology used to establish the new goal, upload it to TrAMS, and notify the FTA Office of Civil Rights once completed. Subsequent to the site visit, GPTD submitted the corrected DBE Uniform Reports in TrAMS along with procedures for correctly completing Uniform Reports and a DBE goal that included the revised methodology.",
+      "response_due_date": "June 28, 2023",
+      "date_closed": "June 28, 2023"
+    },
+    {
+      "review_area": "Title VI",
+      "finding": "D",
+      "deficiency_code": "TVI4-1",
+      "description": "The Title VI regulations at 49 CFR Section 21.9(b), Requirement to Develop Title VI Complaint Procedures and Complaint Form, require that all recipients shall develop procedures for investigating and tracking Title VI complaints filed against them. During the review, GPTD provided a Title VI Log of Investigations, Lawsuits, and Complaints that included four complaints received in 2022 that had not been resolved. GPTD's Title VI Plan states in part: \"If the complaint is deemed to have investigative merit: A complete investigation will be conducted, and an investigative report will be completed within sixty (60) days from receipt of the complaint.\" GPTD acknowledged that these four complaints were not handled and resolved in accordance with the timeframes outlined in its Title VI program requirements.",
+      "corrective_action": "By December 31, 2023, GPTD must prepare and submit to the FTA Office of Civil Rights evidence that it processes complaints as detailed in its Title VI Program. By August 31, 2023, GPTD must also submit a revised Title VI Program to correctly describe how it processes complaints.",
+      "response_due_date": "December 31, 2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - General",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - Complementary Paratransit",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Equal Employment Opportunity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "School Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Charter Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug-Free Workplace Act",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug and Alcohol Program",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5307 Program Requirements",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5310 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5311 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Public Transportation Agency Safety Plan (PTASP)",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Cybersecurity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    }
+  ],
+  "awards": [
+    {
+      "award_number": "ME-2019-013",
+      "award_year": "2019",
+      "description": "GPTD Battery Electric Bus Project",
+      "amount": 1245000.0
+    },
+    {
+      "award_number": "ME-2020-010",
+      "award_year": "2021",
+      "description": "Greater Portland Transit District Section 5307 CARES ACT Operating and Planning",
+      "amount": 8398713.0
+    },
+    {
+      "award_number": "ME-2020-025",
+      "award_year": "2021",
+      "description": "2020 Operating Asst. and Capital Program Grant",
+      "amount": 4656052.0
+    },
+    {
+      "award_number": "ME-2017-008",
+      "award_year": "2017",
+      "description": "2017 Operating Asst. and Capital Program Grant",
+      "amount": 5309844.0
+    },
+    {
+      "award_number": "ME-2021-016",
+      "award_year": "2021",
+      "description": "2021 Operating Asst. and Capital Program Grant",
+      "amount": 3796528.0
+    },
+    {
+      "award_number": "ME-2019-010",
+      "award_year": "2019",
+      "description": "2019 Operating Asst. and Capital Program Grant",
+      "amount": 6026080.0
+    },
+    {
+      "award_number": "ME-2022-011",
+      "award_year": "2022",
+      "description": "2022 Operating and Capital Grant",
+      "amount": 5114800.0
+    },
+    {
+      "award_number": "ME-2017-007",
+      "award_year": "2017",
+      "description": "GPTD Northern Service Expansion - Capital Grant Phase 2",
+      "amount": 173840.0
+    },
+    {
+      "award_number": "ME-2016-017",
+      "award_year": "2016",
+      "description": "Regional Bus Shelter-Sign Project",
+      "amount": 875398.0
+    },
+    {
+      "award_number": "ME-2016-016",
+      "award_year": "2016",
+      "description": "2016 Operating and Capital Grant",
+      "amount": 5247318.0
+    }
+  ],
+  "projects": [
+    {
+      "project_type": "completed",
+      "description": "Replaced some of the bus fleet",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Procured electric buses and charging equipment",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Purchased bus shelters",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Completed several facility renovations",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Continuing to replace the bus fleet",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Installing ADA accessibility improvements at bus stops",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Implementing regional bus system recommendations, including improvements to frequencies and hours, making route alignments, and adding a microtransit pilot project",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Implementing transit signal priority",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Purchase property in support of operations-maintenance facility reconstruction/expansion",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Reconstruct and expand the operations-maintenance facility",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Expand service including implementation of a bus rapid transit project connecting the municipalities of Portland, Westbrook, and Gorham",
+      "completion_date": null,
+      "funding_sources": null
+    }
+  ],
+  "source_file": "GPTD 2023 TR Final Report.pdf",
+  "extracted_at": "2025-12-10T10:23:22.963742",
+  "extraction_method": "claude-api",
+  "summary": {
+    "total_deficiencies": 3,
+    "total_areas_reviewed": 23
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "recipient": {
+    "name": "Androscoggin Valley Council of Governments",
+    "acronym": "AVCOG",
+    "city": "Auburn",
+    "state": "ME",
+    "region_number": 1
+  },
+  "review_info": {
+    "fiscal_year": "FY2023",
+    "review_type": "TR",
+    "report_date": "September 13, 2023"
+  },
+  "assessments": [
+    {
+      "review_area": "Legal",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Financial Management and Capacity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Award Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Program Management and Subrecipient Oversight",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Project Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Transit Asset Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Satisfactory Continuing Control",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Maintenance",
+      "finding": "D",
+      "deficiency_code": "M2-2",
+      "description": "During the examination of the preventive maintenance (PM) records for AVCOG's facility components, it was discovered that the PMs for the bus stations in Lewiston and Auburn were not being completed semi-annually and annually, as required in AVCOG's facility maintenance plan. The Transit Program Manager stated that the monthly inspections and semi-annual HVAC/Plumbing inspections were carried out. However, as a result of staffing vacancies, the agency was never able to implement the full (semi-annual and annual) facility inspections. Per FTA C. 5010.1E Ch. IV 4(n)(4), recipients must follow manufacturers' recommendations for PM inspections for all FTA-funded assets. FTA has directed reviewers to cite a deficiency when PM inspections are less than 80 percent on time.",
+      "corrective_action": "For the deficiency Late facility/equipment preventive maintenance (M2-2), by October 31, 2023, AVCOG must submit to the FTA regional office procedures for completing facility and equipment preventive maintenance inspections on time. By January 31, 2024, AVCOG must submit an annual report signed by the chief executive officer or other senior management designee on the preventive maintenance results of the annual bus station inspections in Lewiston and Auburn. AVCOG must include with the submittal to the FTA regional office: \u2022 A report listing the dates the inspections are due and the dates of the actual inspections. List the percentage of the inspections performed on time. \u2022 Back-up documentation (e.g., copy of a work order, printout from the maintenance management system) documenting the date of the inspection.",
+      "response_due_date": "October 31, 2023 and January 31, 2024",
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Disadvantaged Business Enterprise",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Title VI",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - General",
+      "finding": "D",
+      "deficiency_code": "ADA-GEN13-1",
+      "description": "Per 49 CFR 39.23, recipients that contract with private entities to operate service must ensure the private entity is meeting the ADA service requirements. The AVCOG does not have an implemented oversight process in place to monitor their current contractor, WMTS, to ensure they are complying with the required ADA service provisions. This was a deficiency in the FY 2019 Triennial Review and AVCOG developed an ADA Fixed Route Contractor Monitoring Checklist, but as a result of the Public Health Emergency and resulting staffing vacancies, the agency was never able to implement the oversight program.",
+      "corrective_action": "For the deficiency Insufficient oversight of contracted service for ADA requirements (ADA-GEN13-1), by October 31, 2023, AVCOG must submit to the FTA Office of Civil Rights (FTA TCR) procedures for ensuring that their contractors comply with the ADA service provisions, along with evidence of implementation.",
+      "response_due_date": "October 31, 2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - Complementary Paratransit",
+      "finding": "D",
+      "deficiency_code": "ADA-CPT7-1",
+      "description": "Per 49 CFR 39.23, recipients that contract with private entities to operate service must ensure the private entity is meeting the ADA service requirements. The AVCOG does not have an implemented oversight process in place to monitor their current contractor, WMTS, to ensure they are complying with the required ADA Complementary Paratransit service provisions. This was a deficiency in the FY 2019 Triennial Review and AVCOG developed a capacity constraint monitoring spreadsheet, but as a result of the Public Health Emergency and resulting staffing vacancies, the agency was never able to implement the service oversight program.",
+      "corrective_action": "For the deficiency Insufficient oversight of contractors/other private entities providing ADA complementary paratransit (ADA-CPT7-1), by October 31, 2023, AVCOG must submit to the FTA TCR procedures for ensuring that service provided on its behalf by contractors or other providers complies with the ADA service provisions and evidence of implementation. At a minimum, the review process must include documentation of monitoring the eligibility process, service provisions, no show policy, and capacity constraints.",
+      "response_due_date": "October 31, 2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Equal Employment Opportunity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "School Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Charter Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug-Free Workplace Act",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug and Alcohol Program",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5307 Program Requirements",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5310 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5311 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Public Transportation Agency Safety Plan (PTASP)",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Cybersecurity",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    }
+  ],
+  "awards": [
+    {
+      "award_number": "ME-2022-005",
+      "award_year": "2022",
+      "description": "Androscoggin Valley Council of Governments (AVCOG) FY 2021 Operating, Capital, and Planning Assistance",
+      "amount": 894915.0
+    },
+    {
+      "award_number": "ME-2023-005",
+      "award_year": "2023",
+      "description": "Androscoggin Valley Council of Governments (AVCOG) FY 2022 Operating, Capital, and Planning Assistance",
+      "amount": 1150119.0
+    }
+  ],
+  "projects": [
+    {
+      "project_type": "completed",
+      "description": "Purchased replacement buses in 2019 and 2022",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Modifying service area and methods in line with recommendations from the 2021 Transit Study",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Removing some fixed-route areas and adding demand-response to those geographic areas affected",
+      "completion_date": null,
+      "funding_sources": null
+    }
+  ],
+  "source_file": "AVCOG_2023_TR_Final Report.pdf",
+  "extracted_at": "2025-12-10T10:28:29.613688",
+  "extraction_method": "claude-api",
+  "summary": {
+    "total_deficiencies": 3,
+    "total_areas_reviewed": 23
+  }
+}

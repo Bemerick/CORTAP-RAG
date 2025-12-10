@@ -1,0 +1,294 @@
+{
+  "recipient": {
+    "name": "New River Transit Authority",
+    "acronym": "NRTA",
+    "city": "Beckley",
+    "state": "WV",
+    "region_number": 3
+  },
+  "review_info": {
+    "fiscal_year": "FY2023",
+    "review_type": "TR",
+    "report_date": "July 14, 2023"
+  },
+  "assessments": [
+    {
+      "review_area": "Legal",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Financial Management and Capacity",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Award Management",
+      "finding": "D",
+      "deficiency_code": "TC-AM3-1",
+      "description": "FY2022 MPRs for awards WV-2019-007 and WV-2020-024 do not include a detailed discussion of budget or schedule changes, explanations for why scheduled milestones were not met, or discussion of the expected impact of the delays. FTA Circular 5010.1E requires MPRs to include detailed discussion of all Award Budget or schedule changes, explanation of why scheduled milestones or completion dates were not met, identification of problem areas and how they will be solved, and discussion of the expected impacts and efforts to recover from delays.",
+      "corrective_action": "By August 18, 2023, NRTA must submit to the Region 3 office: 1. Revised reports for Q4 2022 that include the missing information. 2. Procedures for ensuring all required information is included in future reports. If the recipient is no longer able to submit the reports electronically, it must upload soft copies of the reports to TrAMS and notify the regional office when the revised reports are submitted.",
+      "response_due_date": "August 18, 2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Program Management and Subrecipient Oversight",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Technical Capacity - Project Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Transit Asset Management",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Satisfactory Continuing Control",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Maintenance",
+      "finding": "D",
+      "deficiency_code": "M2-1",
+      "description": "The submitted preventive maintenance records do not include complete information on the maintenance work performed during each PM inspection. The Reviewer was unable to determine whether all scheduled preventive maintenance activities are occurring on time. FTA Circular 5010.1E requires recipients to maintain federally-assisted property in good operating order and keep satisfactory records pertaining to the use of federally-assisted property.",
+      "corrective_action": "By November 18, 2023, NRTA must submit to the Region 3 office: 1. Procedures for completing and documenting preventive maintenance inspections on time. 2. A monthly report signed by the Director on preventive maintenance results until the data demonstrate the recipient has conducted 80 percent of its preventive maintenance on time for three consecutive months. For each vehicle that received a preventive maintenance inspection during the month, the recipient must include: a report that lists the vehicle number, date of the inspection, mileage of the current and previous inspections, and mileage interval between the two inspections; the percentage of inspections performed on time; and back-up documentation for each vehicle documenting the date and mileage of the inspection.",
+      "response_due_date": "November 18, 2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Procurement",
+      "finding": "D",
+      "deficiency_code": "P11-1",
+      "description": "The contract files for three procurements included in the file sample did not include the required FTA clauses for seatbelt use or distracted driving. Three procurement files were also missing required clauses: Notice to FTA and U.S. DOT Inspector General of information related to fraud, waste, abuse, or other legal matters and prohibition on certain telecommunications and video surveillance services or equipment. 2 CFR Part 200 and FTA Master Agreement require all third party contracts to contain applicable federal provisions and clauses.",
+      "corrective_action": "By September 18, 2023, NRTA must submit to the Region 3 office: 1. Revised procurement procedures that address inclusion of all FTA-required third party contract clauses through use of a clause checklist or other mechanism. 2. A procedure for updating the required contract clauses on an annual basis.",
+      "response_due_date": "September 18, 2023",
+      "date_closed": null
+    },
+    {
+      "review_area": "Disadvantaged Business Enterprise",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Title VI",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - General",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Americans with Disabilities Act (ADA) - Complementary Paratransit",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Equal Employment Opportunity",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "School Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Charter Bus",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug-Free Workplace Act",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Drug and Alcohol Program",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5307 Program Requirements",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5310 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Section 5311 Program Requirements",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Public Transportation Agency Safety Plan (PTASP)",
+      "finding": "ND",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    },
+    {
+      "review_area": "Cybersecurity",
+      "finding": "NA",
+      "deficiency_code": null,
+      "description": null,
+      "corrective_action": null,
+      "response_due_date": null,
+      "date_closed": null
+    }
+  ],
+  "awards": [
+    {
+      "award_number": "WV-2019-007-00",
+      "award_year": "2019",
+      "description": "FFY 2019 Operating, PM and Expansion Bus Purchase",
+      "amount": 813251.0
+    },
+    {
+      "award_number": "WV-2020-024-00",
+      "award_year": "2020",
+      "description": "New River Transit Authority (NRTA) FYY 2015 and FFY 2017 Section 5307 Purchase of Hardware, Software and Expansion Buses",
+      "amount": 176429.0
+    },
+    {
+      "award_number": "WV-2022-010-00",
+      "award_year": "2022",
+      "description": "New River Transit Authority (NRT) FFY 2017, FFY 2018 and FFY 2019 Section 5307 Operating Assistance, Preventative Maintenance and Vehicle Purchase - Toll Credits",
+      "amount": 1803766.0
+    },
+    {
+      "award_number": "WV-2023-001-00",
+      "award_year": "2022",
+      "description": "The New River Transit Authority (NRTA) FFY 2019 Section 5307 Operating Assistance and Purchase of Hardware and Software",
+      "amount": 289196.0
+    }
+  ],
+  "projects": [
+    {
+      "project_type": "completed",
+      "description": "Purchased 2 buses",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Streamlined with the rest of the State to implement Pre-Trip/Post-Trip technology (Zonar)",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Implemented new route structure with extended hours",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "completed",
+      "description": "Exercised an option with RCCAA to continue to jointly fund and operate public transit service",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "ongoing",
+      "description": "Deploying automatic passenger counting, annunciator, and public tracking software",
+      "completion_date": null,
+      "funding_sources": null
+    },
+    {
+      "project_type": "future",
+      "description": "Expand on the existing mobility management program",
+      "completion_date": null,
+      "funding_sources": null
+    }
+  ],
+  "source_file": "R3_WV_NRTA_TR23_Final_LetterandReport_7.11.pdf TGC Signature.pdf",
+  "extracted_at": "2025-12-10T10:19:59.624429",
+  "extraction_method": "claude-api",
+  "summary": {
+    "total_deficiencies": 3,
+    "total_areas_reviewed": 23
+  }
+}
