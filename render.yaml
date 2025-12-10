@@ -17,9 +17,8 @@ services:
       pip install --upgrade pip &&
       pip install -r requirements.txt &&
       alembic upgrade head &&
-      python ingest_full_guide.py &&
-      echo "Build complete! (Run historical ingestion scripts manually if needed)"
-    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+      echo "Build complete!"
+    startCommand: python startup.py && uvicorn main:app --host 0.0.0.0 --port $PORT
     rootDir: backend
     envVars:
       - key: OPENAI_API_KEY
