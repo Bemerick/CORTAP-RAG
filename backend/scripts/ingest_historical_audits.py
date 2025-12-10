@@ -44,11 +44,15 @@ class HistoricalAuditIngestor:
     def load_compliance_sections(self):
         """Load existing compliance sections for FK mapping."""
         with self.db.get_session() as session:
-            sections = session.query(ComplianceSection).all()
-            # Map section_name -> section_id
-            for section in sections:
-                self.section_map[section.section_name] = section.id
-            logger.info(f"Loaded {len(self.section_map)} compliance sections")
+            try:
+                sections = session.query(ComplianceSection).all()
+                # Map section_name -> section_id
+                for section in sections:
+                    self.section_map[section.section_name] = section.id
+                logger.info(f"Loaded {len(self.section_map)} compliance sections")
+            except Exception as e:
+                logger.warning(f"Could not load compliance sections (table may not exist yet): {e}")
+                logger.info("Continuing without section mapping - deficiencies will not be linked to compliance sections")
 
     def parse_date(self, date_str: str):
         """Parse date string into datetime.date object."""
@@ -390,14 +394,21 @@ def main():
 
     args = parser.parse_args()
 
-    ingestor = HistoricalAuditIngestor()
+    try:
+        ingestor = HistoricalAuditIngestor()
 
-    if args.dry_run:
-        logger.info("DRY RUN MODE - no data will be committed")
+        if args.dry_run:
+            logger.info("DRY RUN MODE - no data will be committed")
 
-    ingestor.ingest_all(args.input_dir)
-    ingestor.get_statistics()
+        ingestor.ingest_all(args.input_dir)
+        ingestor.get_statistics()
+
+        logger.info("✓ Historical audit ingestion completed successfully")
+        return 0
+    except Exception as e:
+        logger.error(f"✗ Historical audit ingestion failed: {e}", exc_info=True)
+        return 1
 
 
 if __name__ == "__main__":
-    main()
+    exit(main())

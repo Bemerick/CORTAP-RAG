@@ -971,11 +971,13 @@ class HybridQueryEngine:
         common_words = {'FTA', 'FY', 'TR', 'SMR', 'ADA', 'DBE', 'REGION', 'THE', 'AND', 'FOR', 'WITH'}
         recipient_candidates = [m for m in acronym_matches if m not in common_words]
 
-        # Pattern 2: Multi-word capitalized names (e.g., "Alameda CTC", "Greater New Haven Transit")
+        # Pattern 2: Multi-word capitalized names (e.g., "Alameda CTC", "Greater New Haven Transit", "City of Bangor")
         # This pattern matches:
         # - Capitalized word + acronym (e.g., "Alameda CTC")
         # - Multiple capitalized words (e.g., "Greater New Haven Transit")
+        # - City/County/Borough + of + Name (e.g., "City of Bangor", "County of Lackawanna")
         multiword_patterns = [
+            r'\b((?:City|County|Borough|Town)\s+of\s+[A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)\b',  # City of X
             r'\b([A-Z][a-z]+\s+[A-Z]{2,10})\b',  # Word + Acronym (e.g., "Alameda CTC")
             r'\b([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\b'  # Multiple words (e.g., "Greater New Haven")
         ]

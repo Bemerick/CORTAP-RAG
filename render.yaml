@@ -3,7 +3,7 @@ databases:
     databaseName: cortap_rag
     user: cortap_user
     region: oregon
-    plan: free
+    plan: basic-256mb
 
 services:
 
@@ -13,7 +13,12 @@ services:
     env: python
     region: oregon
     plan: starter
-    buildCommand: pip install --upgrade pip && pip install -r requirements.txt && alembic upgrade head && python ingest_full_guide.py && python scripts/ingest_historical_audits.py && python scripts/ingest_historical_narratives.py
+    buildCommand: |
+      pip install --upgrade pip &&
+      pip install -r requirements.txt &&
+      alembic upgrade head &&
+      python ingest_full_guide.py &&
+      echo "Build complete! (Run historical ingestion scripts manually if needed)"
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     rootDir: backend
     envVars:
