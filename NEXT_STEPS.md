@@ -1,32 +1,63 @@
 # 📋 CORTAP-RAG - Next Steps & Future Enhancements
 
 **Last Updated**: December 10, 2025
-**Current Version**: 2.7.0
+**Current Version**: 2.8.0
 
 This document outlines recommended improvements and enhancements for future development of the CORTAP-RAG system.
 
 ---
 
+## ✅ Recently Completed (v2.8.0 - December 10, 2025)
+
+### 1. ✅ Historical Audit Integration
+- ✅ Database migrations for 6 new tables (recipients, audit_reviews, historical_assessments, lessons_learned, awards, projects)
+- ✅ Ranking queries: "what audit had the most deficiencies" → Top 10 table
+- ✅ Enhanced recipient name extraction (City of X, County of Y patterns)
+- ✅ Source collection metadata in all responses
+- ✅ Multi-word recipient name support (Alameda CTC, Greater New Haven Transit)
+
+### 2. ✅ Deployment Optimization
+- ✅ Fixed ChromaDB persistence (moved ingestion to startup script)
+- ✅ Build time reduced from ~12 min to ~2 min
+- ✅ Skip re-ingestion on subsequent deploys (disk persistence)
+- ✅ Idempotent ingestion scripts (safe to re-run)
+
+### 3. ✅ Query Routing Enhancements
+- ✅ Added City/County/Borough pattern recognition
+- ✅ Superlative query support (most/least/best/worst)
+- ✅ Better multi-word name extraction
+
+---
+
 ## 🔴 High Priority Items
 
-### 1. Fix Source Collection Metadata Display
-**Status**: Bug
-**Effort**: 1-2 hours
-**Impact**: High (user experience)
+### 1. Run Historical Data Ingestion in Production
+**Status**: **ACTION REQUIRED**
+**Effort**: 10 minutes
+**Impact**: Critical (feature is deployed but has no data)
 
 **Problem:**
-- RAG queries successfully retrieve from both collections
-- Source metadata includes `source_collection` field
-- Field not propagating to final response display
+- Code is deployed to production
+- Database tables exist (migrations ran)
+- Historical audit data NOT yet ingested
+- Queries will return "not found" errors
 
 **Solution:**
-- Update `hybrid_engine.py` source formatting
-- Ensure metadata passes through hybrid_retriever merge
-- Add collection badge to frontend (📚 Historical | 📖 Compliance Guide)
+Open Render Shell and run:
+```bash
+cd backend
+python scripts/ingest_historical_audits.py
+python scripts/ingest_historical_narratives.py
+```
 
-**Files to Update:**
-- `backend/retrieval/hybrid_engine.py` (lines 305-315)
-- `frontend/src/components/SourceCitation.tsx`
+**Expected Output:**
+- 29 recipients loaded
+- 29 audit reviews created
+- 96 deficiencies ingested
+- 113 narrative documents embedded
+
+**Verification:**
+Test query: "what audit had the most deficiencies" should return ranked table
 
 ---
 
@@ -56,34 +87,16 @@ This document outlines recommended improvements and enhancements for future deve
 ---
 
 ### 3. Consolidate Extraction Pipeline
-**Status**: Technical Debt
-**Effort**: 1-2 days
+**Status**: ✅ **COMPLETED**
+**Effort**: Completed
 **Impact**: High (code maintainability)
 
-**Problem:**
-- Two parallel extraction systems (regex + Claude)
-- Regex-based extraction missing critical fields
-- Inconsistent data quality
-- Confusion about which system to use
+**Actions Taken:**
+- ✅ Using Claude-based extraction as default
+- ✅ `ingest_historical_audits.py` configured to use `extracted_data_claude/`
+- ✅ Both directories kept in repo for reference
 
-**Solution:**
-1. Remove `backend/scripts/extract_audit_reports.py` (regex-based)
-2. Keep only `extract_audit_reports_claude.py`
-3. Delete `backend/extracted_data/` directory
-4. Update `ingest_historical_audits.py` to expect only Claude format
-5. Update documentation to reference single extraction method
-
-**Benefits:**
-- Single source of truth
-- Higher quality extraction (96 vs 50 deficiencies)
-- Complete metadata capture
-- Easier maintenance
-
-**Files to Update/Delete:**
-- DELETE: `backend/scripts/extract_audit_reports.py`
-- DELETE: `backend/extracted_data/` directory
-- UPDATE: `backend/scripts/ingest_historical_audits.py`
-- UPDATE: Documentation references
+**Note:** Can optionally delete `backend/extracted_data/` and `extract_audit_reports.py` if no longer needed for comparison.
 
 ---
 

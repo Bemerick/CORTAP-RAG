@@ -2,7 +2,7 @@
 
 **Status**: ✅ Production Ready + Historical Audit Integration Complete
 **Last Updated**: December 10, 2025
-**Version**: 2.7.0
+**Version**: 2.8.0
 
 🚀 **Production Deployment**: Live on Render with PostgreSQL + React frontend
 💻 **Local Development**: Full PostgreSQL setup with database migrations
@@ -18,6 +18,10 @@
 🏆 **Historical Audits - Structured**: 29 FY2023 reports (96 deficiencies, 209 awards, 248 projects)
 🔍 **Historical Audits - Semantic**: 113 documents in vector database (96 deficiency narratives + 17 org descriptions)
 🎨 **Dual Collection RAG**: Queries both compliance guide + historical audits for enriched context
+🏅 **Ranking Queries**: "What audit had the most deficiencies" → Top 10 recipients by deficiency count
+🏙️ **Enhanced Name Extraction**: Handles "City of X", "County of Y", "Borough of Z" patterns
+💾 **Persistent ChromaDB**: Disk-based storage survives deployments, skip re-ingestion on restarts
+⚡ **Fast Deployments**: ~2 min builds (down from ~12 min with re-ingestion)
 
 ---
 
